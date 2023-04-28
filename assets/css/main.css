@@ -310,7 +310,7 @@ nav.main {
     }
 
     .nav-links {
-        background: #2C2C2C;
+        background: #9ad0ff;
         position: fixed;
         top: 0;
         opacity: 1;
@@ -322,7 +322,10 @@ nav.main {
         transition: all 1s ease-out;
         pointer-events: none;
     }
-
+    .book-button{
+        background: linear-gradient(97.68deg, #1d1d1d 0%, #3d3d3d 100%);
+    }
+    
     .nav-links.open {
         clip-path: circle(1000px at 50% 10%);
         -webkit-clip-path: circle(1000px at 50% 10%);
@@ -371,6 +374,7 @@ nav.main {
 
     .toggle .bars1 {
         transform: rotate(-45deg) translate(-5px, 6px);
+        background: white;
     }
 
     .toggle .bars2 {
@@ -380,6 +384,10 @@ nav.main {
 
     .toggle .bars3 {
         transform: rotate(45deg) translate(-5px, -6px);
+        background: white;
+    }
+    .topNavBtn svg path{
+        fill: #000000;
     }
 
 }
