@@ -2,6 +2,7 @@
 
 :root {
     --primary: #5093ce;
+    --primary-light: #5093ce94;
     --light: #5093ce29;
     --transition: all 0.3s ease;
     --ico-hover: translate(6px, -6px) scale(1.2);
@@ -36,6 +37,9 @@ body {
 .clr-dark {
     color: var(--dark) !important;
 }
+.back-dark {
+    color: var(--dark) !important;
+}
 
 .clr-primary {
     color: var(--primary);
@@ -50,7 +54,7 @@ html {
 }
 
 .font-secondary {
-    font-family: Sofia_Pro;
+    font-family: Sofia_Pro  !important;
 }
 
 .back-light {
@@ -324,6 +328,9 @@ nav.main {
     }
     .book-button{
         background: linear-gradient(97.68deg, #1d1d1d 0%, #3d3d3d 100%);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
     }
     
     .nav-links.open {
@@ -416,7 +423,21 @@ nav.topNav .buttons .topNavBtn.bdr {
     border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-
+.form-control{
+    box-shadow: none !important;
+}
+.by-make-model>div select{
+    border: 1px solid;
+}
+.by-make-model>div select:focus{
+    border: 1px solid;
+}
+.by-make-model>div input{
+    border: 1px solid;
+}
+.by-make-model>div input:focus{
+    border: 1px solid;
+}
 .topNavBtn.skew {
     position: relative;
     text-align: center;
@@ -434,15 +455,32 @@ nav.topNav .buttons .topNavBtn.bdr {
     transform: translateY(-4px) scale(1.1);
 }
 
-.top-benner {
+.top-banner {
     height: 70vh;
 }
 
-.top-benner:before {
+.top-banner:before {
     content: '';
     background: url('../images/index/top-banner.png');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.used-car-top-banner {
+    height: 50vh;
+}
+
+.used-car-top-banner:before {
+    content: '';
+    background: url('../images/usedcars/aboutBg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100%;
     position: absolute;
     z-index: -1;
@@ -466,6 +504,18 @@ nav.topNav .buttons .topNavBtn.bdr {
 .sec-2 {
     background: linear-gradient(156deg, var(--primary) 60%, var(--white) 60%);
     /* height: 60vh; */
+}
+.used-sec-2 {
+    background: url('../images/usedcars/used_car_hero_min-768.webp') ;
+    background-repeat: no-repeat;
+    /* height: 60vh; */
+    background-position: center;
+    background-size: cover;
+    /* height: 60vh; */
+    /* linear-gradient(120deg, var(--primary) 50%, */
+}
+.used-sec-2-key-info{
+    background: linear-gradient(110deg, var(--primary) 50%, transparent 50%);
 }
 
 @media (min-width: 768px) {
@@ -531,7 +581,7 @@ nav.topNav .buttons .topNavBtn.bdr {
 
 .heading-m {
     text-transform: uppercase;
-    font-family: Abril_Fatface !important;
+    font-family: Abril_Fatface ;
     font-weight: 100 !important;
     font-size: 24px !important;
     text-transform: capitalize !important;
@@ -557,14 +607,21 @@ nav.topNav .buttons .topNavBtn.bdr {
     object-fit: contain;
     transition: all 0.5s ease;
 }
-
+.card,
+.cg-research-home .cg-research-article-link,
+.mainCardz .card-body .crd{
+ transition: all 0.5s;
+}
 .card:hover,
 .cg-research-home .cg-research-article-link:hover,
 .mainCardz .card-body .crd:hover {
     transform: translateY(-4px) scale(1.015);
-    box-shadow: 0px 4px 1rem rgb(0 0 0 / 13%) !important
+    box-shadow: 0px 4px 1rem rgb(0 0 0 / 13%) !important;
+    transition: all 0.5s;
 }
-
+.btn:hover{
+    background-color: var(--primary-light);
+}
 .box-shadow-0 {
     box-shadow: none !important;
 }
@@ -603,11 +660,20 @@ nav.topNav .buttons .topNavBtn.bdr {
 
 .dropdown_menu .fa-angle-down {
     transition: all 0.3s;
-    transform: rotate(180deg);
 }
 
 .dropdown_menu.active .fa-angle-down {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
+}
+.dropdown_menu2 .fa-angle-down {
+    transition: all 0.3s;
+}
+
+.dropdown_menu2 .fa-angle-down {
+    transform: rotate(180deg);
+}
+.dropdown_menu2.active .fa-angle-down {
+    transform: rotate(360deg);
 }
 
 .footer-li li a:hover {
@@ -637,6 +703,126 @@ nav.topNav .buttons .topNavBtn.bdr {
     background-color: var(--primary);
     right: 0;
 } */
+/* tabs css */
+
+.slick-arrow {
+    display: none !important;
+}
+
+.tab-btn {
+    background-color: #5093cea1;
+}
+
+.tabintotab .nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    isolation: isolate;
+    /* border-color: var(--bs-nav-tabs-link-hover-border-color); */
+    background-color: #5093ce !important;
+    color: white;
+}
+.dropdown_items {
+    display: none;
+}
+.nav-tabs .nav-link.disabled,
+.nav-tabs .nav-link:disabled {
+    color: var(--bs-nav-link-disabled-color);
+    background-color: #5093ce !important;
+    border-color: transparent;
+}
+
+.tabintotab ul.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: rgb(255, 0, 0);
+    background-color: #5093ce !important;
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+/* .tabintotab ul.nav-tabs .nav-link.active::after {
+content: "";
+position: absolute;
+border: 1em solid transparent;
+border-top-color: #f90000;
+transform: translateX(-50%) rotate(360deg);
+left: 50%;
+width: 0;
+height: 0;
+bottom: -8px;
+margin: 0 auto;
+} */
+
+.tabintotab>div .nav-tabs .nav-link.active {
+    text-decoration: underline;
+    background-color: transparent !important;
+    color: black;
+    border: none;
+}
+
+.tabintotab>div .nav-tabs .nav-link:hover,
+.tabintotab>div .nav-tabs .nav-link:focus {
+    isolation: isolate;
+    /* border-color: var(--bs-nav-tabs-link-hover-border-color); */
+    background-color: transparent !important;
+    color: black;
+    text-decoration: underline;
+    border: 2px;
+    margin: 0px !important;
+}
+
+.tabintotab>div .nav-tabs .nav-link {
+    margin: 0px !important;
+    border: none !important;
+    color: #707070;
+}
+
+
+
+.tab-dropdown {
+    border: none;
+    border-right: 1px solid #7070707a;
+    border-radius: 0px;
+}
+
+.tab-dropdown-focus:focus {
+    border: 1px solid !important;
+}
+
+.carbody .card {
+    height: 100px;
+    background-color: #5093ce29 !important;
+    align-items: center;
+    place-content: center;
+    padding-top: 3px;
+    border-radius: 10px !important;
+    border: none;
+
+}
+
+.carbody .card input {
+    display: none;
+}
+
+.carbody .card>div img {
+    border-radius: 10px;
+}
+.carcard .card {
+    height: 100px;
+    background-color: #5093ce29 !important;
+    align-items: center;
+    place-content: center;
+    padding-top: 3px;
+    border-radius: 10px !important;
+    border: none;
+
+}
+
+.carcard .card input {
+    display: none;
+}
+
+.carcard .card>div img {
+    border-radius: 15px;
+}
+ /* tab css end */
 
 @media (max-width: 768px) {
     .homepage.redesign .hero section.searchWrap {
@@ -646,6 +832,9 @@ nav.topNav .buttons .topNavBtn.bdr {
 
     .accordion-heading {
         font-size: 16px !important;
+    }
+    .used-sec-2-key-info{
+        background: linear-gradient(110deg, var(--primary) 80%, transparent 20%);
     }
 }
 
@@ -679,5 +868,10 @@ nav.topNav .buttons .topNavBtn.bdr {
 
         display: block;
         text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .used-sec-2-key-info{
+        background: var(--primary);
     }
 }

@@ -12,105 +12,7 @@
     <script src="./assets/js/bootstrap.js"></script>
     <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
     <title>Document</title>
-    <style>
-        .slick-arrow {
-            display: none !important;
-        }
 
-        .tab-btn {
-            background-color: #5093cea1;
-        }
-
-        .tabintotab .nav-tabs .nav-link:hover,
-        .nav-tabs .nav-link:focus {
-            isolation: isolate;
-            /* border-color: var(--bs-nav-tabs-link-hover-border-color); */
-            background-color: #5093ce !important;
-            color: white;
-        }
-
-        .nav-tabs .nav-link.disabled,
-        .nav-tabs .nav-link:disabled {
-            color: var(--bs-nav-link-disabled-color);
-            background-color: #5093ce !important;
-            border-color: transparent;
-        }
-
-        .tabintotab ul.nav-tabs .nav-link.active,
-        .nav-tabs .nav-item.show .nav-link {
-            color: rgb(255, 0, 0);
-            background-color: #5093ce !important;
-            border-color: var(--bs-nav-tabs-link-active-border-color);
-        }
-
-        /* .tabintotab ul.nav-tabs .nav-link.active::after {
-        content: "";
-        position: absolute;
-        border: 1em solid transparent;
-        border-top-color: #f90000;
-        transform: translateX(-50%) rotate(360deg);
-        left: 50%;
-        width: 0;
-        height: 0;
-        bottom: -8px;
-        margin: 0 auto;
-    } */
-
-        .tabintotab>div .nav-tabs .nav-link.active {
-            text-decoration: underline;
-            background-color: transparent !important;
-            color: black;
-            border: none;
-        }
-
-        .tabintotab>div .nav-tabs .nav-link:hover,
-        .tabintotab>div .nav-tabs .nav-link:focus {
-            isolation: isolate;
-            /* border-color: var(--bs-nav-tabs-link-hover-border-color); */
-            background-color: transparent !important;
-            color: black;
-            text-decoration: underline;
-            border: 2px;
-            margin: 0px !important;
-        }
-
-        .tabintotab>div .nav-tabs .nav-link {
-            margin: 0px !important;
-            border: none !important;
-            color: #707070;
-        }
-
-
-
-        .tab-dropdown {
-            border: none;
-            border-right: 1px solid #7070707a;
-            border-radius: 0px;
-        }
-
-        .tab-dropdown-focus:focus {
-            border: 1px solid !important;
-        }
-
-        .carbody .card {
-            height: 100px;
-            background-color: #5093ce29 !important;
-            align-items: center;
-            place-content: center;
-            padding-top: 3px;
-            border-radius: 10px !important;
-            border: none;
-
-        }
-
-        .carbody .card input {
-            display: none;
-        }
-
-        .carbody .card>div img {
-            border-radius: 10px;
-        }
-    </style>
 </head>
 
 
@@ -219,7 +121,7 @@
             </ul>
         </nav>
     </section>
-    <section class="top-benner">
+    <section class="top-banner">
         <div class="container-fluid my-auto h-100 sec-1 d-flex align-items-center justify-content-center ">
             <div class="row w-100">
                 <div class="col-lg-7 col-md-9 mx-auto home-tab rounded-4 col-12" id="content">
@@ -229,28 +131,28 @@
                         </h1>
                         <ul class="nav nav-tabs mt-2 border-0 " id="myTab" role="tablist">
 
-                            <li class="nav-item col  px-1" role="presentation">
+                            <li class="nav-item col px-1 mt-1" role="presentation">
                                 <a class="nav-link active btn tab-btn text-white" id="profile-tab" data-bs-toggle="tab"
                                     href="#buy" role="tab" aria-controls="buy" aria-selected="true">Buy Used</a>
                             </li>
-                            <li class="nav-item col  px-1" role="presentation">
+                            <li class="nav-item col px-1 mt-1" role="presentation">
                                 <a class="nav-link btn tab-btn text-white" id="buy_new-tab" data-bs-toggle="tab"
                                     href="#buy_new" role="tab" aria-controls="buy_new" aria-selected="false"
                                     tabindex="-1">Buy New</a>
                             </li>
-                            <li class="nav-item col px-1" role="presentation">
+                            <li class="nav-item col px-1 mt-1" role="presentation">
                                 <a class="nav-link btn tab-btn text-white px-0" id="certified-tab" data-bs-toggle="tab"
                                     href="#certified" role="tab" aria-controls="certified" aria-selected="false"
                                     tabindex="-1">Certified
                                     Pre-Owned</a>
                             </li>
-                            <li class="nav-item col px-1" role="presentation">
+                            <li class="nav-item col px-1 mt-1" role="presentation">
                                 <a class="nav-link btn tab-btn text-white" id="financing-tab" data-bs-toggle="tab"
                                     href="#financing" role="tab" aria-controls="financing" aria-selected="false"
                                     tabindex="-1">Financing</a>
                             </li>
                         </ul>
-                        <div class="tab-content p-3 bg-white rounded-3 pb-0" id="myTabContent">
+                        <div class="tab-content p-3 bg-white rounded-3 pb-0 " id="myTabContent">
 
                             <div class="tab-pane fade show active" id="buy" role="tabpanel" aria-labelledby="buy-tab">
                                 <ul class="nav nav-tabs" id="myTabNested" role="tablist">
@@ -270,7 +172,7 @@
                                     </li>
                                 </ul>
 
-                                <div class="tab-content p-3 bg-white rounded-3" id="myTabContentNested">
+                                <div class="tab-content p-3 bg-white rounded-3 " id="myTabContentNested">
                                     <div class="tab-pane fade active show" id="model" role="tabpanel"
                                         aria-labelledby="model-tab">
                                         <div class="row h-100">
@@ -450,7 +352,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 col-sm-4 col-12 d-flex align-items-end ">
+                                            <div class="col-md-3 col-sm-4 col-12  ">
                                                 <div class="">
                                                     <input type="number"
                                                         class="form-control box-shadow-0 tab-dropdown tab-dropdown-focus"
@@ -468,39 +370,35 @@
                                         <div class="row h-100">
                                             <div class="col-12 px-0 mb-3">
                                                 <div class="row carbody" role="listbox">
-                                                    <div class="card col-3 " role="option" aria-selected="false"
-                                                        data-body="bg7" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg7" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
-                                                        <div class="mediaContainer">
+                                                        <div class="card-body p-0 ">
                                                             <div>
                                                                 <div class="media">
-                                                                    <div
-                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
-                                                                        <div class="thumb-container">
-                                                                            <div class="image embedResponsiveItem"
-                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp')">
-                                                                            </div>
-                                                                            <picture class="embedResponsiveItem">
-                                                                                <img draggable="false"
-                                                                                    alt="SUV / Crossover Body Style"
-                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="w-100">
-                                                                            </picture>
-                                                                        </div>
+
+                                                                    <div class="thumb-container">
+
+                                                                        <picture class="embedResponsiveItem">
+                                                                            <img draggable="false"
+                                                                                alt="SUV / Crossover Body Style"
+                                                                                src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                class="w-100">
+                                                                        </picture>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="cardBody">
+                                                        <div class="border-0 bg-transparent">
                                                             <div>
-                                                                <h6 class="title">SUV / Crossover</h6>
+                                                                <h6 class="title">SUV / Crossover </h6>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card col-3 " role="option" aria-selected="false"
-                                                        data-body="bg6" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100 " role="option"
+                                                        aria-selected="false" data-body="bg6" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -530,8 +428,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card col-3 " role="option" aria-selected="false"
-                                                        data-body="bg5" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg5" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -561,8 +459,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card col-3 " role="option" aria-selected="false"
-                                                        data-body="bg0" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg0" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -592,8 +490,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card col-3 " role="option" aria-selected="false"
-                                                        data-body="bg3" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg3" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -623,8 +521,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card col-3 " role="option" aria-selected="false"
-                                                        data-body="bg1" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg1" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -654,8 +552,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card col-3 " role="option" aria-selected="true"
-                                                        data-body="bg9" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="true" data-body="bg9" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox">
                                                         <div class="mediaContainer">
                                                             <div>
@@ -684,8 +582,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card col-3 " role="option" aria-selected="false"
-                                                        data-body="bg4" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg4" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -725,29 +623,14 @@
                                     <div class="tab-pane fade show" id="byprice" role="tabpanel"
                                         aria-labelledby="byprice-tab">
                                         <div class="row h-100">
-                                            <div class="col-md-3 col-sm-4 col-12 d-sm-block d-none">
-                                                <div class="">
-                                                    <p class="mb-0 me-2 fs-sm">
-                                                        From
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 col-sm-4 col-12 d-sm-block d-none">
-                                                <div class="">
-                                                    <p class="mb-0 me-2 fs-sm">
-                                                        To
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 col-sm-4 col-12">
-                                            </div>
+                                            
                                             <div class="col-md-3 col-sm-4  col-12">
                                                 <div class="h-100 d-flex align-items-center">
                                                     <p class="mb-0 me-2 ">
                                                         Price
                                                     </p>
                                                     <select name="minPrice"
-                                                        class="minPriceSelector form-control select-min-price"
+                                                        class="minPriceSelector rounded-0 form-control select-min-price"
                                                         aria-label="Minimum price">
                                                         <option value="0">---</option>
                                                         <option value="1000">$1,000</option>
@@ -800,10 +683,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-md-3 col-sm-4  col-12">
+                                            <div class="col-md-3 col-sm-4  col-12 ">
                                                 <div class="h-100 d-flex align-items-center">
+                                                    <p class="mb-0 me-2 ">
+                                                        Price
+                                                    </p>
                                                     <select name="minPrice"
-                                                        class="minPriceSelector form-control select-min-price"
+                                                        class="minPriceSelector form-control select-min-price rounded-0"
                                                         aria-label="Minimum price">
                                                         <option value="0">---</option>
                                                         <option value="1000">$1,000</option>
@@ -861,12 +747,12 @@
                                                     <p class="mb-0 me-2 ">
                                                         Near
                                                     </p>
-                                                    <input type="number" class="form-control">
+                                                    <input type="number" class="form-control rounded-0">
                                                 </div>
 
                                             </div>
                                             <div class="col-md-3 my-md-auto my-3 col-12 d-flex align-items-end">
-                                                <a href="#" class="butn button-dark w-100 text-center">Search</a>
+                                                <a href="#" class="btn btn-primary back-primary w-100 text-center rounded-0">Search</a>
                                             </div>
                                         </div>
                                     </div>
@@ -891,230 +777,233 @@
                                             tabindex="-1">By Price</a>
                                     </li>
                                 </ul>
-                                <div class="tab-content p-3 bg-white rounded-3" id="myTabContentNested">
-                                    <div class="tab-pane fade show active" id="model1" role="tabpanel"
-                                        aria-labelledby="model1-tab">
+                                <div class="tab-content p-3 bg-white rounded-3 " id="myTabContentNested">
+                                    <div class="tab-pane fade active show" id="model1" role="tabpanel"
+                                        aria-labelledby="model-tab">
                                         <div class="row h-100">
-                                            <div class="col-sm-3 col-12">
+                                            <div class="col-md-3 col-sm-4 col-12">
                                                 <div class="h-100">
-                                                    <select class="form-control" autocomplete="off"
-                                                        id="carPickerUsed_makerSelect" aria-label="Select Make">
-                                                        <option value="-1" selected="selected">Select Makes</option>
-                                                        <optgroup label="Popular Makes">
-                                                            <option value="m4">Acura</option>
-                                                            <option value="m124">Alfa Romeo</option>
-                                                            <option value="m19">Audi</option>
-                                                            <option value="m3">BMW</option>
-                                                            <option value="m21">Buick</option>
-                                                            <option value="m22">Cadillac</option>
-                                                            <option value="m1">Chevrolet</option>
-                                                            <option value="m23">Chrysler</option>
-                                                            <option value="m24">Dodge</option>
-                                                            <option value="m2">Ford</option>
-                                                            <option value="m203">Genesis</option>
-                                                            <option value="m26">GMC</option>
-                                                            <option value="m6">Honda</option>
-                                                            <option value="m28">Hyundai</option>
-                                                            <option value="m84">INFINITI</option>
-                                                            <option value="m31">Jaguar</option>
-                                                            <option value="m32">Jeep</option>
-                                                            <option value="m33">Kia</option>
-                                                            <option value="m35">Land Rover</option>
-                                                            <option value="m37">Lexus</option>
-                                                            <option value="m38">Lincoln</option>
-                                                            <option value="m40">Maserati</option>
-                                                            <option value="m42">Mazda</option>
-                                                            <option value="m43">Mercedes-Benz</option>
-                                                            <option value="m45">MINI</option>
-                                                            <option value="m46">Mitsubishi</option>
-                                                            <option value="m12">Nissan</option>
-                                                            <option value="m47">Pontiac</option>
-                                                            <option value="m48">Porsche</option>
-                                                            <option value="m191">RAM</option>
-                                                            <option value="m53">Subaru</option>
-                                                            <option value="m112">Tesla</option>
-                                                            <option value="m7">Toyota</option>
-                                                            <option value="m55">Volkswagen</option>
-                                                            <option value="m56">Volvo</option>
-                                                            <option value="m271">Wagoneer</option>
-                                                        </optgroup>
-                                                        <optgroup label="All Makes">
-                                                            <option value="m4">Acura</option>
-                                                            <option value="m124">Alfa Romeo</option>
-                                                            <option value="m212">Allard</option>
-                                                            <option value="m79">AM General</option>
-                                                            <option value="m133">AMC</option>
-                                                            <option value="m224">American Bantam</option>
-                                                            <option value="m110">Aston Martin</option>
-                                                            <option value="m213">Auburn</option>
-                                                            <option value="m19">Audi</option>
-                                                            <option value="m119">Austin</option>
-                                                            <option value="m139">Austin-Healey</option>
-                                                            <option value="m20">Bentley</option>
-                                                            <option value="m3">BMW</option>
-                                                            <option value="m196">Bricklin</option>
-                                                            <option value="m113">Bugatti</option>
-                                                            <option value="m21">Buick</option>
-                                                            <option value="m22">Cadillac</option>
-                                                            <option value="m1">Chevrolet</option>
-                                                            <option value="m23">Chrysler</option>
-                                                            <option value="m117">Citroen</option>
-                                                            <option value="m81">Daewoo</option>
-                                                            <option value="m95">Daihatsu</option>
-                                                            <option value="m96">Datsun</option>
-                                                            <option value="m179">De Tomaso</option>
-                                                            <option value="m97">DeLorean</option>
-                                                            <option value="m208">DeSoto</option>
-                                                            <option value="m24">Dodge</option>
-                                                            <option value="m174">Edsel</option>
-                                                            <option value="m198">Excalibur</option>
-                                                            <option value="m25">Ferrari</option>
-                                                            <option value="m98">FIAT</option>
-                                                            <option value="m183">Fisker</option>
-                                                            <option value="m2">Ford</option>
-                                                            <option value="m99">Freightliner</option>
-                                                            <option value="m203">Genesis</option>
-                                                            <option value="m83">Geo</option>
-                                                            <option value="m26">GMC</option>
-                                                            <option value="m144">Hillman</option>
-                                                            <option value="m6">Honda</option>
-                                                            <option value="m186">Hudson</option>
-                                                            <option value="m27">Hummer</option>
-                                                            <option value="m28">Hyundai</option>
-                                                            <option value="m84">INFINITI</option>
-                                                            <option value="m158">International Harvester</option>
-                                                            <option value="m30">Isuzu</option>
-                                                            <option value="m31">Jaguar</option>
-                                                            <option value="m32">Jeep</option>
-                                                            <option value="m189">Kaiser</option>
-                                                            <option value="m233">Karma</option>
-                                                            <option value="m33">Kia</option>
-                                                            <option value="m155">Lada</option>
-                                                            <option value="m34">Lamborghini</option>
-                                                            <option value="m100">Lancia</option>
-                                                            <option value="m35">Land Rover</option>
-                                                            <option value="m37">Lexus</option>
-                                                            <option value="m38">Lincoln</option>
-                                                            <option value="m39">Lotus</option>
-                                                            <option value="m274">Lucid</option>
-                                                            <option value="m40">Maserati</option>
-                                                            <option value="m41">Maybach</option>
-                                                            <option value="m42">Mazda</option>
-                                                            <option value="m141">McLaren</option>
-                                                            <option value="m43">Mercedes-Benz</option>
-                                                            <option value="m44">Mercury</option>
-                                                            <option value="m101">Merkur</option>
-                                                            <option value="m219">Messerschmitt</option>
-                                                            <option value="m102">MG</option>
-                                                            <option value="m45">MINI</option>
-                                                            <option value="m46">Mitsubishi</option>
-                                                            <option value="m255">Mobility Ventures</option>
-                                                            <option value="m150">Morgan</option>
-                                                            <option value="m151">Morris</option>
-                                                            <option value="m154">Moskvitch</option>
-                                                            <option value="m199">Nash</option>
-                                                            <option value="m12">Nissan</option>
-                                                            <option value="m85">Oldsmobile</option>
-                                                            <option value="m103">Opel</option>
-                                                            <option value="m176">Packard</option>
-                                                            <option value="m121">Pagani</option>
-                                                            <option value="m104">Peugeot</option>
-                                                            <option value="m105">Pininfarina</option>
-                                                            <option value="m87">Plymouth</option>
-                                                            <option value="m260">Polestar</option>
-                                                            <option value="m47">Pontiac</option>
-                                                            <option value="m48">Porsche</option>
-                                                            <option value="m191">RAM</option>
-                                                            <option value="m147">Reliant</option>
-                                                            <option value="m106">Renault</option>
-                                                            <option value="m243">Rivian</option>
-                                                            <option value="m49">Rolls-Royce</option>
-                                                            <option value="m131">Rover</option>
-                                                            <option value="m50">Saab</option>
-                                                            <option value="m108">Saleen</option>
-                                                            <option value="m51">Saturn</option>
-                                                            <option value="m52">Scion</option>
-                                                            <option value="m135">Shelby</option>
-                                                            <option value="m227">Siata</option>
-                                                            <option value="m111">smart</option>
-                                                            <option value="m143">Spyker</option>
-                                                            <option value="m194">SRT</option>
-                                                            <option value="m164">Studebaker</option>
-                                                            <option value="m238">Stutz</option>
-                                                            <option value="m53">Subaru</option>
-                                                            <option value="m132">Sunbeam</option>
-                                                            <option value="m54">Suzuki</option>
-                                                            <option value="m112">Tesla</option>
-                                                            <option value="m7">Toyota</option>
-                                                            <option value="m137">Triumph</option>
-                                                            <option value="m55">Volkswagen</option>
-                                                            <option value="m56">Volvo</option>
-                                                            <option value="m205">VPG</option>
-                                                            <option value="m271">Wagoneer</option>
-                                                            <option value="m214">Willys</option>
-                                                        </optgroup>
+                                                    <select
+                                                        class="form-control box-shadow-0 tab-dropdown tab-dropdown-focus px-0"
+                                                        autocomplete="off" id="carPickerUsed_makerSelect"
+                                                        aria-label="Select Make">
+                                                        <option class="" value="-1" selected="selected">
+                                                            Select Makes
+                                                        </option>
+
+                                                        <option value="m4">Acura </option>
+                                                        <option value="m124">Alfa Romeo</option>
+                                                        <option value="m19">Audi</option>
+                                                        <option value="m3">BMW</option>
+                                                        <option value="m21">Buick</option>
+                                                        <option value="m22">Cadillac</option>
+                                                        <option value="m1">Chevrolet</option>
+                                                        <option value="m23">Chrysler</option>
+                                                        <option value="m24">Dodge</option>
+                                                        <option value="m2">Ford</option>
+                                                        <option value="m203">Genesis</option>
+                                                        <option value="m26">GMC</option>
+                                                        <option value="m6">Honda</option>
+                                                        <option value="m28">Hyundai</option>
+                                                        <option value="m84">INFINITI</option>
+                                                        <option value="m31">Jaguar</option>
+                                                        <option value="m32">Jeep</option>
+                                                        <option value="m33">Kia</option>
+                                                        <option value="m35">Land Rover</option>
+                                                        <option value="m37">Lexus</option>
+                                                        <option value="m38">Lincoln</option>
+                                                        <option value="m40">Maserati</option>
+                                                        <option value="m42">Mazda</option>
+                                                        <option value="m43">Mercedes-Benz</option>
+                                                        <option value="m45">MINI</option>
+                                                        <option value="m46">Mitsubishi</option>
+                                                        <option value="m12">Nissan</option>
+                                                        <option value="m47">Pontiac</option>
+                                                        <option value="m48">Porsche</option>
+                                                        <option value="m191">RAM</option>
+                                                        <option value="m53">Subaru</option>
+                                                        <option value="m112">Tesla</option>
+                                                        <option value="m7">Toyota</option>
+                                                        <option value="m55">Volkswagen</option>
+                                                        <option value="m56">Volvo</option>
+                                                        <option value="m271">Wagoneer</option>
+
+
+                                                        <option value="m4">Acura</option>
+                                                        <option value="m124">Alfa Romeo</option>
+                                                        <option value="m212">Allard</option>
+                                                        <option value="m79">AM General</option>
+                                                        <option value="m133">AMC</option>
+                                                        <option value="m224">American Bantam</option>
+                                                        <option value="m110">Aston Martin</option>
+                                                        <option value="m213">Auburn</option>
+                                                        <option value="m19">Audi</option>
+                                                        <option value="m119">Austin</option>
+                                                        <option value="m139">Austin-Healey</option>
+                                                        <option value="m20">Bentley</option>
+                                                        <option value="m3">BMW</option>
+                                                        <option value="m196">Bricklin</option>
+                                                        <option value="m113">Bugatti</option>
+                                                        <option value="m21">Buick</option>
+                                                        <option value="m22">Cadillac</option>
+                                                        <option value="m1">Chevrolet</option>
+                                                        <option value="m23">Chrysler</option>
+                                                        <option value="m117">Citroen</option>
+                                                        <option value="m81">Daewoo</option>
+                                                        <option value="m95">Daihatsu</option>
+                                                        <option value="m96">Datsun</option>
+                                                        <option value="m179">De Tomaso</option>
+                                                        <option value="m97">DeLorean</option>
+                                                        <option value="m208">DeSoto</option>
+                                                        <option value="m24">Dodge</option>
+                                                        <option value="m174">Edsel</option>
+                                                        <option value="m198">Excalibur</option>
+                                                        <option value="m25">Ferrari</option>
+                                                        <option value="m98">FIAT</option>
+                                                        <option value="m183">Fisker</option>
+                                                        <option value="m2">Ford</option>
+                                                        <option value="m99">Freightliner</option>
+                                                        <option value="m203">Genesis</option>
+                                                        <option value="m83">Geo</option>
+                                                        <option value="m26">GMC</option>
+                                                        <option value="m144">Hillman</option>
+                                                        <option value="m6">Honda</option>
+                                                        <option value="m186">Hudson</option>
+                                                        <option value="m27">Hummer</option>
+                                                        <option value="m28">Hyundai</option>
+                                                        <option value="m84">INFINITI</option>
+                                                        <option value="m158">International Harvester</option>
+                                                        <option value="m30">Isuzu</option>
+                                                        <option value="m31">Jaguar</option>
+                                                        <option value="m32">Jeep</option>
+                                                        <option value="m189">Kaiser</option>
+                                                        <option value="m233">Karma</option>
+                                                        <option value="m33">Kia</option>
+                                                        <option value="m155">Lada</option>
+                                                        <option value="m34">Lamborghini</option>
+                                                        <option value="m100">Lancia</option>
+                                                        <option value="m35">Land Rover</option>
+                                                        <option value="m37">Lexus</option>
+                                                        <option value="m38">Lincoln</option>
+                                                        <option value="m39">Lotus</option>
+                                                        <option value="m274">Lucid</option>
+                                                        <option value="m40">Maserati</option>
+                                                        <option value="m41">Maybach</option>
+                                                        <option value="m42">Mazda</option>
+                                                        <option value="m141">McLaren</option>
+                                                        <option value="m43">Mercedes-Benz</option>
+                                                        <option value="m44">Mercury</option>
+                                                        <option value="m101">Merkur</option>
+                                                        <option value="m219">Messerschmitt</option>
+                                                        <option value="m102">MG</option>
+                                                        <option value="m45">MINI</option>
+                                                        <option value="m46">Mitsubishi</option>
+                                                        <option value="m255">Mobility Ventures</option>
+                                                        <option value="m150">Morgan</option>
+                                                        <option value="m151">Morris</option>
+                                                        <option value="m154">Moskvitch</option>
+                                                        <option value="m199">Nash</option>
+                                                        <option value="m12">Nissan</option>
+                                                        <option value="m85">Oldsmobile</option>
+                                                        <option value="m103">Opel</option>
+                                                        <option value="m176">Packard</option>
+                                                        <option value="m121">Pagani</option>
+                                                        <option value="m104">Peugeot</option>
+                                                        <option value="m105">Pininfarina</option>
+                                                        <option value="m87">Plymouth</option>
+                                                        <option value="m260">Polestar</option>
+                                                        <option value="m47">Pontiac</option>
+                                                        <option value="m48">Porsche</option>
+                                                        <option value="m191">RAM</option>
+                                                        <option value="m147">Reliant</option>
+                                                        <option value="m106">Renault</option>
+                                                        <option value="m243">Rivian</option>
+                                                        <option value="m49">Rolls-Royce</option>
+                                                        <option value="m131">Rover</option>
+                                                        <option value="m50">Saab</option>
+                                                        <option value="m108">Saleen</option>
+                                                        <option value="m51">Saturn</option>
+                                                        <option value="m52">Scion</option>
+                                                        <option value="m135">Shelby</option>
+                                                        <option value="m227">Siata</option>
+                                                        <option value="m111">smart</option>
+                                                        <option value="m143">Spyker</option>
+                                                        <option value="m194">SRT</option>
+                                                        <option value="m164">Studebaker</option>
+                                                        <option value="m238">Stutz</option>
+                                                        <option value="m53">Subaru</option>
+                                                        <option value="m132">Sunbeam</option>
+                                                        <option value="m54">Suzuki</option>
+                                                        <option value="m112">Tesla</option>
+                                                        <option value="m7">Toyota</option>
+                                                        <option value="m137">Triumph</option>
+                                                        <option value="m55">Volkswagen</option>
+                                                        <option value="m56">Volvo</option>
+                                                        <option value="m205">VPG</option>
+                                                        <option value="m271">Wagoneer</option>
+                                                        <option value="m214">Willys</option>
+
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3 col-12">
+                                            <div class="col-md-3 col-sm-4 col-12">
                                                 <div class="h-100">
-                                                    <select class="form-control" disabled="disabled" autocomplete="off"
-                                                        id="carPickerUsed_modelSelect" aria-label="Select Model">
+                                                    <select
+                                                        class="form-control box-shadow-0 tab-dropdown tab-dropdown-focus"
+                                                        autocomplete="off" id="carPickerUsed_modelSelect "
+                                                        aria-label="Select Model">
                                                         <option value="-1" selected="selected">All Models</option>
                                                         <optgroup label="Popular Models"> </optgroup>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3 col-12 d-flex align-items-end">
-                                                <div class="form-floating">
-                                                    <input type="number" class="form-control" id="zip"
-                                                        placeholder="Near ZIP">
-                                                    <label for="zip">Near ZIP</label>
+                                            <div class="col-md-3 col-sm-4 col-12  ">
+                                                <div class="">
+                                                    <input type="number"
+                                                        class="form-control box-shadow-0 tab-dropdown tab-dropdown-focus"
+                                                        id="zip" placeholder="Near ZIP">
+                                                    <!-- <label class="p-0" for="zip">Near ZIPaaa</label> -->
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3 col-12 d-flex align-items-end">
-                                                <a href="#" class="butn button-dark w-100 text-center">Search</a>
+                                            <div class="col-md-3 col-12 d-flex align-items-end my-md-auto my-3">
+                                                <a href="#"
+                                                    class="btn back-primary text-white w-100 text-center">Search</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade show" id="price1" role="tabpanel"
-                                        aria-labelledby="price1-tab">
+                                    <div class="tab-pane fade" id="price1" role="tabpanel" aria-labelledby="price-tab">
                                         <div class="row h-100">
                                             <div class="col-12 px-0 mb-3">
-                                                <div class="cardGroup" role="listbox">
-                                                    <div class="card bodyoption " role="option" aria-selected="false"
-                                                        data-body="bg7" tabindex="0">
+                                                <div class="row carbody" role="listbox">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg7" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
-                                                        <div class="mediaContainer">
+                                                        <div class="card-body p-0 ">
                                                             <div>
                                                                 <div class="media">
-                                                                    <div
-                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
-                                                                        <div class="thumb-container">
-                                                                            <div class="image embedResponsiveItem"
-                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp')">
-                                                                            </div>
-                                                                            <picture class="embedResponsiveItem">
-                                                                                <img draggable="false"
-                                                                                    alt="SUV / Crossover Body Style"
-                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
-                                                                            </picture>
-                                                                        </div>
+
+                                                                    <div class="thumb-container">
+
+                                                                        <picture class="embedResponsiveItem">
+                                                                            <img draggable="false"
+                                                                                alt="SUV / Crossover Body Style"
+                                                                                src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                class="w-100">
+                                                                        </picture>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="cardBody">
+                                                        <div class="border-0 bg-transparent">
                                                             <div>
                                                                 <h6 class="title">SUV / Crossover</h6>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card bodyoption " role="option" aria-selected="false"
-                                                        data-body="bg6" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100 " role="option"
+                                                        aria-selected="false" data-body="bg6" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -1131,7 +1020,7 @@
                                                                                     alt="Sedan Body Style"
                                                                                     src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/sedan.png?io=true&amp;format=jpg&amp;auto=webp"
                                                                                     data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/sedan.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
+                                                                                    class="w-100">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -1144,8 +1033,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card bodyoption " role="option" aria-selected="false"
-                                                        data-body="bg5" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg5" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -1162,7 +1051,7 @@
                                                                                     alt="Pickup Truck Body Style"
                                                                                     src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/pickup.png?io=true&amp;format=jpg&amp;auto=webp"
                                                                                     data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/pickup.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
+                                                                                    class="w-100">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -1175,8 +1064,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card bodyoption " role="option" aria-selected="false"
-                                                        data-body="bg0" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg0" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -1193,7 +1082,7 @@
                                                                                     alt="Coupe Body Style"
                                                                                     src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
                                                                                     data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
+                                                                                    class="w-100">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -1206,8 +1095,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card bodyoption " role="option" aria-selected="false"
-                                                        data-body="bg3" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg3" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -1224,7 +1113,7 @@
                                                                                     alt="Hatchback Body Style"
                                                                                     src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/hatchback.png?io=true&amp;format=jpg&amp;auto=webp"
                                                                                     data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/hatchback.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
+                                                                                    class="w-100">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -1237,8 +1126,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card bodyoption " role="option" aria-selected="false"
-                                                        data-body="bg1" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg1" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -1255,7 +1144,7 @@
                                                                                     alt="Convertible Body Style"
                                                                                     src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/convertible.png?io=true&amp;format=jpg&amp;auto=webp"
                                                                                     data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/convertible.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
+                                                                                    class="w-100">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -1268,8 +1157,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card bodyoption " role="option" aria-selected="true"
-                                                        data-body="bg9" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="true" data-body="bg9" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox">
                                                         <div class="mediaContainer">
                                                             <div>
@@ -1285,7 +1174,7 @@
                                                                                     alt="Wagon Body Style"
                                                                                     src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/wagon.png?io=true&amp;format=jpg&amp;auto=webp"
                                                                                     data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/wagon.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
+                                                                                    class="w-100">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -1298,8 +1187,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="card bodyoption " role="option" aria-selected="false"
-                                                        data-body="bg4" tabindex="0">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg4" tabindex="0">
                                                         <input type="checkbox" name="carModel" class="carModelCheckbox"
                                                             id="">
                                                         <div class="mediaContainer">
@@ -1316,7 +1205,7 @@
                                                                                     alt="Minivan Body Style"
                                                                                     src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/minivan.png?io=true&amp;format=jpg&amp;auto=webp"
                                                                                     data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/minivan.png?io=true&amp;format=jpg&amp;auto=webp"
-                                                                                    class="embedResponsiveItem">
+                                                                                    class="w-100">
                                                                             </picture>
                                                                         </div>
                                                                     </div>
@@ -1333,178 +1222,20 @@
 
                                                 </div>
                                             </div>
-                                            <div class="col-sm-3 col-12 d-sm-block d-none">
-                                                <div class="">
-                                                    <p class="mb-0 me-2 fs-sm">
-                                                        From
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3 col-12 d-sm-block d-none">
-                                                <div class="">
-                                                    <p class="mb-0 me-2 fs-sm">
-                                                        To
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-12">
 
-                                            </div>
-                                            <div class="col-sm-3 col-12">
-                                                <div class="h-100 d-flex align-items-center">
-                                                    <p class="mb-0 me-2 ">
-                                                        Price
-                                                    </p>
-                                                    <select name="minPrice"
-                                                        class="minPriceSelector form-control select-min-price"
-                                                        aria-label="Minimum price">
-                                                        <option value="0">---</option>
-                                                        <option value="1000">$1,000</option>
-                                                        <option value="2000">$2,000</option>
-                                                        <option value="3000">$3,000</option>
-                                                        <option value="4000">$4,000</option>
-                                                        <option value="5000">$5,000</option>
-                                                        <option value="6000">$6,000</option>
-                                                        <option value="7000">$7,000</option>
-                                                        <option value="8000">$8,000</option>
-                                                        <option value="9000">$9,000</option>
-                                                        <option value="10000">$10,000</option>
-                                                        <option value="12000">$12,000</option>
-                                                        <option value="14000">$14,000</option>
-                                                        <option value="16000">$16,000</option>
-                                                        <option value="18000">$18,000</option>
-                                                        <option value="20000">$20,000</option>
-                                                        <option value="22000">$22,000</option>
-                                                        <option value="24000">$24,000</option>
-                                                        <option value="26000">$26,000</option>
-                                                        <option value="28000">$28,000</option>
-                                                        <option value="30000">$30,000</option>
-                                                        <option value="35000">$35,000</option>
-                                                        <option value="40000">$40,000</option>
-                                                        <option value="45000">$45,000</option>
-                                                        <option value="50000">$50,000</option>
-                                                        <option value="55000">$55,000</option>
-                                                        <option value="60000">$60,000</option>
-                                                        <option value="65000">$65,000</option>
-                                                        <option value="70000">$70,000</option>
-                                                        <option value="75000">$75,000</option>
-                                                        <option value="80000">$80,000</option>
-                                                        <option value="85000">$85,000</option>
-                                                        <option value="90000">$90,000</option>
-                                                        <option value="95000">$95,000</option>
-                                                        <option value="100000">$100,000</option>
-                                                        <option value="110000">$110,000</option>
-                                                        <option value="120000">$120,000</option>
-                                                        <option value="130000">$130,000</option>
-                                                        <option value="140000">$140,000</option>
-                                                        <option value="150000">$150,000</option>
-                                                        <option value="160000">$160,000</option>
-                                                        <option value="170000">$170,000</option>
-                                                        <option value="180000">$180,000</option>
-                                                        <option value="190000">$190,000</option>
-                                                        <option value="200000">$200,000</option>
-
-
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-3 col-12">
-                                                <div class="h-100 d-flex align-items-center">
-                                                    <select name="minPrice"
-                                                        class="minPriceSelector form-control select-min-price"
-                                                        aria-label="Minimum price">
-                                                        <option value="0">---</option>
-                                                        <option value="1000">$1,000</option>
-                                                        <option value="2000">$2,000</option>
-                                                        <option value="3000">$3,000</option>
-                                                        <option value="4000">$4,000</option>
-                                                        <option value="5000">$5,000</option>
-                                                        <option value="6000">$6,000</option>
-                                                        <option value="7000">$7,000</option>
-                                                        <option value="8000">$8,000</option>
-                                                        <option value="9000">$9,000</option>
-                                                        <option value="10000">$10,000</option>
-                                                        <option value="12000">$12,000</option>
-                                                        <option value="14000">$14,000</option>
-                                                        <option value="16000">$16,000</option>
-                                                        <option value="18000">$18,000</option>
-                                                        <option value="20000">$20,000</option>
-                                                        <option value="22000">$22,000</option>
-                                                        <option value="24000">$24,000</option>
-                                                        <option value="26000">$26,000</option>
-                                                        <option value="28000">$28,000</option>
-                                                        <option value="30000">$30,000</option>
-                                                        <option value="35000">$35,000</option>
-                                                        <option value="40000">$40,000</option>
-                                                        <option value="45000">$45,000</option>
-                                                        <option value="50000">$50,000</option>
-                                                        <option value="55000">$55,000</option>
-                                                        <option value="60000">$60,000</option>
-                                                        <option value="65000">$65,000</option>
-                                                        <option value="70000">$70,000</option>
-                                                        <option value="75000">$75,000</option>
-                                                        <option value="80000">$80,000</option>
-                                                        <option value="85000">$85,000</option>
-                                                        <option value="90000">$90,000</option>
-                                                        <option value="95000">$95,000</option>
-                                                        <option value="100000">$100,000</option>
-                                                        <option value="110000">$110,000</option>
-                                                        <option value="120000">$120,000</option>
-                                                        <option value="130000">$130,000</option>
-                                                        <option value="140000">$140,000</option>
-                                                        <option value="150000">$150,000</option>
-                                                        <option value="160000">$160,000</option>
-                                                        <option value="170000">$170,000</option>
-                                                        <option value="180000">$180,000</option>
-                                                        <option value="190000">$190,000</option>
-                                                        <option value="200000">$200,000</option>
-
-
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-3 col-12">
-                                                <div class="h-100 d-flex align-items-center">
-                                                    <p class="mb-0 me-2 ">
-                                                        Near
-                                                    </p>
-                                                    <input type="number" class="form-control">
-                                                </div>
-
-                                            </div>
-                                            <div class="col-sm-3 col-12 d-flex align-items-end">
-                                                <a href="#" class="butn button-dark w-100 text-center">Search</a>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade show" id="byprice1" role="tabpanel"
-                                        aria-labelledby="byprice1-tab">
+                                        aria-labelledby="byprice-tab">
                                         <div class="row h-100">
-                                            <div class="col-sm-3 col-12 d-sm-block d-none">
-                                                <div class="">
-                                                    <p class="mb-0 me-2 fs-sm">
-                                                        From
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3 col-12 d-sm-block d-none">
-                                                <div class="">
-                                                    <p class="mb-0 me-2 fs-sm">
-                                                        To
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-12">
-                                            </div>
-                                            <div class="col-sm-3 col-12">
+                                            
+                                            <div class="col-md-3 col-sm-4  col-12">
                                                 <div class="h-100 d-flex align-items-center">
                                                     <p class="mb-0 me-2 ">
                                                         Price
                                                     </p>
                                                     <select name="minPrice"
-                                                        class="minPriceSelector form-control select-min-price"
+                                                        class="minPriceSelector rounded-0 form-control select-min-price"
                                                         aria-label="Minimum price">
                                                         <option value="0">---</option>
                                                         <option value="1000">$1,000</option>
@@ -1557,10 +1288,13 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-3 col-12">
+                                            <div class="col-md-3 col-sm-4  col-12 ">
                                                 <div class="h-100 d-flex align-items-center">
+                                                    <p class="mb-0 me-2 ">
+                                                        Price
+                                                    </p>
                                                     <select name="minPrice"
-                                                        class="minPriceSelector form-control select-min-price"
+                                                        class="minPriceSelector form-control select-min-price rounded-0"
                                                         aria-label="Minimum price">
                                                         <option value="0">---</option>
                                                         <option value="1000">$1,000</option>
@@ -1613,209 +1347,604 @@
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-3 col-12">
+                                            <div class="col-md-3 col-sm-4  col-12">
                                                 <div class="h-100 d-flex align-items-center">
                                                     <p class="mb-0 me-2 ">
                                                         Near
                                                     </p>
-                                                    <input type="number" class="form-control">
+                                                    <input type="number" class="form-control rounded-0">
                                                 </div>
 
                                             </div>
-                                            <div class="col-sm-3 col-12 d-flex align-items-end">
-                                                <a href="#" class="butn button-dark w-100 text-center">Search</a>
+                                            <div class="col-md-3 my-md-auto my-3 col-12 d-flex align-items-end">
+                                                <a href="#" class="btn btn-primary back-primary w-100 text-center rounded-0">Search</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="certified" role="tabpanel" aria-labelledby="certified-tab">
-                                <div class="row h-100">
-                                    <div class="col-sm-3 col-12">
-                                        <div class="h-100">
-                                            <select class="form-control" autocomplete="off"
-                                                id="carPickerUsed_makerSelect" aria-label="Select Make">
-                                                <option value="-1" selected="selected">All Makes</option>
-                                                <optgroup label="Popular Makes">
-                                                    <option value="m4">Acura</option>
-                                                    <option value="m124">Alfa Romeo</option>
-                                                    <option value="m19">Audi</option>
-                                                    <option value="m3">BMW</option>
-                                                    <option value="m21">Buick</option>
-                                                    <option value="m22">Cadillac</option>
-                                                    <option value="m1">Chevrolet</option>
-                                                    <option value="m23">Chrysler</option>
-                                                    <option value="m24">Dodge</option>
-                                                    <option value="m2">Ford</option>
-                                                    <option value="m203">Genesis</option>
-                                                    <option value="m26">GMC</option>
-                                                    <option value="m6">Honda</option>
-                                                    <option value="m28">Hyundai</option>
-                                                    <option value="m84">INFINITI</option>
-                                                    <option value="m31">Jaguar</option>
-                                                    <option value="m32">Jeep</option>
-                                                    <option value="m33">Kia</option>
-                                                    <option value="m35">Land Rover</option>
-                                                    <option value="m37">Lexus</option>
-                                                    <option value="m38">Lincoln</option>
-                                                    <option value="m40">Maserati</option>
-                                                    <option value="m42">Mazda</option>
-                                                    <option value="m43">Mercedes-Benz</option>
-                                                    <option value="m45">MINI</option>
-                                                    <option value="m46">Mitsubishi</option>
-                                                    <option value="m12">Nissan</option>
-                                                    <option value="m47">Pontiac</option>
-                                                    <option value="m48">Porsche</option>
-                                                    <option value="m191">RAM</option>
-                                                    <option value="m53">Subaru</option>
-                                                    <option value="m112">Tesla</option>
-                                                    <option value="m7">Toyota</option>
-                                                    <option value="m55">Volkswagen</option>
-                                                    <option value="m56">Volvo</option>
-                                                    <option value="m271">Wagoneer</option>
-                                                </optgroup>
-                                                <optgroup label="All Makes">
-                                                    <option value="m4">Acura</option>
-                                                    <option value="m124">Alfa Romeo</option>
-                                                    <option value="m212">Allard</option>
-                                                    <option value="m79">AM General</option>
-                                                    <option value="m133">AMC</option>
-                                                    <option value="m224">American Bantam</option>
-                                                    <option value="m110">Aston Martin</option>
-                                                    <option value="m213">Auburn</option>
-                                                    <option value="m19">Audi</option>
-                                                    <option value="m119">Austin</option>
-                                                    <option value="m139">Austin-Healey</option>
-                                                    <option value="m20">Bentley</option>
-                                                    <option value="m3">BMW</option>
-                                                    <option value="m196">Bricklin</option>
-                                                    <option value="m113">Bugatti</option>
-                                                    <option value="m21">Buick</option>
-                                                    <option value="m22">Cadillac</option>
-                                                    <option value="m1">Chevrolet</option>
-                                                    <option value="m23">Chrysler</option>
-                                                    <option value="m117">Citroen</option>
-                                                    <option value="m81">Daewoo</option>
-                                                    <option value="m95">Daihatsu</option>
-                                                    <option value="m96">Datsun</option>
-                                                    <option value="m179">De Tomaso</option>
-                                                    <option value="m97">DeLorean</option>
-                                                    <option value="m208">DeSoto</option>
-                                                    <option value="m24">Dodge</option>
-                                                    <option value="m174">Edsel</option>
-                                                    <option value="m198">Excalibur</option>
-                                                    <option value="m25">Ferrari</option>
-                                                    <option value="m98">FIAT</option>
-                                                    <option value="m183">Fisker</option>
-                                                    <option value="m2">Ford</option>
-                                                    <option value="m99">Freightliner</option>
-                                                    <option value="m203">Genesis</option>
-                                                    <option value="m83">Geo</option>
-                                                    <option value="m26">GMC</option>
-                                                    <option value="m144">Hillman</option>
-                                                    <option value="m6">Honda</option>
-                                                    <option value="m186">Hudson</option>
-                                                    <option value="m27">Hummer</option>
-                                                    <option value="m28">Hyundai</option>
-                                                    <option value="m84">INFINITI</option>
-                                                    <option value="m158">International Harvester</option>
-                                                    <option value="m30">Isuzu</option>
-                                                    <option value="m31">Jaguar</option>
-                                                    <option value="m32">Jeep</option>
-                                                    <option value="m189">Kaiser</option>
-                                                    <option value="m233">Karma</option>
-                                                    <option value="m33">Kia</option>
-                                                    <option value="m155">Lada</option>
-                                                    <option value="m34">Lamborghini</option>
-                                                    <option value="m100">Lancia</option>
-                                                    <option value="m35">Land Rover</option>
-                                                    <option value="m37">Lexus</option>
-                                                    <option value="m38">Lincoln</option>
-                                                    <option value="m39">Lotus</option>
-                                                    <option value="m274">Lucid</option>
-                                                    <option value="m40">Maserati</option>
-                                                    <option value="m41">Maybach</option>
-                                                    <option value="m42">Mazda</option>
-                                                    <option value="m141">McLaren</option>
-                                                    <option value="m43">Mercedes-Benz</option>
-                                                    <option value="m44">Mercury</option>
-                                                    <option value="m101">Merkur</option>
-                                                    <option value="m219">Messerschmitt</option>
-                                                    <option value="m102">MG</option>
-                                                    <option value="m45">MINI</option>
-                                                    <option value="m46">Mitsubishi</option>
-                                                    <option value="m255">Mobility Ventures</option>
-                                                    <option value="m150">Morgan</option>
-                                                    <option value="m151">Morris</option>
-                                                    <option value="m154">Moskvitch</option>
-                                                    <option value="m199">Nash</option>
-                                                    <option value="m12">Nissan</option>
-                                                    <option value="m85">Oldsmobile</option>
-                                                    <option value="m103">Opel</option>
-                                                    <option value="m176">Packard</option>
-                                                    <option value="m121">Pagani</option>
-                                                    <option value="m104">Peugeot</option>
-                                                    <option value="m105">Pininfarina</option>
-                                                    <option value="m87">Plymouth</option>
-                                                    <option value="m260">Polestar</option>
-                                                    <option value="m47">Pontiac</option>
-                                                    <option value="m48">Porsche</option>
-                                                    <option value="m191">RAM</option>
-                                                    <option value="m147">Reliant</option>
-                                                    <option value="m106">Renault</option>
-                                                    <option value="m243">Rivian</option>
-                                                    <option value="m49">Rolls-Royce</option>
-                                                    <option value="m131">Rover</option>
-                                                    <option value="m50">Saab</option>
-                                                    <option value="m108">Saleen</option>
-                                                    <option value="m51">Saturn</option>
-                                                    <option value="m52">Scion</option>
-                                                    <option value="m135">Shelby</option>
-                                                    <option value="m227">Siata</option>
-                                                    <option value="m111">smart</option>
-                                                    <option value="m143">Spyker</option>
-                                                    <option value="m194">SRT</option>
-                                                    <option value="m164">Studebaker</option>
-                                                    <option value="m238">Stutz</option>
-                                                    <option value="m53">Subaru</option>
-                                                    <option value="m132">Sunbeam</option>
-                                                    <option value="m54">Suzuki</option>
-                                                    <option value="m112">Tesla</option>
-                                                    <option value="m7">Toyota</option>
-                                                    <option value="m137">Triumph</option>
-                                                    <option value="m55">Volkswagen</option>
-                                                    <option value="m56">Volvo</option>
-                                                    <option value="m205">VPG</option>
-                                                    <option value="m271">Wagoneer</option>
-                                                    <option value="m214">Willys</option>
-                                                </optgroup>
-                                            </select>
+                                <div class="tab-content p-3 bg-white rounded-3 " id="myTabContentNested">
+                                    <div class="tab-pane fade active show" id="model" role="tabpanel"
+                                        aria-labelledby="model-tab">
+                                        <div class="row h-100">
+                                            <div class="col-md-3 col-sm-4 col-12">
+                                                <div class="h-100">
+                                                    <select
+                                                        class="form-control box-shadow-0 tab-dropdown tab-dropdown-focus"
+                                                        autocomplete="off" id="carPickerUsed_makerSelect"
+                                                        aria-label="Select Make">
+                                                        <option value="-1" selected="selected">
+                                                            All Makes
+                                                        </option>
+
+                                                        <option value="m4">Acura </option>
+                                                        <option value="m124">Alfa Romeo</option>
+                                                        <option value="m19">Audi</option>
+                                                        <option value="m3">BMW</option>
+                                                        <option value="m21">Buick</option>
+                                                        <option value="m22">Cadillac</option>
+                                                        <option value="m1">Chevrolet</option>
+                                                        <option value="m23">Chrysler</option>
+                                                        <option value="m24">Dodge</option>
+                                                        <option value="m2">Ford</option>
+                                                        <option value="m203">Genesis</option>
+                                                        <option value="m26">GMC</option>
+                                                        <option value="m6">Honda</option>
+                                                        <option value="m28">Hyundai</option>
+                                                        <option value="m84">INFINITI</option>
+                                                        <option value="m31">Jaguar</option>
+                                                        <option value="m32">Jeep</option>
+                                                        <option value="m33">Kia</option>
+                                                        <option value="m35">Land Rover</option>
+                                                        <option value="m37">Lexus</option>
+                                                        <option value="m38">Lincoln</option>
+                                                        <option value="m40">Maserati</option>
+                                                        <option value="m42">Mazda</option>
+                                                        <option value="m43">Mercedes-Benz</option>
+                                                        <option value="m45">MINI</option>
+                                                        <option value="m46">Mitsubishi</option>
+                                                        <option value="m12">Nissan</option>
+                                                        <option value="m47">Pontiac</option>
+                                                        <option value="m48">Porsche</option>
+                                                        <option value="m191">RAM</option>
+                                                        <option value="m53">Subaru</option>
+                                                        <option value="m112">Tesla</option>
+                                                        <option value="m7">Toyota</option>
+                                                        <option value="m55">Volkswagen</option>
+                                                        <option value="m56">Volvo</option>
+                                                        <option value="m271">Wagoneer</option>
+
+
+                                                        <option value="m4">Acura</option>
+                                                        <option value="m124">Alfa Romeo</option>
+                                                        <option value="m212">Allard</option>
+                                                        <option value="m79">AM General</option>
+                                                        <option value="m133">AMC</option>
+                                                        <option value="m224">American Bantam</option>
+                                                        <option value="m110">Aston Martin</option>
+                                                        <option value="m213">Auburn</option>
+                                                        <option value="m19">Audi</option>
+                                                        <option value="m119">Austin</option>
+                                                        <option value="m139">Austin-Healey</option>
+                                                        <option value="m20">Bentley</option>
+                                                        <option value="m3">BMW</option>
+                                                        <option value="m196">Bricklin</option>
+                                                        <option value="m113">Bugatti</option>
+                                                        <option value="m21">Buick</option>
+                                                        <option value="m22">Cadillac</option>
+                                                        <option value="m1">Chevrolet</option>
+                                                        <option value="m23">Chrysler</option>
+                                                        <option value="m117">Citroen</option>
+                                                        <option value="m81">Daewoo</option>
+                                                        <option value="m95">Daihatsu</option>
+                                                        <option value="m96">Datsun</option>
+                                                        <option value="m179">De Tomaso</option>
+                                                        <option value="m97">DeLorean</option>
+                                                        <option value="m208">DeSoto</option>
+                                                        <option value="m24">Dodge</option>
+                                                        <option value="m174">Edsel</option>
+                                                        <option value="m198">Excalibur</option>
+                                                        <option value="m25">Ferrari</option>
+                                                        <option value="m98">FIAT</option>
+                                                        <option value="m183">Fisker</option>
+                                                        <option value="m2">Ford</option>
+                                                        <option value="m99">Freightliner</option>
+                                                        <option value="m203">Genesis</option>
+                                                        <option value="m83">Geo</option>
+                                                        <option value="m26">GMC</option>
+                                                        <option value="m144">Hillman</option>
+                                                        <option value="m6">Honda</option>
+                                                        <option value="m186">Hudson</option>
+                                                        <option value="m27">Hummer</option>
+                                                        <option value="m28">Hyundai</option>
+                                                        <option value="m84">INFINITI</option>
+                                                        <option value="m158">International Harvester</option>
+                                                        <option value="m30">Isuzu</option>
+                                                        <option value="m31">Jaguar</option>
+                                                        <option value="m32">Jeep</option>
+                                                        <option value="m189">Kaiser</option>
+                                                        <option value="m233">Karma</option>
+                                                        <option value="m33">Kia</option>
+                                                        <option value="m155">Lada</option>
+                                                        <option value="m34">Lamborghini</option>
+                                                        <option value="m100">Lancia</option>
+                                                        <option value="m35">Land Rover</option>
+                                                        <option value="m37">Lexus</option>
+                                                        <option value="m38">Lincoln</option>
+                                                        <option value="m39">Lotus</option>
+                                                        <option value="m274">Lucid</option>
+                                                        <option value="m40">Maserati</option>
+                                                        <option value="m41">Maybach</option>
+                                                        <option value="m42">Mazda</option>
+                                                        <option value="m141">McLaren</option>
+                                                        <option value="m43">Mercedes-Benz</option>
+                                                        <option value="m44">Mercury</option>
+                                                        <option value="m101">Merkur</option>
+                                                        <option value="m219">Messerschmitt</option>
+                                                        <option value="m102">MG</option>
+                                                        <option value="m45">MINI</option>
+                                                        <option value="m46">Mitsubishi</option>
+                                                        <option value="m255">Mobility Ventures</option>
+                                                        <option value="m150">Morgan</option>
+                                                        <option value="m151">Morris</option>
+                                                        <option value="m154">Moskvitch</option>
+                                                        <option value="m199">Nash</option>
+                                                        <option value="m12">Nissan</option>
+                                                        <option value="m85">Oldsmobile</option>
+                                                        <option value="m103">Opel</option>
+                                                        <option value="m176">Packard</option>
+                                                        <option value="m121">Pagani</option>
+                                                        <option value="m104">Peugeot</option>
+                                                        <option value="m105">Pininfarina</option>
+                                                        <option value="m87">Plymouth</option>
+                                                        <option value="m260">Polestar</option>
+                                                        <option value="m47">Pontiac</option>
+                                                        <option value="m48">Porsche</option>
+                                                        <option value="m191">RAM</option>
+                                                        <option value="m147">Reliant</option>
+                                                        <option value="m106">Renault</option>
+                                                        <option value="m243">Rivian</option>
+                                                        <option value="m49">Rolls-Royce</option>
+                                                        <option value="m131">Rover</option>
+                                                        <option value="m50">Saab</option>
+                                                        <option value="m108">Saleen</option>
+                                                        <option value="m51">Saturn</option>
+                                                        <option value="m52">Scion</option>
+                                                        <option value="m135">Shelby</option>
+                                                        <option value="m227">Siata</option>
+                                                        <option value="m111">smart</option>
+                                                        <option value="m143">Spyker</option>
+                                                        <option value="m194">SRT</option>
+                                                        <option value="m164">Studebaker</option>
+                                                        <option value="m238">Stutz</option>
+                                                        <option value="m53">Subaru</option>
+                                                        <option value="m132">Sunbeam</option>
+                                                        <option value="m54">Suzuki</option>
+                                                        <option value="m112">Tesla</option>
+                                                        <option value="m7">Toyota</option>
+                                                        <option value="m137">Triumph</option>
+                                                        <option value="m55">Volkswagen</option>
+                                                        <option value="m56">Volvo</option>
+                                                        <option value="m205">VPG</option>
+                                                        <option value="m271">Wagoneer</option>
+                                                        <option value="m214">Willys</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="col-md-3 col-sm-4 col-12  ">
+                                                <div class="">
+                                                    <input type="number"
+                                                        class="form-control box-shadow-0 tab-dropdown tab-dropdown-focus"
+                                                        id="zip" placeholder="Near ZIP">
+                                                    <!-- <label class="p-0" for="zip">Near ZIPaaa</label> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-12 d-flex align-items-end my-md-auto my-3">
+                                                <a href="#"
+                                                    class="btn back-primary text-white w-100 text-center">Search</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-12">
-                                        <div class="h-100">
-                                            <select class="form-control" disabled="disabled" autocomplete="off"
-                                                id="carPickerUsed_modelSelect" aria-label="Select Model">
-                                                <option value="-1" selected="selected">All Models</option>
-                                                <optgroup label="Popular Models"> </optgroup>
-                                            </select>
+                                    <div class="tab-pane fade" id="price" role="tabpanel" aria-labelledby="price-tab">
+                                        <div class="row h-100">
+                                            <div class="col-12 px-0 mb-3">
+                                                <div class="row carbody" role="listbox">
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg7" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox"
+                                                            id="">
+                                                        <div class="card-body p-0 ">
+                                                            <div>
+                                                                <div class="media">
+
+                                                                    <div class="thumb-container">
+
+                                                                        <picture class="embedResponsiveItem">
+                                                                            <img draggable="false"
+                                                                                alt="SUV / Crossover Body Style"
+                                                                                src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/suv-crossover.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                class="w-100">
+                                                                        </picture>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="border-0 bg-transparent">
+                                                            <div>
+                                                                <h6 class="title">SUV / Crossover</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100 " role="option"
+                                                        aria-selected="false" data-body="bg6" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox"
+                                                            id="">
+                                                        <div class="mediaContainer">
+                                                            <div>
+                                                                
+                                                                <div class="media">
+                                                                    <div
+                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
+                                                                        <div class="thumb-container">
+                                                                            <div class="image embedResponsiveItem"
+                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/sedan.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                                                            </div>
+                                                                            <picture class="embedResponsiveItem">
+                                                                                <img draggable="false"
+                                                                                    alt="Sedan Body Style"
+                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/sedan.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/sedan.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    class="w-100">
+                                                                            </picture>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBody">
+                                                            <div>
+                                                                <h6 class="title">Sedan</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg5" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox"
+                                                            id="">
+                                                        <div class="mediaContainer">
+                                                            <div>
+                                                                <div class="media">
+                                                                    <div
+                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
+                                                                        <div class="thumb-container">
+                                                                            <div class="image embedResponsiveItem"
+                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/pickup.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                                                            </div>
+                                                                            <picture class="embedResponsiveItem">
+                                                                                <img draggable="false"
+                                                                                    alt="Pickup Truck Body Style"
+                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/pickup.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/pickup.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    class="w-100">
+                                                                            </picture>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBody">
+                                                            <div>
+                                                                <h6 class="title">Pickup Truck</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg0" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox"
+                                                            id="">
+                                                        <div class="mediaContainer">
+                                                            <div>
+                                                                <div class="media">
+                                                                    <div
+                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
+                                                                        <div class="thumb-container">
+                                                                            <div class="image embedResponsiveItem"
+                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                                                            </div>
+                                                                            <picture class="embedResponsiveItem">
+                                                                                <img draggable="false"
+                                                                                    alt="Coupe Body Style"
+                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    class="w-100">
+                                                                            </picture>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBody">
+                                                            <div>
+                                                                <h6 class="title">Coupe</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg3" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox"
+                                                            id="">
+                                                        <div class="mediaContainer">
+                                                            <div>
+                                                                <div class="media">
+                                                                    <div
+                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
+                                                                        <div class="thumb-container">
+                                                                            <div class="image embedResponsiveItem"
+                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/hatchback.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                                                            </div>
+                                                                            <picture class="embedResponsiveItem">
+                                                                                <img draggable="false"
+                                                                                    alt="Hatchback Body Style"
+                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/hatchback.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/hatchback.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    class="w-100">
+                                                                            </picture>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBody">
+                                                            <div>
+                                                                <h6 class="title">Hatchback</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg1" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox"
+                                                            id="">
+                                                        <div class="mediaContainer">
+                                                            <div>
+                                                                <div class="media">
+                                                                    <div
+                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
+                                                                        <div class="thumb-container">
+                                                                            <div class="image embedResponsiveItem"
+                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/convertible.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                                                            </div>
+                                                                            <picture class="embedResponsiveItem">
+                                                                                <img draggable="false"
+                                                                                    alt="Convertible Body Style"
+                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/convertible.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/convertible.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    class="w-100">
+                                                                            </picture>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBody">
+                                                            <div>
+                                                                <h6 class="title">Convertible</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="true" data-body="bg9" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox">
+                                                        <div class="mediaContainer">
+                                                            <div>
+                                                                <div class="media">
+                                                                    <div
+                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
+                                                                        <div class="thumb-container">
+                                                                            <div class="image embedResponsiveItem"
+                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/wagon.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                                                            </div>
+                                                                            <picture class="embedResponsiveItem">
+                                                                                <img draggable="false"
+                                                                                    alt="Wagon Body Style"
+                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/wagon.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/wagon.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    class="w-100">
+                                                                            </picture>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBody">
+                                                            <div>
+                                                                <h6 class="title">Wagon</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card col-md-3  col-6 col-sm-4 h-100" role="option"
+                                                        aria-selected="false" data-body="bg4" tabindex="0">
+                                                        <input type="checkbox" name="carModel" class="carModelCheckbox"
+                                                            id="">
+                                                        <div class="mediaContainer">
+                                                            <div>
+                                                                <div class="media">
+                                                                    <div
+                                                                        class="embedResponsive embed-responsive-16by9 mediaContainer">
+                                                                        <div class="thumb-container">
+                                                                            <div class="image embedResponsiveItem"
+                                                                                style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/minivan.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                                                            </div>
+                                                                            <picture class="embedResponsiveItem">
+                                                                                <img draggable="false"
+                                                                                    alt="Minivan Body Style"
+                                                                                    src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/minivan.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/minivan.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                                                    class="w-100">
+                                                                            </picture>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBody">
+                                                            <div>
+                                                                <h6 class="title">Minivan</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
-                                    <div class="col-sm-3 col-12 d-flex align-items-end">
-                                        <div class="form-floating">
-                                            <input type="number" class="form-control" id="zip" placeholder="Near ZIP">
-                                            <label for="zip">Near ZIP</label>
+                                    <div class="tab-pane fade show" id="byprice" role="tabpanel"
+                                        aria-labelledby="byprice-tab">
+                                        <div class="row h-100">
+                                            
+                                            <div class="col-md-3 col-sm-4  col-12">
+                                                <div class="h-100 d-flex align-items-center">
+                                                    <p class="mb-0 me-2 ">
+                                                        Price
+                                                    </p>
+                                                    <select name="minPrice"
+                                                        class="minPriceSelector rounded-0 form-control select-min-price"
+                                                        aria-label="Minimum price">
+                                                        <option value="0">---</option>
+                                                        <option value="1000">$1,000</option>
+                                                        <option value="2000">$2,000</option>
+                                                        <option value="3000">$3,000</option>
+                                                        <option value="4000">$4,000</option>
+                                                        <option value="5000">$5,000</option>
+                                                        <option value="6000">$6,000</option>
+                                                        <option value="7000">$7,000</option>
+                                                        <option value="8000">$8,000</option>
+                                                        <option value="9000">$9,000</option>
+                                                        <option value="10000">$10,000</option>
+                                                        <option value="12000">$12,000</option>
+                                                        <option value="14000">$14,000</option>
+                                                        <option value="16000">$16,000</option>
+                                                        <option value="18000">$18,000</option>
+                                                        <option value="20000">$20,000</option>
+                                                        <option value="22000">$22,000</option>
+                                                        <option value="24000">$24,000</option>
+                                                        <option value="26000">$26,000</option>
+                                                        <option value="28000">$28,000</option>
+                                                        <option value="30000">$30,000</option>
+                                                        <option value="35000">$35,000</option>
+                                                        <option value="40000">$40,000</option>
+                                                        <option value="45000">$45,000</option>
+                                                        <option value="50000">$50,000</option>
+                                                        <option value="55000">$55,000</option>
+                                                        <option value="60000">$60,000</option>
+                                                        <option value="65000">$65,000</option>
+                                                        <option value="70000">$70,000</option>
+                                                        <option value="75000">$75,000</option>
+                                                        <option value="80000">$80,000</option>
+                                                        <option value="85000">$85,000</option>
+                                                        <option value="90000">$90,000</option>
+                                                        <option value="95000">$95,000</option>
+                                                        <option value="100000">$100,000</option>
+                                                        <option value="110000">$110,000</option>
+                                                        <option value="120000">$120,000</option>
+                                                        <option value="130000">$130,000</option>
+                                                        <option value="140000">$140,000</option>
+                                                        <option value="150000">$150,000</option>
+                                                        <option value="160000">$160,000</option>
+                                                        <option value="170000">$170,000</option>
+                                                        <option value="180000">$180,000</option>
+                                                        <option value="190000">$190,000</option>
+                                                        <option value="200000">$200,000</option>
+
+
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3 col-sm-4  col-12 ">
+                                                <div class="h-100 d-flex align-items-center">
+                                                    <p class="mb-0 me-2 ">
+                                                        Price
+                                                    </p>
+                                                    <select name="minPrice"
+                                                        class="minPriceSelector form-control select-min-price rounded-0"
+                                                        aria-label="Minimum price">
+                                                        <option value="0">---</option>
+                                                        <option value="1000">$1,000</option>
+                                                        <option value="2000">$2,000</option>
+                                                        <option value="3000">$3,000</option>
+                                                        <option value="4000">$4,000</option>
+                                                        <option value="5000">$5,000</option>
+                                                        <option value="6000">$6,000</option>
+                                                        <option value="7000">$7,000</option>
+                                                        <option value="8000">$8,000</option>
+                                                        <option value="9000">$9,000</option>
+                                                        <option value="10000">$10,000</option>
+                                                        <option value="12000">$12,000</option>
+                                                        <option value="14000">$14,000</option>
+                                                        <option value="16000">$16,000</option>
+                                                        <option value="18000">$18,000</option>
+                                                        <option value="20000">$20,000</option>
+                                                        <option value="22000">$22,000</option>
+                                                        <option value="24000">$24,000</option>
+                                                        <option value="26000">$26,000</option>
+                                                        <option value="28000">$28,000</option>
+                                                        <option value="30000">$30,000</option>
+                                                        <option value="35000">$35,000</option>
+                                                        <option value="40000">$40,000</option>
+                                                        <option value="45000">$45,000</option>
+                                                        <option value="50000">$50,000</option>
+                                                        <option value="55000">$55,000</option>
+                                                        <option value="60000">$60,000</option>
+                                                        <option value="65000">$65,000</option>
+                                                        <option value="70000">$70,000</option>
+                                                        <option value="75000">$75,000</option>
+                                                        <option value="80000">$80,000</option>
+                                                        <option value="85000">$85,000</option>
+                                                        <option value="90000">$90,000</option>
+                                                        <option value="95000">$95,000</option>
+                                                        <option value="100000">$100,000</option>
+                                                        <option value="110000">$110,000</option>
+                                                        <option value="120000">$120,000</option>
+                                                        <option value="130000">$130,000</option>
+                                                        <option value="140000">$140,000</option>
+                                                        <option value="150000">$150,000</option>
+                                                        <option value="160000">$160,000</option>
+                                                        <option value="170000">$170,000</option>
+                                                        <option value="180000">$180,000</option>
+                                                        <option value="190000">$190,000</option>
+                                                        <option value="200000">$200,000</option>
+
+
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3 col-sm-4  col-12">
+                                                <div class="h-100 d-flex align-items-center">
+                                                    <p class="mb-0 me-2 ">
+                                                        Near
+                                                    </p>
+                                                    <input type="number" class="form-control rounded-0">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-3 my-md-auto my-3 col-12 d-flex align-items-end">
+                                                <a href="#" class="btn btn-primary back-primary w-100 text-center rounded-0">Search</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-3 col-12 d-flex align-items-end">
-                                        <a href="#" class="butn button-dark w-100 text-center">Search</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="financing" role="tabpanel" aria-labelledby="financing-tab">
-                                <div class="row">
+                            <div class="tab-pane fade " id="financing" role="tabpanel" aria-labelledby="financing-tab">
+                                <div class="row py-3">
                                     <div class="col-12 mb-3">
-                                        <h5 class="text-dark fw-bold text-center">
+                                        <h5 class="text-dark fw-bold text-center ">
                                             Shop with real rates in hand
 
 
@@ -1828,7 +1957,8 @@
                                                 <path
                                                     d="m70.212766 0h-63.82978728c-3.52393617 0-6.38297872 2.85904255-6.38297872 6.38297872v46.80851068c0 3.5239361 2.85904255 6.3829787 6.38297872 6.3829787h63.82978728c3.5239361 0 6.3829787-2.8590426 6.3829787-6.3829787v-46.80851068c0-3.52393617-2.8590426-6.38297872-6.3829787-6.38297872zm2.1276595 53.1914894c0 1.1702127-.9574468 2.1276595-2.1276595 2.1276595h-63.82978728c-1.17021276 0-2.12765957-.9574468-2.12765957-2.1276595v-46.80851068c0-1.17021276.95744681-2.12765957 2.12765957-2.12765957h63.82978728c1.1702127 0 2.1276595.95744681 2.1276595 2.12765957zm-46.8085106-9.0425532v1.0638298c0 .8776595-.7180851 1.5957446-1.5957447 1.5957446h-9.5744681c-.8776595 0-1.5957447-.7180851-1.5957447-1.5957446v-1.0638298c0-.8776596.7180852-1.5957447 1.5957447-1.5957447h9.5744681c.8776596 0 1.5957447.7180851 1.5957447 1.5957447zm25.5319149 0v1.0638298c0 .8776595-.7180851 1.5957446-1.5957447 1.5957446h-18.0851064c-.8776596 0-1.5957447-.7180851-1.5957447-1.5957446v-1.0638298c0-.8776596.7180851-1.5957447 1.5957447-1.5957447h18.0851064c.8776596 0 1.5957447.7180851 1.5957447 1.5957447zm13.8297872-35.6382979h-10.6382979c-1.768617 0-3.1914893 1.42287234-3.1914893 3.1914894v6.3829787c0 1.768617 1.4228723 3.1914893 3.1914893 3.1914893h10.6382979c1.768617 0 3.1914894-1.4228723 3.1914894-3.1914893v-6.3829787c0-1.76861706-1.4228724-3.1914894-3.1914894-3.1914894zm-1.0638298 8.5106383h-8.5106383v-4.2553192h8.5106383zm-29.2553191 21.2765957h-7.4468085c-.8776596 0-1.5957447-.7180851-1.5957447-1.5957446v-5.319149c0-.8776596.7180851-1.5957447 1.5957447-1.5957447h7.4468085c.8776596 0 1.5957447.7180851 1.5957447 1.5957447v5.319149c0 .8776595-.7180851 1.5957446-1.5957447 1.5957446zm3.7234042-1.5957446v-5.319149c0-.8776596.7180851-1.5957447 1.5957447-1.5957447h7.4468085c.8776596 0 1.5957447.7180851 1.5957447 1.5957447v5.319149c0 .8776595-.7180851 1.5957446-1.5957447 1.5957446h-7.4468085c-.8776596 0-1.5957447-.7180851-1.5957447-1.5957446zm-25.5319149 0v-5.319149c0-.8776596.7180852-1.5957447 1.5957447-1.5957447h7.4468085c.8776596 0 1.5957447.7180851 1.5957447 1.5957447v5.319149c0 .8776595-.7180851 1.5957446-1.5957447 1.5957446h-7.4468085c-.8776595 0-1.5957447-.7180851-1.5957447-1.5957446zm51.0638298-5.319149v5.319149c0 .8776595-.7180851 1.5957446-1.5957446 1.5957446h-9.5744681c-.8776596 0-1.5957447-.7180851-1.5957447-1.5957446v-5.319149c0-.8776596.7180851-1.5957447 1.5957447-1.5957447h9.5744681c.8776595 0 1.5957446.7180851 1.5957446 1.5957447z"
                                                     fill="#00a0dd" fill-rule="nonzero"
-                                                    transform="translate(0 14.425532)"></path>
+                                                    transform="translate(0 14.425532)">
+                                                </path>
                                                 <g transform="translate(54.106383)">
                                                     <path
                                                         d="m27.5872936 8.59459619 3.7928308 1.90455891 1.8960249 3.8083347c.211671.4244243.6442674.6925102 1.1174677.6925102.4732004 0 .9057967-.2680859 1.1174678-.6925102l1.8960249-3.8083347 3.7928307-1.90455891c.4249399-.21164659.6936766-.64640393.6936766-1.12221749 0-.47581355-.2687367-.91057089-.6936766-1.12221748l-3.7928307-1.90455891-1.8960249-3.8083347c-.4240287-.84969015-1.8109069-.84969015-2.2349355 0l-1.8960249 3.8083347-3.7928308 1.90455891c-.4249399.21164659-.6936766.64640393-.6936766 1.12221748 0 .47581356.2687367.9105709.6936766 1.12221749zm5.2629042-2.07630351c.2449373-.12287123.4436739-.32133858.5667118-.56594399l.9767074-1.95234869.9767074 1.95551039c.1235853.24342877.3222643.44073008.5667119.56278229l1.9565807.97854562-1.9565807.98170732c-.2446049.12333045-.4432141.32167057-.5667119.56594399l-.9767074 1.95551039-.9767074-1.95234869c-.1234977-.24427342-.322107-.44261355-.5667118-.56594399l-1.9565808-.98170732zm4.5565958 23.92795502-1.8958261-3.8083844c-.4239841-.8504844-1.8107168-.8504844-2.234701 0l-1.895826 3.8083844-3.7924329 1.9038006c-.4253272.2114907-.6943906.6464865-.6943906 1.1226237 0 .4761373.2690634.911133.6943906 1.1226237l3.7924329 1.9038007 1.895826 3.8083844c.2116488.4244298.6441998.6925192 1.1173505.6925192.4731508 0 .9057017-.2680894 1.1173505-.6925192l1.8958261-3.8083844 3.7924328-1.9038007c.4253272-.2114907.6943906-.6464864.6943906-1.1226237 0-.4761372-.2690634-.911133-.6943906-1.1226237zm-1.4697573 4.0315075c-.2448264.1233983-.443488.3220677-.5667119.5667344l-.9767074 1.9555104-.9767074-1.9555104c-.1232239-.2446667-.3218854-.4433361-.5667118-.5667344l-1.9565808-.9777552 1.9565808-.9785456c.2448264-.1233983.4434879-.3220678.5667118-.5667344l.9767074-1.95472.9767074 1.95472c.1232239.2446666.3218855.4433361.5667119.5667344l1.9565807.9785456zm-4.0434193-14.0059403c-.0004743-.4896463-.2764504-.9373006-.7135471-1.1574279l-9.0864254-4.5481345-4.5428091-9.10838435c-.4382987-.87715753-1.8718504-.87715753-2.3101492 0l-4.5428091 9.10838435-9.08642539 4.5481345c-.43968713.2181236-.71783469.6667618-.71783469 1.1578318s.27814756.9397082.71783469 1.1578318l9.08642539 4.5521729 4.5428091 9.1035383c.2187945.4377409.6659493.7142382 1.1550746.7142382s.9362801-.2764973 1.1550746-.7142382l4.5428091-9.1035383 9.0864254-4.5505575c.4374794-.2209513.7135471-.6694917.7135471-1.1598511z"
@@ -1839,7 +1969,7 @@
                                                 </g>
                                             </g>
                                         </svg>
-                                        <p class="fs-sm mb-0 text-dark">
+                                        <p class="fs-sm mb-0 text-dark smaller">
                                             No impact on your credit score
                                         </p>
                                     </div>
@@ -1864,7 +1994,7 @@
                                                 </g>
                                             </g>
                                         </svg>
-                                        <p class="fs-sm mb-0 text-dark"> No impact on your credit score</p>
+                                        <p class="fs-sm mb-0 text-dark smaller"> No impact on your credit score</p>
                                     </div>
                                     <div class="col-md-3 col-sm-6 col-12 text-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 79 70"
@@ -1878,10 +2008,10 @@
                                                     fill="#527d89"></path>
                                             </g>
                                         </svg>
-                                        <p class="fs-sm mb-0 text-dark"> No impact on your credit score</p>
+                                        <p class="fs-sm mb-0 text-dark smaller"> No impact on your credit score</p>
                                     </div>
-                                    <div class="col-md-3 col-sm-6 col-12 ">
-                                        <a href="#" class="butn button-dark w-100 text-center">See my options</a>
+                                    <div class="col-md-3 col-sm-6 col-12 my-auto ">
+                                        <a href="#" class="btn btn-primary back-primary w-100 text-center">See my options</a>
                                     </div>
                                 </div>
                             </div>
@@ -2189,7 +2319,7 @@
                     </div>
                 </div>
             </div>
-           
+
             <div class="carousel-control-group my-5 text-end">
 
                 <a id="home_prev">
@@ -3081,7 +3211,7 @@
     </section>
     <section class=" px-0 mt-5">
         <footer class="bg-white text-center text-black">
-            <div class=" p-4">
+            <div class=" p-md-4 p-3">
                 <section class="">
                     <div class="row px-md-5 px-1">
                         <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-start">

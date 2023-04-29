@@ -9823,6 +9823,9 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
+  .shadow-md-none{
+    box-shadow: none !important;
+  }
   .float-md-start {
     float: left !important;
   }
