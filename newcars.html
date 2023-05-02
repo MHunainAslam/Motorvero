@@ -11,6 +11,11 @@
     <script src="./assets/js/bootstrap.js"></script>
     <title>New Cars</title>
 </head>
+<style>
+    .dropdown_items {
+    display: none;
+}
+</style>
 <body>
     <section class="sticky-top">
         <nav class="topNav d-flex align-items-center justify-content-end">
@@ -94,6 +99,1047 @@
             </ul>
         </nav>
     </section>
+    <section class="used-car-top-banner">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div>
+                    <p class="heading">New cars <span> for sale</span>
+                    </p>
+                    <p> Find one that fits your needs and your budget</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="search bg-white py-4">
+        <div class="container-fluid px-md-5 px-sm-3 px-2">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4 class="heading text-start">By Make <span> & Model</span></h4>
+                    <hr class="mx-auto">
+                    <div data-cg-ft="used-cars-search-form">
+                        <div class="row by-make-model">
+                            <div class="col-md-12">
+                                <select name="maker" id="maker" class="rounded-0 form-control">
+
+
+                                    <option value="134">VPG</option>
+                                    <option value="133">Polestar</option>
+                                    <option value="132">Edsel</option>
+                                    <option value="131">SRT</option>
+                                    <option value="130">BRICKLIN</option>
+                                    <option value="129">austin-healey</option>
+                                    <option value="128">autobianchi</option>
+                                    <option value="127">Buick</option>
+                                    <option value="126">Chrysler</option>
+                                    <option value="125">KARMA</option>
+                                    <option value="124">Lada</option>
+                                    <option value="123">Lancia</option>
+                                    <option value="122">MINI</option>
+                                    <option value="121">Hummer</option>
+                                    <option value="120">Ford</option>
+                                    <option value="119">Freightliner</option>
+                                    <option value="118">Franklin</option>
+                                    <option value="117">Intermeccanica</option>
+                                    <option value="116">International Harvester</option>
+                                    <option value="115">Jensen</option>
+                                    <option value="114">Daihatsu</option>
+                                    <option value="113">Duesenberg</option>
+                                    <option value="112">Morris</option>
+                                    <option value="111">Maybach</option>
+                                    <option value="110">MG</option>
+                                    <option value="109">Moskvitch </option>
+                                    <option value="108">Muntz</option>
+                                    <option value="107">Pagani </option>
+                                    <option value="106">BMW</option>
+                                    <option value="105">Pininfarina</option>
+                                    <option value="104">Peugeot</option>
+                                    <option value="103">Kaiser</option>
+                                    <option value="102">Lada</option>
+                                    <option value="101">MG</option>
+                                    <option value="100">De Tomaso</option>
+                                    <option value="99">DeLorean</option>
+                                    <option value="98">Oldsmobile</option>
+                                    <option value="97">Opel</option>
+                                    <option value="96">Nash</option>
+                                    <option value="95">Graham</option>
+                                    <option value="94">Hillman</option>
+                                    <option value="93">DeSoto</option>
+                                    <option value="92">Eagle</option>
+                                    <option value="91">Opel</option>
+                                    <option value="90">Plymouth</option>
+                                    <option value="89">Iso</option>
+                                    <option value="88">Geo</option>
+                                    <option value="87">DODGE</option>
+                                    <option value="86">daewoo</option>
+                                    <option value="85">studebaker</option>
+                                    <option value="84">Triumph </option>
+                                    <option value="83">Packard</option>
+                                    <option value="82">sunbeam</option>
+                                    <option value="81">packard</option>
+                                    <option value="80">Rambler</option>
+                                    <option value="79">Renault</option>
+                                    <option value="78">Reliant</option>
+                                    <option value="77">Riley</option>
+                                    <option value="76">Shelby</option>
+                                    <option value="75">Shelby</option>
+                                    <option value="74">Shelby</option>
+                                    <option value="73">TVR</option>
+                                    <option value="72">Suzuki</option>
+                                    <option value="71">Willys</option>
+                                    <option value="70">Acura</option>
+                                    <option value="69">Alfa Romeo</option>
+                                    <option value="68">HONDA</option>
+                                    <option value="67">acura</option>
+                                    <option value="66">Smart</option>
+                                    <option value="65">GMC</option>
+                                    <option value="64">Maserati</option>
+                                    <option value="62">genesis</option>
+                                    <option value="61">AMC</option>
+                                    <option value="60">Citreon</option>
+                                    <option value="59">Landrover</option>
+                                    <option value="58">Mitsubishi</option>
+                                    <option value="57">lincoln</option>
+                                    <option value="56">AMC</option>
+                                    <option value="55">Subaru </option>
+                                    <option value="54">Isuzu</option>
+                                    <option value="53">FIAT</option>
+                                    <option value="52">Chevrolet</option>
+                                    <option value="51">lotus</option>
+                                    <option value="50">Mazda</option>
+                                    <option value="49">McLaren</option>
+                                    <option value="48">Lamborghini</option>
+                                    <option value="47">amc</option>
+                                    <option value="46">Ferrari</option>
+                                    <option value="45">Pontiac</option>
+                                    <option value="44">Cadillac</option>
+                                    <option value="43">Nissan</option>
+                                    <option value="42">Mercedes Benz</option>
+                                    <option value="41">Jaguar</option>
+                                    <option value="40">Bentley</option>
+                                    <option value="39">amc</option>
+                                    <option value="38">RAM</option>
+                                    <option value="37">Jaguar</option>
+                                    <option value="36">INFINITI</option>
+                                    <option value="34">Volkswagen</option>
+                                    <option value="33">Saturn</option>
+                                    <option value="32">Rover</option>
+                                    <option value="31">Volvo</option>
+                                    <option value="30">SCION</option>
+                                    <option value="29">Mercury</option>
+                                    <option value="28">Saab</option>
+                                    <option value="27">Rolls Royce</option>
+                                    <option value="26">Wagoneer</option>
+                                    <option value="25">kia</option>
+                                    <option value="23">Lexus</option>
+                                    <option value="20">Jaguar</option>
+                                    <option value="17">Aston Martin</option>
+                                    <option value="16">Ariel</option>
+                                    <option value="15">AM General</option>
+                                    <option value="14">allard</option>
+                                    <option value="12">Buick</option>
+                                    <option value="11">Honda</option>
+                                    <option value="10">Hyundai</option>
+                                    <option value="9">Porsche</option>
+                                    <option value="8">BMW</option>
+                                    <option value="7">Tesla </option>
+                                    <option value="6">Toyota</option>
+                                    <option value="5">Audi</option>
+                                    <option value="2">Alfa Romeo</option>
+                                    <option value="1">Acura</option>
+
+
+                                </select>
+                            </div>
+                            <div class="col-md-12 mt-2 ">
+                                <input type="text" name="Year" id="Year" placeholder="Please Enter Year"
+                                    class="form-control">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <input type="text" name="Price" id="Price" placeholder="Enter Price"
+                                    class="form-control">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <input type="text" name="Zip" id="Zip" placeholder="Your ZipCode" class="form-control">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <button id="btnSearch" name="btnSearch"
+                                    class="btn btn-primary back-primary w-100 py-2">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 ps-5">
+                    <h2 class="heading text-start mt-sm-0 mt-3">By Body <span>style </span></h2>
+                    <hr class="mx-auto ecu">
+                    <div class="row carcard">
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                            <a href="./StockSearch.html">
+                                <div class="card h-100" role="option" aria-selected="false" data-body="bg0"
+                                    tabindex="0">
+                                    <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                    <div class="thumb-container">
+                                        <div class="image embedResponsiveItem"
+                                            style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                        </div>
+                                        <picture class="embedResponsiveItem">
+                                            <img draggable="false" alt="Coupe Body Style"
+                                                src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                class="w-100 px-2 py-1">
+                                        </picture>
+
+                                    </div>
+                                    <div class="cardBody">
+                                        <h6 class="title">Coupe</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                            <a href="./StockSearch.html">
+                                <div class="card h-100" role="option" aria-selected="false" data-body="bg0"
+                                    tabindex="0">
+                                    <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                    <div class="thumb-container">
+                                        <div class="image embedResponsiveItem"
+                                            style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                        </div>
+                                        <picture class="embedResponsiveItem">
+                                            <img draggable="false" alt="Coupe Body Style"
+                                                src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                                class="w-100 px-2 py-1">
+                                        </picture>
+
+                                    </div>
+                                    <div class="cardBody">
+                                        <h6 class="title">Coupe</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                           <a href="./StockSearch.html"> <div class="card h-100" role="option" aria-selected="false" data-body="bg0" tabindex="0">
+                                <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                <div class="thumb-container">
+                                    <div class="image embedResponsiveItem"
+                                        style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                    </div>
+                                    <picture class="embedResponsiveItem">
+                                        <img draggable="false" alt="Coupe Body Style"
+                                            src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            class="w-100 px-2 py-1">
+                                    </picture>
+
+                                </div>
+                                <div class="cardBody">
+                                    <h6 class="title">Coupe</h6>
+                                </div>
+                            </div></a>
+                        </div>
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                           <a href="./StockSearch.html"> <div class="card h-100" role="option" aria-selected="false" data-body="bg0" tabindex="0">
+                                <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                <div class="thumb-container">
+                                    <div class="image embedResponsiveItem"
+                                        style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                    </div>
+                                    <picture class="embedResponsiveItem">
+                                        <img draggable="false" alt="Coupe Body Style"
+                                            src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            class="w-100 px-2 py-1">
+                                    </picture>
+
+                                </div>
+                                <div class="cardBody">
+                                    <h6 class="title">Coupe</h6>
+                                </div>
+                            </div></a>
+                        </div>
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                           <a href="./StockSearch.html"> <div class="card h-100" role="option" aria-selected="false" data-body="bg0" tabindex="0">
+                                <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                <div class="thumb-container">
+                                    <div class="image embedResponsiveItem"
+                                        style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                    </div>
+                                    <picture class="embedResponsiveItem">
+                                        <img draggable="false" alt="Coupe Body Style"
+                                            src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            class="w-100 px-2 py-1">
+                                    </picture>
+
+                                </div>
+                                <div class="cardBody">
+                                    <h6 class="title">Coupe</h6>
+                                </div>
+                            </div></a>
+                        </div>
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                           <a href="./StockSearch.html"> <div class="card h-100" role="option" aria-selected="false" data-body="bg0" tabindex="0">
+                                <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                <div class="thumb-container">
+                                    <div class="image embedResponsiveItem"
+                                        style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                    </div>
+                                    <picture class="embedResponsiveItem">
+                                        <img draggable="false" alt="Coupe Body Style"
+                                            src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            class="w-100 px-2 py-1">
+                                    </picture>
+
+                                </div>
+                                <div class="cardBody">
+                                    <h6 class="title">Coupe</h6>
+                                </div>
+                            </div></a>
+                        </div>
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                           <a href="./StockSearch.html"> <div class="card h-100" role="option" aria-selected="false" data-body="bg0" tabindex="0">
+                                <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                <div class="thumb-container">
+                                    <div class="image embedResponsiveItem"
+                                        style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                    </div>
+                                    <picture class="embedResponsiveItem">
+                                        <img draggable="false" alt="Coupe Body Style"
+                                            src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            class="w-100 px-2 py-1">
+                                    </picture>
+
+                                </div>
+                                <div class="cardBody">
+                                    <h6 class="title">Coupe</h6>
+                                </div>
+                            </div></a>
+                        </div>
+                        <div class="col-md-3 px-1 mt-2 col-6 col-sm-4 ">
+                           <a href="./StockSearch.html"> <div class="card h-100" role="option" aria-selected="false" data-body="bg0" tabindex="0">
+                                <input type="checkbox" name="carModel" class="carModelCheckbox" id="">
+
+                                <div class="thumb-container">
+                                    <div class="image embedResponsiveItem"
+                                        style="background-image: URL('https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp')">
+                                    </div>
+                                    <picture class="embedResponsiveItem">
+                                        <img draggable="false" alt="Coupe Body Style"
+                                            src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            data-src="https://static1.cargurus.com/gfx/reskin/bodystyle/small/coupe.png?io=true&amp;format=jpg&amp;auto=webp"
+                                            class="w-100 px-2 py-1">
+                                    </picture>
+
+                                </div>
+                                <div class="cardBody">
+                                    <h6 class="title">Coupe</h6>
+                                </div>
+                            </div></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5 sec used-sec-2 py-0">
+        <div class="used-sec-2-key-info ">
+            <div class="container-fluid px-md-5 px-sm-3 px-2 position-relative h-100">
+                <div class="row h-75 py-md-auto py-5">
+                    <div class="col-md-6 col-12 my-auto ">
+                        <h2 class="text-white 
+                         fw-normal font-primary">
+                            Key info. All upfront.
+                        </h2>
+                        <h6 class="text-white my-3 lh-sm">Making information hard to find? Not our thing. The moment you
+                            click on any car, you’ll see its deal rating, accident history, number of owners, and days
+                            on lot so you know exactly what you’re getting.
+                        </h6>
+                        <div class="d-flex ">
+                            <img src="./assets/images/icon/icon1.png" class="col-1 col-md-2" alt="">
+                            <p class="fs-6  fw-bold font-secondary my-auto ms-3 text-white">Great Deal</p>
+                        </div>
+                        <div class="d-flex ">
+                            <img src="./assets/images/icon/icon2.png" class="col-1 col-md-2" alt="">
+                            <p class="fs-6  fw-bold font-secondary my-auto ms-3 text-white">One owner</p>
+                        </div>
+                        <div class="d-flex ">
+                            <img src="./assets/images/icon/icon3.png" class="col-1 col-md-2" alt="">
+                            <p class="fs-6  fw-bold font-secondary my-auto ms-3 text-white">Accident Check</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 my-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container-fluid px-md-5 px-sm-3 px-2">
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">How do I know if
+                                I am
+                                getting a good deal?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">
+                                How do I finance a used car?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">Can I lease a
+                                used car?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">Are loan rates
+                                higher for used cars? Why?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">How much mileage
+                                is too much?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">What’s an
+                                extended warranty? Is it worth it?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">Is it better to
+                                buy privately or through a dealer?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">What’s certified
+                                pre-owned (CPO)?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">Is it better to
+                                buy a used or new car?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row  p-1  py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="button-primary dropdown_menu  rounded-5 back-light p-2 px-3 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-flex justify-content-between">
+                            <h4 class="text-black fs-6 fw-bold py-2 text-md-center text-start my-auto">What additional
+                                fees must I pay when buying a used car?
+                            </h4>
+                            <div class="my-auto"><i class="fa-solid fa-angle-down fs-5 clr-dark"></i></div>
+                        </div>
+
+
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items  bg-white rounded-3 ">
+                        <div class="row text-center">
+                            <p>Rest assured you’re getting a good deal thanks to the proprietary CarGurus Instant Market
+                                Value (IMV). We analyze every deal and give it a rating from Overpriced to Great. And
+                                since we’re the largest online car marketplace, we know a good deal when we see one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5">
+        <div class="container-fluid mt-5 px-md-5 px-sm-3 px-2">
+            <div class="row p-md-4 p-1 py-md-5 py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="btn dropdown_menu2 bg-md-auto bg-white rounded-3 shadow-md-none shadow-sm p-2 px-3 border-0 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-md-block d-flex justify-content-between">
+                            <h4 class="accordion-heading text-md-center text-start my-auto">Popular <span>Used
+                                    Cars</span></h4>
+                            <div class="d-md-none d-block my-auto"><i class="fa-solid fa-angle-down fs-5"></i></div>
+                        </div>
+
+                        <hr class="mx-auto ecu-2 d-md-block d-none">
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items2 bg-md-auto bg-white rounded-3 p-md-0 p-3 mb-md-0 mb-3">
+                        <div class="row px-md-3">
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2 "><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#" class="text-dark h5 fw-bold">2016
+                                    Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5 fw-bold ">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5 px-md-5 px-sm-3 px-2">
+            <div class="row p-md-4 p-1 py-md-5 py-0 parent_dropdown">
+                <div class="col-12">
+                    <button
+                        class="btn dropdown_menu2 bg-md-auto bg-white rounded-3 shadow-md-none shadow-sm p-2 px-3 border-0 fs-2 d-md-block mb-3 w-100">
+                        <div class="d-md-block d-flex justify-content-between">
+                            <h4 class="accordion-heading text-md-center text-start my-auto">Popular <span>New
+                                    Cars</span></h4>
+                            <div class="d-md-none d-block my-auto"><i class="fa-solid fa-angle-down fs-5"></i></div>
+                        </div>
+
+                        <hr class="mx-auto ecu-2 d-md-block d-none">
+
+                    </button>
+
+                </div>
+                <div class="col-12">
+                    <div class="dropdown_items2 bg-md-auto bg-white rounded-3 p-md-0 p-3 mb-md-0 mb-3">
+                        <div class="row px-md-3">
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2 "><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#" class="text-dark h5 fw-bold">2016
+                                    Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5  fw-bold">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+                            <div class="lh-1 col-md-3 col-sm-4 col-6 my-2"><a href="#"
+                                    class="text-dark h5 fw-bold ">2016 Hyundai Accent SE 4-Door Hatchback FWD </a>
+                                <p class="smaller my-2">
+                                    Starting at </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class=" px-0 mt-5">
+        <footer class="bg-white text-center mt-5 text-black">
+            <div class=" p-md-4 p-3">
+                <section class="">
+                    <div class="row px-md-5 px-1">
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-start">
+                            <h5 class="heading-m clr-dark text-start">Company</h5>
+                            <ul class="list-unstyled mb-0 footer-li">
+                                <li>
+                                    <a href="#!" class="text-black">About MotorVero</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Our Team</a>
+                                </li>
+
+                                <a href="#!" class="text-black">Press Room</a>
+
+                                <li>
+                                    <a href="#!" class="text-black">Sell my car</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Careers</a>
+                                </li>
+
+                                <li>
+                                    <a href="#!" class="text-black">Site map</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-start">
+                            <h5 class="heading-m text-start clr-dark">For <span> Dealers</span>
+                            </h5>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-black">Dealer Signup</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Become a Dealer</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Find a Dealer</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-start">
+                            <h5 class="heading-m clr-dark text-start">For <span> Help</span>
+                            </h5>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-black">Customer Support</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">How Delivery Works</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-start">
+                            <h5 class="heading-m clr-dark text-start">Terms</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-black">Do Not Sell My Personal Information</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Terms of Use</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Interest-Based Ads</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-black">Security</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-start">
+                            <form action="">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-12">
+                                        <p class="mb-2 heading-m text-start">
+                                            Sign up for our <span> newsletter</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12  my-2">
+                                        <div class="form-floating">
+                                            <input type="email"
+                                                class="form-control box-shadow-0 bg-transparent border-black text-black"
+                                                id="floatingInput" placeholder="name@example.com">
+                                            <label for="floatingInput" class="text-dark">Email address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 my-2">
+                                        <button type="submit"
+                                            class="btn btn-primary  rounded-4 back-primary border-0 mb-2 h-100 px-4">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 my-2 text-start">
+                            <a class="btn btn-outline-dark btn-floating rounded-circle footerIcons mt-1"
+                                href="https://www.facebook.com/motorvero/" role="button"><i class="fab fa-facebook-f"
+                                    aria-hidden="true"></i></a>
+                            <a class="btn btn-outline-dark btn-floating rounded-circle footerIcons mt-1"
+                                href="https://www.twitter.com/cargurus/" role="button"><i class="fab fa-twitter"
+                                    aria-hidden="true"></i></a>
+                            <a class="btn btn-outline-dark btn-floating rounded-circle footerIcons mt-1"
+                                href="https://www.pinterest.com/cargurus" role="button"><i class="fab fa-pinterest"
+                                    aria-hidden="true"></i></a>
+                            <a class="btn btn-outline-dark btn-floating rounded-circle footerIcons mt-1"
+                                href="https://www.youtube.com/cargurus" role="button"><i class="fab fa-youtube"
+                                    aria-hidden="true"></i></a>
+                            <a class="btn btn-outline-dark btn-floating rounded-circle footerIcons mt-1"
+                                href="https://instagram.com/motorvero/" role="button"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a>
+                            <a class="btn btn-outline-dark btn-floating rounded-circle footerIcons mt-1"
+                                href="https://www.linkedin.com/company/cargurus" role="button"><i
+                                    class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="text-center p-2">
+                © 2022 <b> MotorVero</b>,
+                <a class="text-black" href="#">Inc., All Rights Reserved.</a>
+            </div>
+
+        </footer>
+
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+    <script>
+        function checkMedia(x) {
+            // if (x.matches) {
+            $(".dropdown_menu").click(function () {
+                $(this).parents('.parent_dropdown').find(".dropdown_items").slideToggle();
+                $(this).parents('.parent_dropdown').find(".dropdown_menu").toggleClass('active');
+                // console.log($(this).parents('.parent_dropdown').find(".dropdown_menu"));
+            });
+
+            // } else {
+            // document.body.style.backgroundColor = "pink";
+            // }
+        }
+        function checkMedia2(y) {
+            if (y.matches) {
+                $(".dropdown_menu2").click(function () {
+                    $(this).parents('.parent_dropdown').find(".dropdown_items2").slideToggle();
+                    $(this).parents('.parent_dropdown').find(".dropdown_menu2").toggleClass('active');
+                    // console.log($(this).parents('.parent_dropdown').find(".dropdown_menu"));
+                });
+            }
+
+
+        }
+        var y = window.matchMedia("(max-width: 768px)")
+        checkMedia2(y)
+        y.addListener(checkMedia2)
+        // var x = window.matchMedia("(max-width: 768px)")
+        checkMedia('')
+        // x.addListener(checkMedia)
+    </script>
     <script src="./assets/js/nav.js"></script>
 </body>
 </html>

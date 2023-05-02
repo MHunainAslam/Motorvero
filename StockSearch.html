@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,28 +12,603 @@
     <script src="./assets/js/bootstrap.js"></script>
     <title>Stock Search</title>
 </head>
+<style>
+    .qJTHM {
+        -webkit-user-select: none;
+        color: #202124;
+        direction: ltr;
+        -webkit-touch-callout: none;
+        font-family: 'Roboto-Regular', arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+        margin: 0;
+        overflow: hidden;
+        -webkit-text-size-adjust: 100%
+    }
+
+    .ynRLnc {
+        left: -9999px;
+        position: absolute;
+        top: -9999px
+    }
+
+    .L6cTce {
+        display: none
+    }
+
+    .bltWBb {
+        word-break: break-all
+    }
+
+    .hSRGPd {
+        color: #1a73e8;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none
+    }
+
+    .Bz112c-W3lGp {
+        height: 16px;
+        width: 16px
+    }
+
+    .Bz112c-E3DyYd {
+        height: 20px;
+        width: 20px
+    }
+
+    .Bz112c-r9oPif {
+        height: 24px;
+        width: 24px
+    }
+
+    .Bz112c-uaxL4e {
+        -webkit-border-radius: 10px;
+        border-radius: 10px
+    }
+
+    .LgbsSe-Bz112c {
+        display: block
+    }
+
+    .S9gUrf-YoZ4jf,
+    .S9gUrf-YoZ4jf * {
+        border: none;
+        margin: 0;
+        padding: 0
+    }
+
+    .fFW7wc-ibnC6b>.aZ2wEe>div {
+        border-color: #4285f4
+    }
+
+    .P1ekSe-ZMv3u>div:nth-child(1) {
+        background-color: #1a73e8 !important
+    }
+
+    .P1ekSe-ZMv3u>div:nth-child(2),
+    .P1ekSe-ZMv3u>div:nth-child(3) {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(to right, #1a73e8, #1a73e8) !important
+    }
+
+    .haAclf {
+        display: inline-block
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe {
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: background-color .218s, border-color .218s;
+        transition: background-color .218s, border-color .218s;
+        -webkit-user-select: none;
+        -webkit-appearance: none;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #dadce0;
+        color: #3c4043;
+        cursor: pointer;
+        font-family: 'Google Sans', arial, sans-serif;
+        font-size: 14px;
+        height: 40px;
+        letter-spacing: 0.25px;
+        outline: none;
+        overflow: hidden;
+        padding: 0 12px;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: auto
+    }
+
+    @media screen and (-ms-high-contrast: active) {
+        .nsm7Bb-HzV7m-LgbsSe {
+            border: 2px solid windowText;
+            color: windowText
+        }
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe {
+        font-size: 14px;
+        height: 32px;
+        letter-spacing: 0.25px;
+        padding: 0 10px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe {
+        font-size: 11px;
+        height: 20px;
+        letter-spacing: 0.3px;
+        padding: 0 8px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe {
+        padding: 0;
+        width: 40px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe {
+        width: 32px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe {
+        width: 20px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK {
+        -webkit-border-radius: 20px;
+        border-radius: 20px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe {
+        -webkit-border-radius: 16px;
+        border-radius: 16px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe {
+        -webkit-border-radius: 10px;
+        border-radius: 10px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc {
+        border: none;
+        color: #fff
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc {
+        background-color: #1a73e8
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc {
+        background-color: #202124;
+        color: #e8eaed
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        height: 18px;
+        margin-right: 8px;
+        min-width: 18px;
+        width: 18px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        height: 14px;
+        min-width: 14px;
+        width: 14px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        height: 10px;
+        min-width: 10px;
+        width: 10px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        margin-left: 8px;
+        margin-right: -4px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        margin: 0;
+        padding: 10px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        padding: 8px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        padding: 4px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        -webkit-border-top-left-radius: 3px;
+        border-top-left-radius: 3px;
+        -webkit-border-bottom-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        background-color: #fff;
+        height: 36px;
+        margin-left: -10px;
+        margin-right: 12px;
+        min-width: 36px;
+        width: 36px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c {
+        margin: 0;
+        padding: 0
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        height: 28px;
+        margin-left: -8px;
+        margin-right: 10px;
+        min-width: 28px;
+        width: 28px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        height: 16px;
+        margin-left: -6px;
+        margin-right: 8px;
+        min-width: 16px;
+        width: 16px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        margin-left: 2px;
+        margin-right: 0;
+        padding: 0
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        -webkit-border-radius: 18px;
+        border-radius: 18px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        -webkit-border-radius: 14px;
+        border-radius: 14px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        -webkit-border-radius: 8px;
+        border-radius: 8px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        height: 100%;
+        position: relative;
+        width: 100%
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX {
+        justify-content: center
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        font-family: 'Google Sans', arial, sans-serif;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: top
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        font-weight: 300
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        -webkit-flex-grow: 0;
+        flex-grow: 0
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        -webkit-transition: background-color .218s;
+        transition: background-color .218s;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe:hover,
+    .nsm7Bb-HzV7m-LgbsSe:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: #d2e3fc;
+        outline: none
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,
+    .nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(66, 133, 244, 0.04)
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(66, 133, 244, 0.1)
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,
+    .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(255, 255, 255, 0.24)
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe {
+        background: rgba(255, 255, 255, 0.32)
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY {
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        height: 20px;
+        margin-left: -4px;
+        margin-right: 8px;
+        min-width: 20px;
+        width: 20px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+        font-family: 'Roboto';
+        font-size: 12px;
+        text-align: left
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS {
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        color: #5f6368;
+        fill: #5f6368;
+        font-size: 11px;
+        font-weight: 400
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff {
+        color: #e8eaed;
+        fill: #e8eaed
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c {
+        height: 18px;
+        margin: -3px -3px -3px 2px;
+        min-width: 18px;
+        width: 18px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        -webkit-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+        -webkit-border-bottom-left-radius: 0;
+        border-bottom-left-radius: 0;
+        -webkit-border-top-right-radius: 3px;
+        border-top-right-radius: 3px;
+        -webkit-border-bottom-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        margin-left: 12px;
+        margin-right: -10px
+    }
+
+    .nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf {
+        -webkit-border-radius: 18px;
+        border-radius: 18px
+    }
+
+    .L5Fo6c-sM5MNb {
+        border: 0;
+        display: block;
+        left: 0;
+        position: relative;
+        top: 0
+    }
+
+    .L5Fo6c-bF1uUb {
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+
+    .L5Fo6c-bF1uUb:focus {
+        border: none;
+        outline: none
+    }
+
+    .searchPanel {
+        background-color: #f5f6f6;
+        border: 1px solid #cccccc;
+        padding: 0.5rem;
+        margin-bottom: 0.625rem;
+        border-radius: 14px;
+        width: 100%;
+    }
+
+    #main .tabList.main {
+        margin: 0.5rem;
+        width: calc(100% - 1rem);
+    }
+
+    #main .tabList.main {
+        padding: 0.25rem;
+    }
+
+    #main ul.tabList {
+        padding-left: 0px;
+    }
+
+    #main .tabList {
+        border-radius: 54px;
+    }
+
+    .tabList.main {
+        align-content: stretch;
+        background-color: #ffffff;
+        border: 1px solid #cdd2d2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0 0 0.5rem;
+        width: 100%;
+    }
+
+    .tabList {
+        align-content: stretch;
+        background-color: #ffffff;
+        border: 1px solid #cdd2d2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0 0 1rem;
+        width: 100%;
+    }
+
+    #main .tabList .tab {
+        border-radius: 36px;
+    }
+
+    .tabList .tab.selected {
+        background-color: #4a93d2;
+        color: #ffffff;
+    }
+
+    .tabList.main .tab {
+        border-right: 1px solid #cdd2d2;
+        color: #006598;
+        padding: 0.6rem 0;
+    }
+
+    .tab {
+        cursor: pointer;
+        border-right: 0.1rem solid #cdd2d2;
+        color: #000;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 0.4rem 0;
+    }
+
+    .tabList.main .tab:last-child,
+    .tab:last-child {
+        border-right: none;
+    }
+
+    .tabList.main .tab {
+        border-right: 1px solid #cdd2d2;
+        color: #006598;
+        padding: 0.6rem 0;
+    }
+
+    .tab {
+        cursor: pointer;
+        border-right: 0.1rem solid #cdd2d2;
+        color: #000;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 0.4rem 0;
+    }
+
+    .tabGroup {
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+    #main ul.tabList {
+    padding-left: 0px;
+}
+#main .tabList {
+    border-radius: 54px;
+}
+.tabList {
+    align-content: stretch;
+    background-color: #ffffff;
+    border: 1px solid #cdd2d2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 0 1rem;
+    width: 100%;
+}
+    /*# sourceURL=/_/gsi/_/ss/k=gsi.gsi.tCB0CF0PYPo.L.W.O/am=chE/d=1/rs=AF0KOtVnwrR3G0SH_dAafZ_I2U2nbna7aw/m=gis_client_button_style */
+</style>
+
 <body>
     <section class="sticky-top">
         <nav class="topNav d-flex align-items-center justify-content-end">
             <div class="buttons d-flex h-100 align-items-center fw-bold">
                 <a href="#" class="h-50 topNavBtn d-flex align-items-center bdr skew">
-                    <svg class="me-3" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.67517 3.82332L3.7734 6.40081H13.9244L13.0226 3.82332C12.8672 3.38107 12.4491 3.08393 11.9792 3.08393H5.71861C5.24871 3.08393 4.83065 3.38107 4.67517 3.82332ZM1.37212 6.56665L2.5883 3.0943C3.05474 1.76409 4.30893 0.872681 5.71861 0.872681H11.9792C13.3889 0.872681 14.6431 1.76409 15.1095 3.0943L16.3257 6.56665C17.1273 6.89834 17.6939 7.68955 17.6939 8.61206V15.2458C17.6939 15.8574 17.1998 16.3514 16.5883 16.3514H15.4827C14.8711 16.3514 14.377 15.8574 14.377 15.2458V13.5874H3.32078V15.2458C3.32078 15.8574 2.82671 16.3514 2.21516 16.3514H1.10953C0.497982 16.3514 0.00390625 15.8574 0.00390625 15.2458V8.61206C0.00390625 7.68955 0.570539 6.89834 1.37212 6.56665ZM4.42641 9.71768C4.42641 9.10613 3.93233 8.61206 3.32078 8.61206C2.70923 8.61206 2.21516 9.10613 2.21516 9.71768C2.21516 10.3292 2.70923 10.8233 3.32078 10.8233C3.93233 10.8233 4.42641 10.3292 4.42641 9.71768ZM14.377 10.8233C14.9886 10.8233 15.4827 10.3292 15.4827 9.71768C15.4827 9.10613 14.9886 8.61206 14.377 8.61206C13.7655 8.61206 13.2714 9.10613 13.2714 9.71768C13.2714 10.3292 13.7655 10.8233 14.377 10.8233Z" fill="#059DF3"></path>
+                    <svg class="me-3" width="18" height="17" viewBox="0 0 18 17" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.67517 3.82332L3.7734 6.40081H13.9244L13.0226 3.82332C12.8672 3.38107 12.4491 3.08393 11.9792 3.08393H5.71861C5.24871 3.08393 4.83065 3.38107 4.67517 3.82332ZM1.37212 6.56665L2.5883 3.0943C3.05474 1.76409 4.30893 0.872681 5.71861 0.872681H11.9792C13.3889 0.872681 14.6431 1.76409 15.1095 3.0943L16.3257 6.56665C17.1273 6.89834 17.6939 7.68955 17.6939 8.61206V15.2458C17.6939 15.8574 17.1998 16.3514 16.5883 16.3514H15.4827C14.8711 16.3514 14.377 15.8574 14.377 15.2458V13.5874H3.32078V15.2458C3.32078 15.8574 2.82671 16.3514 2.21516 16.3514H1.10953C0.497982 16.3514 0.00390625 15.8574 0.00390625 15.2458V8.61206C0.00390625 7.68955 0.570539 6.89834 1.37212 6.56665ZM4.42641 9.71768C4.42641 9.10613 3.93233 8.61206 3.32078 8.61206C2.70923 8.61206 2.21516 9.10613 2.21516 9.71768C2.21516 10.3292 2.70923 10.8233 3.32078 10.8233C3.93233 10.8233 4.42641 10.3292 4.42641 9.71768ZM14.377 10.8233C14.9886 10.8233 15.4827 10.3292 15.4827 9.71768C15.4827 9.10613 14.9886 8.61206 14.377 8.61206C13.7655 8.61206 13.2714 9.10613 13.2714 9.71768C13.2714 10.3292 13.7655 10.8233 14.377 10.8233Z"
+                            fill="#059DF3"></path>
                     </svg>
                     MOTORVERO
                 </a>
 
                 <a href="./login.html" class="h-50 topNavBtn d-flex align-items-center bdr">
-                    <svg class="me-3" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.24353 0.88855C4.52025 0.88855 0.693359 4.72369 0.693359 9.45714C0.693359 14.1906 4.52025 18.0257 9.24353 18.0257C13.9668 18.0257 17.7937 14.1906 17.7937 9.45714C17.7937 4.72369 13.9668 0.88855 9.24353 0.88855ZM9.24353 4.20542C10.9191 4.20542 12.2775 5.56673 12.2775 7.24589C12.2775 8.92506 10.9191 10.2864 9.24353 10.2864C7.56797 10.2864 6.2096 8.92506 6.2096 7.24589C6.2096 5.56673 7.56797 4.20542 9.24353 4.20542ZM9.24353 16.0909C7.21976 16.0909 5.40629 15.1718 4.19272 13.7345C4.84088 12.5114 6.10961 11.6684 7.58865 11.6684C7.6714 11.6684 7.75414 11.6822 7.83344 11.7064C8.28163 11.8515 8.75051 11.9448 9.24353 11.9448C9.73654 11.9448 10.2089 11.8515 10.6536 11.7064C10.7329 11.6822 10.8157 11.6684 10.8984 11.6684C12.3774 11.6684 13.6462 12.5114 14.2943 13.7345C13.0808 15.1718 11.2673 16.0909 9.24353 16.0909Z" fill="#059DF3"></path>
+                    <svg class="me-3" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.24353 0.88855C4.52025 0.88855 0.693359 4.72369 0.693359 9.45714C0.693359 14.1906 4.52025 18.0257 9.24353 18.0257C13.9668 18.0257 17.7937 14.1906 17.7937 9.45714C17.7937 4.72369 13.9668 0.88855 9.24353 0.88855ZM9.24353 4.20542C10.9191 4.20542 12.2775 5.56673 12.2775 7.24589C12.2775 8.92506 10.9191 10.2864 9.24353 10.2864C7.56797 10.2864 6.2096 8.92506 6.2096 7.24589C6.2096 5.56673 7.56797 4.20542 9.24353 4.20542ZM9.24353 16.0909C7.21976 16.0909 5.40629 15.1718 4.19272 13.7345C4.84088 12.5114 6.10961 11.6684 7.58865 11.6684C7.6714 11.6684 7.75414 11.6822 7.83344 11.7064C8.28163 11.8515 8.75051 11.9448 9.24353 11.9448C9.73654 11.9448 10.2089 11.8515 10.6536 11.7064C10.7329 11.6822 10.8157 11.6684 10.8984 11.6684C12.3774 11.6684 13.6462 12.5114 14.2943 13.7345C13.0808 15.1718 11.2673 16.0909 9.24353 16.0909Z"
+                            fill="#059DF3"></path>
                     </svg>
 
                     LOGIN / SIGNUP
                 </a>
                 <a href="tel:00000000" class="h-50 topNavBtn d-flex align-items-center">
-                    <svg class="me-3" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.4589 7.77798H16.1255C16.1255 3.50297 12.898 0.278809 8.61719 0.278809V1.94548C12.0022 1.94548 14.4589 4.39797 14.4589 7.77798Z" fill="#059DF3"></path>
-                        <path d="M8.62654 5.27884C10.379 5.27884 11.1265 6.02634 11.1265 7.77884H12.7932C12.7932 5.09134 11.314 3.61218 8.62654 3.61218V5.27884ZM11.4782 9.81468C11.3181 9.66914 11.1077 9.59152 10.8914 9.5982C10.6751 9.60489 10.4699 9.69536 10.319 9.85051L8.32487 11.9013C7.84487 11.8097 6.87987 11.5088 5.88654 10.518C4.8932 9.52384 4.59237 8.55634 4.5032 8.07968L6.55237 6.08468C6.70771 5.93395 6.79832 5.7287 6.805 5.51235C6.81169 5.296 6.73394 5.08555 6.5882 4.92551L3.50904 1.53968C3.36324 1.37914 3.1606 1.28177 2.94416 1.26823C2.72773 1.25469 2.51454 1.32606 2.34987 1.46718L0.541537 3.01801C0.397463 3.16261 0.31147 3.35505 0.29987 3.55884C0.28737 3.76718 0.0490371 8.70218 3.8757 12.5305C7.21404 15.868 11.3957 16.1122 12.5474 16.1122C12.7157 16.1122 12.819 16.1072 12.8465 16.1055C13.0503 16.0941 13.2426 16.0077 13.3865 15.863L14.9365 14.0538C15.0778 13.8893 15.1493 13.6762 15.1359 13.4597C15.1225 13.2433 15.0253 13.0406 14.8649 12.8947L11.4782 9.81468V9.81468Z" fill="#059DF3"></path>
+                    <svg class="me-3" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.4589 7.77798H16.1255C16.1255 3.50297 12.898 0.278809 8.61719 0.278809V1.94548C12.0022 1.94548 14.4589 4.39797 14.4589 7.77798Z"
+                            fill="#059DF3"></path>
+                        <path
+                            d="M8.62654 5.27884C10.379 5.27884 11.1265 6.02634 11.1265 7.77884H12.7932C12.7932 5.09134 11.314 3.61218 8.62654 3.61218V5.27884ZM11.4782 9.81468C11.3181 9.66914 11.1077 9.59152 10.8914 9.5982C10.6751 9.60489 10.4699 9.69536 10.319 9.85051L8.32487 11.9013C7.84487 11.8097 6.87987 11.5088 5.88654 10.518C4.8932 9.52384 4.59237 8.55634 4.5032 8.07968L6.55237 6.08468C6.70771 5.93395 6.79832 5.7287 6.805 5.51235C6.81169 5.296 6.73394 5.08555 6.5882 4.92551L3.50904 1.53968C3.36324 1.37914 3.1606 1.28177 2.94416 1.26823C2.72773 1.25469 2.51454 1.32606 2.34987 1.46718L0.541537 3.01801C0.397463 3.16261 0.31147 3.35505 0.29987 3.55884C0.28737 3.76718 0.0490371 8.70218 3.8757 12.5305C7.21404 15.868 11.3957 16.1122 12.5474 16.1122C12.7157 16.1122 12.819 16.1072 12.8465 16.1055C13.0503 16.0941 13.2426 16.0077 13.3865 15.863L14.9365 14.0538C15.0778 13.8893 15.1493 13.6762 15.1359 13.4597C15.1225 13.2433 15.0253 13.0406 14.8649 12.8947L11.4782 9.81468V9.81468Z"
+                            fill="#059DF3"></path>
                     </svg>
 
                     (336) 228-6493
@@ -51,11 +627,11 @@
                 <div class="bars3"></div>
             </div>
             <ul class="nav-links">
-                <li><a href="./usedcars.html" class="text-uppercase ">used cars</a></li>
-                <li><a href="./newcars.html" class="text-uppercase">new cars</a></li>
+                <li><a href="./usedcars.html" class="text-uppercase">used cars</a></li>
+                <li><a href="./newcars.html" class="text-uppercase ">new cars</a></li>
                 <li><a href="./certifiedcars.html" class="text-uppercase ">certified cars</a></li>
-                <li><a href="./financing.html" class="text-uppercase active">financing</a></li>
-                <li><a href="./research.html" class="text-uppercase">research</a></li>
+                <li><a href="./financing.html" class="text-uppercase">financing</a></li>
+                <li><a href="./research.html" class="text-uppercase ">research</a></li>
 
                 <li><button class="book-button" href="#">SELL MY CAR</button></li>
                 <!-- <li class="phoneSearch"><a href="#" class="text-uppercase">
@@ -68,23 +644,34 @@
                 <li class="phoneTopBar">
                     <div class="buttons d-flex w-100 justify-content-evenly align-items-center">
                         <a href="#" class=" topNavBtn d-flex align-items-center">
-                            <svg class="me-3" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.67517 3.82332L3.7734 6.40081H13.9244L13.0226 3.82332C12.8672 3.38107 12.4491 3.08393 11.9792 3.08393H5.71861C5.24871 3.08393 4.83065 3.38107 4.67517 3.82332ZM1.37212 6.56665L2.5883 3.0943C3.05474 1.76409 4.30893 0.872681 5.71861 0.872681H11.9792C13.3889 0.872681 14.6431 1.76409 15.1095 3.0943L16.3257 6.56665C17.1273 6.89834 17.6939 7.68955 17.6939 8.61206V15.2458C17.6939 15.8574 17.1998 16.3514 16.5883 16.3514H15.4827C14.8711 16.3514 14.377 15.8574 14.377 15.2458V13.5874H3.32078V15.2458C3.32078 15.8574 2.82671 16.3514 2.21516 16.3514H1.10953C0.497982 16.3514 0.00390625 15.8574 0.00390625 15.2458V8.61206C0.00390625 7.68955 0.570539 6.89834 1.37212 6.56665ZM4.42641 9.71768C4.42641 9.10613 3.93233 8.61206 3.32078 8.61206C2.70923 8.61206 2.21516 9.10613 2.21516 9.71768C2.21516 10.3292 2.70923 10.8233 3.32078 10.8233C3.93233 10.8233 4.42641 10.3292 4.42641 9.71768ZM14.377 10.8233C14.9886 10.8233 15.4827 10.3292 15.4827 9.71768C15.4827 9.10613 14.9886 8.61206 14.377 8.61206C13.7655 8.61206 13.2714 9.10613 13.2714 9.71768C13.2714 10.3292 13.7655 10.8233 14.377 10.8233Z" fill="#059DF3"></path>
+                            <svg class="me-3" width="18" height="17" viewBox="0 0 18 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.67517 3.82332L3.7734 6.40081H13.9244L13.0226 3.82332C12.8672 3.38107 12.4491 3.08393 11.9792 3.08393H5.71861C5.24871 3.08393 4.83065 3.38107 4.67517 3.82332ZM1.37212 6.56665L2.5883 3.0943C3.05474 1.76409 4.30893 0.872681 5.71861 0.872681H11.9792C13.3889 0.872681 14.6431 1.76409 15.1095 3.0943L16.3257 6.56665C17.1273 6.89834 17.6939 7.68955 17.6939 8.61206V15.2458C17.6939 15.8574 17.1998 16.3514 16.5883 16.3514H15.4827C14.8711 16.3514 14.377 15.8574 14.377 15.2458V13.5874H3.32078V15.2458C3.32078 15.8574 2.82671 16.3514 2.21516 16.3514H1.10953C0.497982 16.3514 0.00390625 15.8574 0.00390625 15.2458V8.61206C0.00390625 7.68955 0.570539 6.89834 1.37212 6.56665ZM4.42641 9.71768C4.42641 9.10613 3.93233 8.61206 3.32078 8.61206C2.70923 8.61206 2.21516 9.10613 2.21516 9.71768C2.21516 10.3292 2.70923 10.8233 3.32078 10.8233C3.93233 10.8233 4.42641 10.3292 4.42641 9.71768ZM14.377 10.8233C14.9886 10.8233 15.4827 10.3292 15.4827 9.71768C15.4827 9.10613 14.9886 8.61206 14.377 8.61206C13.7655 8.61206 13.2714 9.10613 13.2714 9.71768C13.2714 10.3292 13.7655 10.8233 14.377 10.8233Z"
+                                    fill="#059DF3"></path>
                             </svg>
                             SPEEDY LIMO FLEET
                         </a>
 
                         <a href="#" class=" topNavBtn d-flex align-items-center">
-                            <svg class="me-3" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.24353 0.88855C4.52025 0.88855 0.693359 4.72369 0.693359 9.45714C0.693359 14.1906 4.52025 18.0257 9.24353 18.0257C13.9668 18.0257 17.7937 14.1906 17.7937 9.45714C17.7937 4.72369 13.9668 0.88855 9.24353 0.88855ZM9.24353 4.20542C10.9191 4.20542 12.2775 5.56673 12.2775 7.24589C12.2775 8.92506 10.9191 10.2864 9.24353 10.2864C7.56797 10.2864 6.2096 8.92506 6.2096 7.24589C6.2096 5.56673 7.56797 4.20542 9.24353 4.20542ZM9.24353 16.0909C7.21976 16.0909 5.40629 15.1718 4.19272 13.7345C4.84088 12.5114 6.10961 11.6684 7.58865 11.6684C7.6714 11.6684 7.75414 11.6822 7.83344 11.7064C8.28163 11.8515 8.75051 11.9448 9.24353 11.9448C9.73654 11.9448 10.2089 11.8515 10.6536 11.7064C10.7329 11.6822 10.8157 11.6684 10.8984 11.6684C12.3774 11.6684 13.6462 12.5114 14.2943 13.7345C13.0808 15.1718 11.2673 16.0909 9.24353 16.0909Z" fill="#059DF3"></path>
+                            <svg class="me-3" width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.24353 0.88855C4.52025 0.88855 0.693359 4.72369 0.693359 9.45714C0.693359 14.1906 4.52025 18.0257 9.24353 18.0257C13.9668 18.0257 17.7937 14.1906 17.7937 9.45714C17.7937 4.72369 13.9668 0.88855 9.24353 0.88855ZM9.24353 4.20542C10.9191 4.20542 12.2775 5.56673 12.2775 7.24589C12.2775 8.92506 10.9191 10.2864 9.24353 10.2864C7.56797 10.2864 6.2096 8.92506 6.2096 7.24589C6.2096 5.56673 7.56797 4.20542 9.24353 4.20542ZM9.24353 16.0909C7.21976 16.0909 5.40629 15.1718 4.19272 13.7345C4.84088 12.5114 6.10961 11.6684 7.58865 11.6684C7.6714 11.6684 7.75414 11.6822 7.83344 11.7064C8.28163 11.8515 8.75051 11.9448 9.24353 11.9448C9.73654 11.9448 10.2089 11.8515 10.6536 11.7064C10.7329 11.6822 10.8157 11.6684 10.8984 11.6684C12.3774 11.6684 13.6462 12.5114 14.2943 13.7345C13.0808 15.1718 11.2673 16.0909 9.24353 16.0909Z"
+                                    fill="#059DF3"></path>
                             </svg>
 
                             LOGIN / SIGNUP
                         </a>
                         <a href="#" class=" topNavBtn d-flex align-items-center">
-                            <svg class="me-3" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.4589 7.77798H16.1255C16.1255 3.50297 12.898 0.278809 8.61719 0.278809V1.94548C12.0022 1.94548 14.4589 4.39797 14.4589 7.77798Z" fill="#059DF3"></path>
-                                <path d="M8.62654 5.27884C10.379 5.27884 11.1265 6.02634 11.1265 7.77884H12.7932C12.7932 5.09134 11.314 3.61218 8.62654 3.61218V5.27884ZM11.4782 9.81468C11.3181 9.66914 11.1077 9.59152 10.8914 9.5982C10.6751 9.60489 10.4699 9.69536 10.319 9.85051L8.32487 11.9013C7.84487 11.8097 6.87987 11.5088 5.88654 10.518C4.8932 9.52384 4.59237 8.55634 4.5032 8.07968L6.55237 6.08468C6.70771 5.93395 6.79832 5.7287 6.805 5.51235C6.81169 5.296 6.73394 5.08555 6.5882 4.92551L3.50904 1.53968C3.36324 1.37914 3.1606 1.28177 2.94416 1.26823C2.72773 1.25469 2.51454 1.32606 2.34987 1.46718L0.541537 3.01801C0.397463 3.16261 0.31147 3.35505 0.29987 3.55884C0.28737 3.76718 0.0490371 8.70218 3.8757 12.5305C7.21404 15.868 11.3957 16.1122 12.5474 16.1122C12.7157 16.1122 12.819 16.1072 12.8465 16.1055C13.0503 16.0941 13.2426 16.0077 13.3865 15.863L14.9365 14.0538C15.0778 13.8893 15.1493 13.6762 15.1359 13.4597C15.1225 13.2433 15.0253 13.0406 14.8649 12.8947L11.4782 9.81468V9.81468Z" fill="#059DF3"></path>
+                            <svg class="me-3" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.4589 7.77798H16.1255C16.1255 3.50297 12.898 0.278809 8.61719 0.278809V1.94548C12.0022 1.94548 14.4589 4.39797 14.4589 7.77798Z"
+                                    fill="#059DF3"></path>
+                                <path
+                                    d="M8.62654 5.27884C10.379 5.27884 11.1265 6.02634 11.1265 7.77884H12.7932C12.7932 5.09134 11.314 3.61218 8.62654 3.61218V5.27884ZM11.4782 9.81468C11.3181 9.66914 11.1077 9.59152 10.8914 9.5982C10.6751 9.60489 10.4699 9.69536 10.319 9.85051L8.32487 11.9013C7.84487 11.8097 6.87987 11.5088 5.88654 10.518C4.8932 9.52384 4.59237 8.55634 4.5032 8.07968L6.55237 6.08468C6.70771 5.93395 6.79832 5.7287 6.805 5.51235C6.81169 5.296 6.73394 5.08555 6.5882 4.92551L3.50904 1.53968C3.36324 1.37914 3.1606 1.28177 2.94416 1.26823C2.72773 1.25469 2.51454 1.32606 2.34987 1.46718L0.541537 3.01801C0.397463 3.16261 0.31147 3.35505 0.29987 3.55884C0.28737 3.76718 0.0490371 8.70218 3.8757 12.5305C7.21404 15.868 11.3957 16.1122 12.5474 16.1122C12.7157 16.1122 12.819 16.1072 12.8465 16.1055C13.0503 16.0941 13.2426 16.0077 13.3865 15.863L14.9365 14.0538C15.0778 13.8893 15.1493 13.6762 15.1359 13.4597C15.1225 13.2433 15.0253 13.0406 14.8649 12.8947L11.4782 9.81468V9.81468Z"
+                                    fill="#059DF3"></path>
                             </svg>
 
                             (336) 228-6493
@@ -93,6 +680,1562 @@
                 </li>
             </ul>
         </nav>
+    </section>
+    <section class="search-car-top-banner">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div>
+                    <p class="heading text-center">New And Used<span>Car</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div class="container-fluid px-1">
+            <div class="col-12">
+                <div class="col-md-4 col-12">
+                    <div class="leftPanelWrapper">
+                        <div class="listingSearchWrap-leftPanel searchPanel">
+                            <ul class="tabList main" role="tablist">
+                                <li class="tab selected" role="tab" id="react-tabs-0" aria-selected="true"
+                                    aria-disabled="false" aria-controls="react-tabs-1" tabindex="0">Search Used
+                                </li>
+                                <li class="tab" role="tab" id="react-tabs-2" aria-selected="false" aria-disabled="false"
+                                    aria-controls="react-tabs-3">Search New
+                                </li>
+                            </ul>
+                            <div class="react-tabs__tab-panel react-tabs__tab-panel--selected" role="tabpanel"
+                                id="react-tabs-1" aria-labelledby="react-tabs-0">
+                                <div class="searchForms">
+                                    <div class="tabGroup" data-tabs="true">
+                                        <ul class="tabList" role="tablist">
+                                            <li class="tab selected" role="tab" id="react-tabs-4" aria-selected="true"
+                                                aria-disabled="false" aria-controls="react-tabs-5" tabindex="0">By Car
+                                            </li>
+                                        </ul>
+                                        <div class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                                            role="tabpanel" id="react-tabs-5" aria-labelledby="react-tabs-4">
+                                            <form>
+                                                <div class="carPicker">
+                                                    <select name="selectedMakeId" id="maker" aria-label="Select Make">
+                                                        <?php
+                                                        $sql = "SELECT * FROM makers ORDER BY id DESC";
+                                                        $result = mysqli_query($con, $sql);
+                                                        if ($result) {
+                                                            while ($row = mysqli_fetch_assoc($result)) { ?>
+                                                        <option value="<?php echo $row['id'] ?>">
+                                                            <?php echo $row['Maker'] ?>
+                                                        </option>
+                                                        <?php }
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                                <div class="yearSelectors">
+                                                    <select id="Year" name="selectedStartYear">
+                                                        <option>All Years</option>
+                                                        <option>2021</option>
+                                                        <option>2020</option>
+                                                        <option>2019</option>
+                                                        <option>2018</option>
+                                                        <option>2017</option>
+                                                        <option>2015</option>
+                                                        <option>2014</option>
+                                                        <option>2012</option>
+                                                        <option>2010</option>
+                                                        <option>2008</option>
+                                                        <option>2007</option>
+                                                        <option>2002</option>
+                                                        <option>2000</option>
+                                                        <option>1995</option>
+                                                        <option>1998</option>
+                                                        <option>1994</option>
+                                                        <option>1993</option>
+                                                        <option>1991</option>
+                                                        <option>1987</option>
+                                                        <option>1985</option>
+                                                        <option>1981</option>
+                                                    </select>
+                                                    <span>to</span>
+                                                    <select name="selectedEndYear" aria-label="Select To Year">
+                                                        <option>Similar</option>
+                                                        <option>2021</option>
+                                                        <option>2020</option>
+                                                        <option>2019</option>
+                                                        <option>2018</option>
+                                                        <option>2017</option>
+                                                        <option>2015</option>
+                                                        <option>2014</option>
+                                                        <option>2012</option>
+                                                        <option>2010</option>
+                                                        <option>2008</option>
+                                                        <option>2007</option>
+                                                        <option>2002</option>
+                                                        <option>2000</option>
+                                                        <option>1995</option>
+                                                        <option>1998</option>
+                                                        <option>1994</option>
+                                                        <option>1993</option>
+                                                        <option>1991</option>
+                                                        <option>1987</option>
+                                                        <option>1985</option>
+                                                        <option>1981</option>
+                                                    </select>
+                                                </div>
+                                                <div class="row inlineLabel">
+                                                    <label for="zip">ZIP</label>
+                                                    <span><input name="zip" id="zip" type="tel" size="7" maxlength="7"
+                                                            class="fullWidth" value=""></span>
+                                                </div>
+                                                <div class="row inlineLabel">
+                                                    <label for="distance">Radius</label>
+                                                    <select name="distance" id="distance" class="fullWidth">
+                                                        <option value="10">10 mi</option>
+                                                        <option value="25">25 mi</option>
+                                                        <option value="50">50 mi</option>
+                                                        <option value="75">75 mi</option>
+                                                        <option value="100">100 mi</option>
+                                                        <option value="150">150 mi</option>
+                                                        <option value="200">200 mi</option>
+                                                        <option value="500">500 mi</option>
+                                                        <option value="50000" selected="selected">Nationwide</option>
+                                                    </select>
+                                                </div>
+                                                <button class="btn btn-primary py-2 rounded-pill"
+                                                    type="submit">Search</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_3K15rt" data-cg-ft="filters-panel-desktop">
+                            <div class="a5oHrY">
+                                <h3>Filter Results</h3>
+                                <p>92 listings</p>
+                            </div>
+                            <div>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-price">
+                                    <legend class="_5m33yq"><span>Price</span></legend>
+                                    <div>
+                                        <div class="wXkvin">
+                                            <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">$4,000 - $60,000
+                                            </div>
+                                            <div class="_4VRgPK">
+                                                <div class="_3vmcUg"></div>
+                                                <div class="_3pdaxM"></div>
+                                                <button role="slider" aria-valuemin="4000" aria-valuemax="60000"
+                                                    aria-label="4000" aria-valuenow="4000" class="UzYZdP"
+                                                    data-cg-ft="range-slider-handle-$$-0" style="left: 0%;"></button>
+                                                <button role="slider" aria-valuemin="4000" aria-valuemax="60000"
+                                                    aria-label="60000" aria-valuenow="60000" class="UzYZdP"
+                                                    data-cg-ft="range-slider-handle-$$-1" style="left: 100%;"></button>
+                                                <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
+                                            </div>
+                                        </div>
+                                        <label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                id="rangeFilter" data-cg-ft="checkbox-rangeFilter" value="" checked="">
+                                            <p class="_2J3cfC">Include Listings Without Available Pricing</p>
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-contactless_options">
+                                    <legend class="_5m33yq"><span>Contactless Services</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li class="_4YS7ud"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="CONTACTLESS_OPTIONS-REMOTE_PURCHASES"
+                                                    data-cg-ft="checkbox-67" value="REMOTE_PURCHASES">
+                                                <p class="_2J3cfC">Contactless purchase<span class="_4vKwXK">(67)</span>
+                                                </p>
+                                            </label>
+                                            <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
+                                                aria-labelledby="REMOTE_PURCHASES" tabindex="0" aria-expanded="false"
+                                                aria-controls="hidden-7k0k4l" aria-haspopup="dialog">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
+                                                <div hidden="" id="REMOTE_PURCHASES" class="_26jUmd">View more</div>
+                                            </button>
+                                            <div role="dialog" id="hidden-7k0k4l" class="hidden _3sja5r" hidden=""
+                                                tabindex="-1" aria-modal="false" data-dialog="true"
+                                                aria-label="Pay or finance this car completely remotely—either by phone or email. Paperwork will be delivered to you."
+                                                style="display: none; position: absolute; transform: translate3d(242px, 707px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                <div class="_3DxALd"
+                                                    style="position: absolute; font-size: 30px; width: 1em; height: 1em; pointer-events: none; transform: rotateZ(180deg); top: 100%; left: 0px;">
+                                                    <svg viewBox="0 0 30 30">
+                                                        <path class="stroke"
+                                                            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z">
+                                                        </path>
+                                                        <path class="fill"
+                                                            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <p class="_25ALsM">Pay or finance this car completely remotely—either by
+                                                    phone or email. Paperwork will be delivered to you.</p>
+                                            </div>
+                                        </li>
+                                        <li class="_4YS7ud"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="CONTACTLESS_OPTIONS-AT_HOME_DROP_OFF"
+                                                    data-cg-ft="checkbox-65" value="AT_HOME_DROP_OFF">
+                                                <p class="_2J3cfC">Free home drop-off<span class="_4vKwXK">(65)</span>
+                                                </p>
+                                            </label>
+                                            <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
+                                                aria-labelledby="AT_HOME_DROP_OFF" tabindex="0" aria-expanded="false"
+                                                aria-controls="hidden-t2dm3m" aria-haspopup="dialog">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
+                                                <div hidden="" id="AT_HOME_DROP_OFF" class="_26jUmd">View more</div>
+                                            </button>
+                                            <div role="dialog" id="hidden-t2dm3m" class="hidden _3sja5r" hidden=""
+                                                tabindex="-1" aria-modal="false" data-dialog="true"
+                                                aria-label="Ready to buy? This dealer will drop your new car off at your home, free of charge within 25 miles of the dealership."
+                                                style="display: none; position: absolute; transform: translate3d(241px, 758px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                <div class="_3DxALd"
+                                                    style="position: absolute; font-size: 30px; width: 1em; height: 1em; pointer-events: none; transform: rotateZ(180deg); top: 100%; left: 0px;">
+                                                    <svg viewBox="0 0 30 30">
+                                                        <path class="stroke"
+                                                            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z">
+                                                        </path>
+                                                        <path class="fill"
+                                                            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <p class="_25ALsM">Ready to buy? This dealer will drop your new car off
+                                                    at
+                                                    your home, free of charge within 25 miles of the dealership.</p>
+                                            </div>
+                                        </li>
+                                        <li class="_4YS7ud"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="CONTACTLESS_OPTIONS-AT_HOME_TEST_DRIVE"
+                                                    data-cg-ft="checkbox-59" value="AT_HOME_TEST_DRIVE">
+                                                <p class="_2J3cfC">Free test drive at home<span
+                                                        class="_4vKwXK">(59)</span>
+                                                </p>
+                                            </label>
+                                            <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
+                                                aria-labelledby="AT_HOME_TEST_DRIVE" tabindex="0" aria-expanded="false"
+                                                aria-controls="hidden-pqmjcd" aria-haspopup="dialog">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
+                                                <div hidden="" id="AT_HOME_TEST_DRIVE" class="_26jUmd">View more</div>
+                                            </button>
+                                            <div role="dialog" id="hidden-pqmjcd" class="hidden _3sja5r" hidden=""
+                                                tabindex="-1" aria-modal="false" data-dialog="true"
+                                                aria-label="Try a no-commitment, free test drive at home. Car will be dropped off (within 25 miles of the dealership) so you can safely test drive on your own."
+                                                style="display: none; position: absolute; transform: translate3d(242px, 794px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                <div class="_3DxALd"
+                                                    style="position: absolute; font-size: 30px; width: 1em; height: 1em; pointer-events: none; transform: rotateZ(180deg); top: 100%; left: 0px;">
+                                                    <svg viewBox="0 0 30 30">
+                                                        <path class="stroke"
+                                                            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z">
+                                                        </path>
+                                                        <path class="fill"
+                                                            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <p class="_25ALsM">Try a no-commitment, free test drive at home. Car
+                                                    will be
+                                                    dropped off (within 25 miles of the dealership) so you can safely
+                                                    test
+                                                    drive on your own.</p>
+                                            </div>
+                                        </li>
+                                        <li class="_4YS7ud"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="CONTACTLESS_OPTIONS-SHOWROOM_APPOINTMENTS"
+                                                    data-cg-ft="checkbox-66" value="SHOWROOM_APPOINTMENTS">
+                                                <p class="_2J3cfC">Private dealer appointments<span
+                                                        class="_4vKwXK">(66)</span></p>
+                                            </label>
+                                            <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
+                                                aria-labelledby="SHOWROOM_APPOINTMENTS" tabindex="0"
+                                                aria-expanded="false" aria-controls="hidden-iq1mao"
+                                                aria-haspopup="dialog">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
+                                                <div hidden="" id="SHOWROOM_APPOINTMENTS" class="_26jUmd">View more
+                                                </div>
+                                            </button>
+                                            <div role="dialog" id="hidden-iq1mao" class="hidden _3sja5r" hidden=""
+                                                tabindex="-1" aria-modal="false" data-dialog="true"
+                                                aria-label="Practice social distancing and get a specific time to visit this dealer to enjoy a solo test drive."
+                                                style="display: none; position: absolute; transform: translate3d(242px, 849px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                <div class="_3DxALd"
+                                                    style="position: absolute; font-size: 30px; width: 1em; height: 1em; pointer-events: none; transform: rotateZ(180deg); top: 100%; left: 0px;">
+                                                    <svg viewBox="0 0 30 30">
+                                                        <path class="stroke"
+                                                            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z">
+                                                        </path>
+                                                        <path class="fill"
+                                                            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <p class="_25ALsM">Practice social distancing and get a specific time to
+                                                    visit this dealer to enjoy a solo test drive.</p>
+                                            </div>
+                                        </li>
+                                        <li class="_4YS7ud"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="CONTACTLESS_OPTIONS-REMOTE_APPOINTMENTS"
+                                                    data-cg-ft="checkbox-65" value="REMOTE_APPOINTMENTS">
+                                                <p class="_2J3cfC">Virtual appointments<span class="_4vKwXK">(65)</span>
+                                                </p>
+                                            </label>
+                                            <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
+                                                aria-labelledby="REMOTE_APPOINTMENTS" tabindex="0" aria-expanded="false"
+                                                aria-controls="hidden-fadl8h" aria-haspopup="dialog">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
+                                                <div hidden="" id="REMOTE_APPOINTMENTS" class="_26jUmd">View more</div>
+                                            </button>
+                                            <div role="dialog" id="hidden-fadl8h" class="hidden _3sja5r" hidden=""
+                                                tabindex="-1" aria-modal="false" data-dialog="true"
+                                                aria-label="Schedule a virtual meeting with this dealer and get a video tour of this car."
+                                                style="display: none; position: absolute; transform: translate3d(242px, 904px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                <div class="_3DxALd"
+                                                    style="position: absolute; font-size: 30px; width: 1em; height: 1em; pointer-events: none; transform: rotateZ(180deg); top: 100%; left: 0px;">
+                                                    <svg viewBox="0 0 30 30">
+                                                        <path class="stroke"
+                                                            d="M23.7,27.1L17,19.9C16.5,19.3,15.8,19,15,19s-1.6,0.3-2.1,0.9l-6.6,7.2C5.3,28.1,3.4,29,2,29h26 C26.7,29,24.6,28.1,23.7,27.1z">
+                                                        </path>
+                                                        <path class="fill"
+                                                            d="M23,27.8c1.1,1.2,3.4,2.2,5,2.2h2H0h2c1.7,0,3.9-1,5-2.2l6.6-7.2c0.7-0.8,2-0.8,2.7,0L23,27.8L23,27.8z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                                <p class="_25ALsM">Schedule a virtual meeting with this dealer and get a
+                                                    video tour of this car.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-finance_partners">
+                                    <legend class="_5m33yq"><span>Financing</span></legend>
+                                    <ul class="_3dCQ2x" role="group">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="HAS_FINANCING" data-cg-ft="checkbox-HAS_FINANCING" value="">
+                                                <p class="_2J3cfC">Online Financing<span class="_4vKwXK">(77)</span></p>
+                                            </label></li>
+                                        <li class="qZvkvr">
+                                            <ul>
+                                                <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                            tabindex="0" id="FINANCE_PARTNERS-CAPITAL_ONE"
+                                                            data-cg-ft="checkbox-FINANCE_PARTNERS" value="CAPITAL_ONE">
+                                                        <p class="_2J3cfC">Capital One<span class="_4vKwXK">(63)</span>
+                                                        </p>
+                                                    </label></li>
+                                                <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                            tabindex="0" id="FINANCE_PARTNERS-GLS"
+                                                            data-cg-ft="checkbox-FINANCE_PARTNERS" value="GLS">
+                                                        <p class="_2J3cfC">GLS<span class="_4vKwXK">(45)</span></p>
+                                                    </label>
+                                                </li>
+                                                <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                            tabindex="0" id="FINANCE_PARTNERS-WESTLAKE"
+                                                            data-cg-ft="checkbox-FINANCE_PARTNERS" value="WESTLAKE">
+                                                        <p class="_2J3cfC">Westlake<span class="_4vKwXK">(69)</span></p>
+                                                    </label></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="N39hwG">
+                                        <div class="_2ygENa">
+                                            <button class="_52ReBB UKJzUV _2yeM1A"
+                                                data-cg-ft="financing-link-launcher-SRP_FILTER_LAUNCHER" role="button"
+                                                type="button">Learn more about online financing
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-mileage">
+                                    <legend class="_5m33yq"><span>Mileage</span></legend>
+                                    <div class="wXkvin">
+                                        <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">Any</div>
+                                        <div class="_4VRgPK">
+                                            <div class="_3vmcUg"></div>
+                                            <div class="_3pdaxM"></div>
+                                            <button role="slider" aria-valuemin="0" aria-valuemax="179000"
+                                                aria-label="179000" aria-valuenow="179000" class="UzYZdP"
+                                                data-cg-ft="range-slider-handle-$$-0" style="left: 100%;"></button>
+                                            <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-shop_by_type">
+                                    <legend class="_5m33yq"><span>Choose how to shop</span>
+                                        <button class="_34eWiv _4sCgq3 _5pm78H hvw5U6" type="submit"
+                                            aria-labelledby="filter-disclaimer-collapse-btn-shop_by_type">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="info-circle"
+                                                class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+                                            <div hidden="" id="filter-disclaimer-collapse-btn-shop_by_type"
+                                                class="_26jUmd">
+                                                View more
+                                            </div>
+                                        </button>
+                                    </legend>
+                                    <div aria-hidden="true" class="_5giXsd" style="min-height: 0px; display: none;">
+                                        <div class="_2LMv9T">
+                                            <div class="_3jW2QL">
+                                                <div class="HB59W6">
+                                                    <div class="_4XKgKt"><span>Find the car you love at a price that's
+                                                            just right—no matter where it's located.</span>
+                                                        <div><span class="SVefyn">Nearby listings: </span><span>Local
+                                                                listings available in your area now.</span>
+                                                        </div>
+                                                        <div><span class="SVefyn">Home delivery: </span><span>Listings
+                                                                you can buy online and get delivered to your
+                                                                driveway.</span>
+                                                        </div>
+                                                        <div><span class="SVefyn">Store transfers: </span><span>Cars
+                                                                available for transfer to a local dealer.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="_3dCQ2x">
+                                        <div class="sbsGfm"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="MIX" data-cg-ft="checkbox-MIX" value="" checked="">
+                                                <p class="_2J3cfC"><span class="_3TkZNa">See a mix:</span><span
+                                                        class="_42L88F">show all local cars &amp; some delivery &amp;
+                                                        store transfer results</span>
+                                                </p>
+                                            </label></div>
+                                        <fieldset>
+                                            <legend class="_4eTETB">Customize results</legend>
+                                            <div><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                        tabindex="0" id="NEAR_BY" data-cg-ft="checkbox-NEAR_BY"
+                                                        value="">
+                                                    <p class="_2J3cfC">Nearby listings<span class="_4vKwXK">(2)</span>
+                                                    </p>
+                                                </label><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                        tabindex="0" id="HOME_DELIVERY"
+                                                        data-cg-ft="checkbox-HOME_DELIVERY" value="">
+                                                    <p class="_2J3cfC">Home delivery<span class="_4vKwXK">(91)</span>
+                                                    </p>
+                                                </label></div>
+                                        </fieldset>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-trim_name">
+                                    <legend class="_5m33yq"><span>Trim</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-AWD" data-cg-ft="checkbox-AWD" value="AWD">
+                                                <p class="_2J3cfC">AWD<span class="_4vKwXK">(1)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-FWD" data-cg-ft="checkbox-FWD" value="FWD">
+                                                <p class="_2J3cfC">FWD<span class="_4vKwXK">(4)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-FWD with Technology Package"
+                                                    data-cg-ft="checkbox-FWD with Technology Package"
+                                                    value="FWD with Technology Package">
+                                                <p class="_2J3cfC">FWD with Technology Package<span
+                                                        class="_4vKwXK">(6)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-FWD wth Technology Package"
+                                                    data-cg-ft="checkbox-FWD wth Technology Package"
+                                                    value="FWD wth Technology Package">
+                                                <p class="_2J3cfC">FWD wth Technology Package<span
+                                                        class="_4vKwXK">(1)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-SH-AWD" data-cg-ft="checkbox-SH-AWD" value="SH-AWD">
+                                                <p class="_2J3cfC">SH-AWD<span class="_4vKwXK">(32)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-SH-AWD with A-SPEC Package"
+                                                    data-cg-ft="checkbox-SH-AWD with A-SPEC Package"
+                                                    value="SH-AWD with A-SPEC Package">
+                                                <p class="_2J3cfC">SH-AWD with A-SPEC Package<span
+                                                        class="_4vKwXK">(1)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-SH-AWD with Advance and Entertainment Package"
+                                                    data-cg-ft="checkbox-SH-AWD with Advance and Entertainment Package"
+                                                    value="SH-AWD with Advance and Entertainment Package">
+                                                <p class="_2J3cfC">SH-AWD with Advance and Entertainment Package<span
+                                                        class="_4vKwXK">(6)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-SH-AWD with Advance Package"
+                                                    data-cg-ft="checkbox-SH-AWD with Advance Package"
+                                                    value="SH-AWD with Advance Package">
+                                                <p class="_2J3cfC">SH-AWD with Advance Package<span
+                                                        class="_4vKwXK">(4)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-SH-AWD with Technology and A-SPEC Package"
+                                                    data-cg-ft="checkbox-SH-AWD with Technology and A-SPEC Package"
+                                                    value="SH-AWD with Technology and A-SPEC Package">
+                                                <p class="_2J3cfC">SH-AWD with Technology and A-SPEC Package<span
+                                                        class="_4vKwXK">(1)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-SH-AWD with Technology and Entertainment Package"
+                                                    data-cg-ft="checkbox-SH-AWD with Technology and Entertainment Package"
+                                                    value="SH-AWD with Technology and Entertainment Package">
+                                                <p class="_2J3cfC">SH-AWD with Technology and Entertainment Package<span
+                                                        class="_4vKwXK">(3)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="TRIM_NAME-SH-AWD with Technology Package"
+                                                    data-cg-ft="checkbox-SH-AWD with Technology Package"
+                                                    value="SH-AWD with Technology Package">
+                                                <p class="_2J3cfC">SH-AWD with Technology Package<span
+                                                        class="_4vKwXK">(31)</span></p>
+                                            </label></li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-days_on_market">
+                                    <legend class="_5m33yq"><span>Days on Market</span></legend>
+                                    <div class="wXkvin">
+                                        <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">0 days - 200 days
+                                        </div>
+                                        <div class="_4VRgPK">
+                                            <div class="_3vmcUg"></div>
+                                            <div class="_3pdaxM"></div>
+                                            <button role="slider" aria-valuemin="0" aria-valuemax="200" aria-label="0"
+                                                aria-valuenow="0" class="UzYZdP" data-cg-ft="range-slider-handle-$$-0"
+                                                style="left: 0%;"></button>
+                                            <button role="slider" aria-valuemin="0" aria-valuemax="200" aria-label="200"
+                                                aria-valuenow="200" class="UzYZdP" data-cg-ft="range-slider-handle-$$-1"
+                                                style="left: 100%;"></button>
+                                            <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-drivetrain">
+                                    <legend class="_5m33yq"><span>Drivetrain</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DRIVETRAIN-ALL_WHEEL_DRIVE"
+                                                    data-cg-ft="checkbox-ALL_WHEEL_DRIVE" value="ALL_WHEEL_DRIVE">
+                                                <p class="_2J3cfC">All-Wheel Drive<span class="_4vKwXK">(78)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DRIVETRAIN-FRONT_WHEEL_DRIVE"
+                                                    data-cg-ft="checkbox-FRONT_WHEEL_DRIVE" value="FRONT_WHEEL_DRIVE">
+                                                <p class="_2J3cfC">Front-Wheel Drive<span class="_4vKwXK">(11)</span>
+                                                </p>
+                                            </label></li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-color">
+                                    <legend class="_5m33yq"><span>Color</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="COLOR-BLACK" data-cg-ft="checkbox-BLACK" value="BLACK">
+                                                <p class="_2J3cfC">
+                                                <div class="_3ZsiJM"><span class="EWdfup BNasx5"></span><span
+                                                        class="_2P52Mt">Black</span></div>
+                                                <span class="_4vKwXK">(24)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="COLOR-BLUE" data-cg-ft="checkbox-BLUE" value="BLUE">
+                                                <p class="_2J3cfC">
+                                                <div class="_3ZsiJM"><span class="EWdfup RdKcF6"></span><span
+                                                        class="_2P52Mt">Blue</span></div>
+                                                <span class="_4vKwXK">(3)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="COLOR-GRAY" data-cg-ft="checkbox-GRAY" value="GRAY">
+                                                <p class="_2J3cfC">
+                                                <div class="_3ZsiJM"><span class="EWdfup _2wmsu7"></span><span
+                                                        class="_2P52Mt">Gray</span></div>
+                                                <span class="_4vKwXK">(18)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="COLOR-RED" data-cg-ft="checkbox-RED" value="RED">
+                                                <p class="_2J3cfC">
+                                                <div class="_3ZsiJM"><span class="EWdfup _3VL3i3"></span><span
+                                                        class="_2P52Mt">Red</span></div>
+                                                <span class="_4vKwXK">(2)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="COLOR-SILVER" data-cg-ft="checkbox-SILVER" value="SILVER">
+                                                <p class="_2J3cfC">
+                                                <div class="_3ZsiJM"><span class="EWdfup _4NchCV"></span><span
+                                                        class="_2P52Mt">Silver</span></div>
+                                                <span class="_4vKwXK">(9)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="COLOR-WHITE" data-cg-ft="checkbox-WHITE" value="WHITE">
+                                                <p class="_2J3cfC">
+                                                <div class="_3ZsiJM"><span class="EWdfup _3Vvhnr"></span><span
+                                                        class="_2P52Mt">White</span></div>
+                                                <span class="_4vKwXK">(22)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="COLOR-UNKNOWN" data-cg-ft="checkbox-UNKNOWN" value="UNKNOWN">
+                                                <p class="_2J3cfC">
+                                                <div class="_3ZsiJM"><span class="EWdfup _3Zr7XV"></span><span
+                                                        class="_2P52Mt">Unknown</span></div>
+                                                <span class="_4vKwXK">(14)</span></p>
+                                            </label></li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-interior_color">
+                                    <legend class="_5m33yq"><span>Interior Color</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="INTERIOR_COLOR-BLACK" data-cg-ft="checkbox-BLACK" value="BLACK">
+                                                <p class="_2J3cfC">Black<span class="_4vKwXK">(31)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="INTERIOR_COLOR-BROWN" data-cg-ft="checkbox-BROWN" value="BROWN">
+                                                <p class="_2J3cfC">Brown<span class="_4vKwXK">(7)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="INTERIOR_COLOR-GRAY" data-cg-ft="checkbox-GRAY" value="GRAY">
+                                                <p class="_2J3cfC">Gray<span class="_4vKwXK">(1)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="INTERIOR_COLOR-WHITE" data-cg-ft="checkbox-WHITE" value="WHITE">
+                                                <p class="_2J3cfC">White<span class="_4vKwXK">(8)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="INTERIOR_COLOR-UNKNOWN" data-cg-ft="checkbox-UNKNOWN"
+                                                    value="UNKNOWN">
+                                                <p class="_2J3cfC">Unknown<span class="_4vKwXK">(45)</span></p>
+                                            </label></li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-vehicle_option">
+                                    <legend class="_5m33yq"><span>Features</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-132" data-cg-ft="checkbox-132" value="132">
+                                                <p class="_2J3cfC">Adaptive Cruise Control<span
+                                                        class="_4vKwXK">(58)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-136" data-cg-ft="checkbox-136" value="136">
+                                                <p class="_2J3cfC">Adaptive Suspension<span class="_4vKwXK">(5)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-6" data-cg-ft="checkbox-6" value="6">
+                                                <p class="_2J3cfC">Alloy Wheels<span class="_4vKwXK">(78)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-19" data-cg-ft="checkbox-19" value="19">
+                                                <p class="_2J3cfC">Ambient Light Package<span class="_4vKwXK">(1)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-141" data-cg-ft="checkbox-141" value="141">
+                                                <p class="_2J3cfC">Android Auto<span class="_4vKwXK">(26)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-23" data-cg-ft="checkbox-23" value="23">
+                                                <p class="_2J3cfC">Audio Package<span class="_4vKwXK">(5)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-121" data-cg-ft="checkbox-121" value="121">
+                                                <p class="_2J3cfC">Backup Camera<span class="_4vKwXK">(80)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-138" data-cg-ft="checkbox-138" value="138">
+                                                <p class="_2J3cfC">Blind Spot Monitoring<span
+                                                        class="_4vKwXK">(44)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-120" data-cg-ft="checkbox-120" value="120">
+                                                <p class="_2J3cfC">Bluetooth<span class="_4vKwXK">(76)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-142" data-cg-ft="checkbox-142" value="142">
+                                                <p class="_2J3cfC">CarPlay<span class="_4vKwXK">(29)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-14" data-cg-ft="checkbox-14" value="14">
+                                                <p class="_2J3cfC">Cold Weather Package<span class="_4vKwXK">(1)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-5" data-cg-ft="checkbox-5" value="5">
+                                                <p class="_2J3cfC">DVD Entertainment System<span
+                                                        class="_4vKwXK">(8)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-140" data-cg-ft="checkbox-140" value="140">
+                                                <p class="_2J3cfC">Heated Seats<span class="_4vKwXK">(88)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-48" data-cg-ft="checkbox-48" value="48">
+                                                <p class="_2J3cfC">LE Package<span class="_4vKwXK">(2)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-1" data-cg-ft="checkbox-1" value="1">
+                                                <p class="_2J3cfC">Leather Seats<span class="_4vKwXK">(70)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-143" data-cg-ft="checkbox-143" value="143">
+                                                <p class="_2J3cfC">Multi Zone Climate Control<span
+                                                        class="_4vKwXK">(10)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-4" data-cg-ft="checkbox-4" value="4">
+                                                <p class="_2J3cfC">Navigation System<span class="_4vKwXK">(60)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-139" data-cg-ft="checkbox-139" value="139">
+                                                <p class="_2J3cfC">Parking Sensors<span class="_4vKwXK">(8)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-66" data-cg-ft="checkbox-66" value="66">
+                                                <p class="_2J3cfC">Power Mirror Package<span class="_4vKwXK">(5)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-67" data-cg-ft="checkbox-67" value="67">
+                                                <p class="_2J3cfC">Power Package<span class="_4vKwXK">(8)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-12" data-cg-ft="checkbox-12" value="12">
+                                                <p class="_2J3cfC">Premium Package<span class="_4vKwXK">(9)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-9" data-cg-ft="checkbox-9" value="9">
+                                                <p class="_2J3cfC">Premium Wheels<span class="_4vKwXK">(4)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-122" data-cg-ft="checkbox-122" value="122">
+                                                <p class="_2J3cfC">Remote Start<span class="_4vKwXK">(30)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-85" data-cg-ft="checkbox-85" value="85">
+                                                <p class="_2J3cfC">SE Package<span class="_4vKwXK">(5)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-93" data-cg-ft="checkbox-93" value="93">
+                                                <p class="_2J3cfC">Sound Package<span class="_4vKwXK">(1)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-2" data-cg-ft="checkbox-2" value="2">
+                                                <p class="_2J3cfC">Sunroof/Moonroof<span class="_4vKwXK">(91)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-103" data-cg-ft="checkbox-103" value="103">
+                                                <p class="_2J3cfC">Technology Package<span class="_4vKwXK">(30)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-135" data-cg-ft="checkbox-135" value="135">
+                                                <p class="_2J3cfC">Third Row Seating<span class="_4vKwXK">(86)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-13" data-cg-ft="checkbox-13" value="13">
+                                                <p class="_2J3cfC">Tow Package<span class="_4vKwXK">(2)</span></p>
+                                            </label>
+                                        </li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_OPTION-108" data-cg-ft="checkbox-108" value="108">
+                                                <p class="_2J3cfC">Trim Package<span class="_4vKwXK">(1)</span></p>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-deal_rating">
+                                    <legend class="_5m33yq"><span>Deal Ratings</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DEAL_RATING-GREAT_PRICE" data-cg-ft="checkbox-GREAT_PRICE"
+                                                    value="GREAT_PRICE">
+                                                <p class="_2J3cfC">
+                                                <div class="_2YwLJP">
+                                                    <div class="_3uEYW2 _2QYuhA">
+                                                        <svg class="_39Jeuh _2UowKY" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 34 34">
+                                                            <circle fill="#ccc" cx="17" cy="17" r="15"></circle>
+                                                            <path class="_4MkEVP" fill="#fff"
+                                                                d="M25.779,17l-7.97-7.97v4.857H8.221v6.226h9.588V24.97Z">
+                                                            </path>
+                                                            <path class="_3TQrgB" fill="#fff"
+                                                                d="M11.491,24.707a.731.731,0,0,1-.73-.733.723.723,0,0,1,.157-.451L21.934,9.571a.731.731,0,0,1,1.148.906h0L12.065,24.43A.725.725,0,0,1,11.491,24.707Z">
+                                                            </path>
+                                                            <path class="tSs9pu" fill="#fff"
+                                                                d="M12.713,10.43a7.843,7.843,0,0,1,.829-.635,5.98,5.98,0,0,1,.972-.522,6.1,6.1,0,0,1,1.134-.35A6.474,6.474,0,0,1,16.972,8.8a5.488,5.488,0,0,1,1.762.267,3.983,3.983,0,0,1,1.363.761,3.4,3.4,0,0,1,.877,1.2,3.823,3.823,0,0,1,.312,1.568,3.964,3.964,0,0,1-.245,1.462,4.114,4.114,0,0,1-.611,1.074,4.708,4.708,0,0,1-.807.789l-.828.628a6.378,6.378,0,0,0-.672.578,1.139,1.139,0,0,0-.34.639l-.255,1.624h-1.88l-.188-1.812a1.478,1.478,0,0,1,.149-.917,2.815,2.815,0,0,1,.579-.724,7.592,7.592,0,0,1,.806-.634,7.319,7.319,0,0,0,.834-.667,3.487,3.487,0,0,0,.65-.811,2.087,2.087,0,0,0,.261-1.074,1.643,1.643,0,0,0-.15-.717,1.617,1.617,0,0,0-.416-.544,1.853,1.853,0,0,0-.64-.35,2.559,2.559,0,0,0-.806-.122,3.565,3.565,0,0,0-1.072.139,3.867,3.867,0,0,0-.746.311c-.2.115-.376.219-.517.31a.707.707,0,0,1-.378.14.607.607,0,0,1-.578-.334Zm2.1,13.108a1.714,1.714,0,0,1,.127-.656,1.6,1.6,0,0,1,.351-.533,1.7,1.7,0,0,1,1.2-.49,1.636,1.636,0,0,1,.662.134,1.758,1.758,0,0,1,.534.356,1.628,1.628,0,0,1,.361.533,1.657,1.657,0,0,1-.895,2.2,1.708,1.708,0,0,1-.662.128,1.755,1.755,0,0,1-.667-.128,1.582,1.582,0,0,1-.884-.878A1.707,1.707,0,0,1,14.815,23.538Z">
+                                                            </path>
+                                                            <path class="_5VHxKG" fill="#ccc"
+                                                                d="M27.2,10.6l-8.3-8.3c-1.1-1.1-2.8-1.1-3.9,0l-8.3,8.3C6.3,11.1,6,11.8,6,12.6v17.2c0,1.5,1.2,2.7,2.7,2.7h16.5c1.5,0,2.7-1.2,2.7-2.7V12.6C28,11.8,27.7,11.1,27.2,10.6z M15.1,7.5c1.1-1.1,2.8-1.1,3.9,0c1.1,1.1,1.1,2.8,0,3.9c-1.1,1.1-2.8,1.1-3.9,0C14,10.3,14,8.6,15.1,7.5z M12.7,25.8h-0.4c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-3.1-4c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v3.8H8.2v-5.5h0.4c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1l3.1,4c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2v-3.7h0.7V25.8z M17.2,25.8h-3.4v-5.5h3.4v0.7h-2.6v1.7h2.1v0.6h-2.1v1.8h2.6L17.2,25.8z M24.1,25.8h-0.7L22,21.7c0-0.1-0.1-0.2-0.1-0.3c0,0.1-0.1,0.2-0.1,0.3l-1.4,4.1h-0.7L18,20.2h0.7c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.1,3.7c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0-0.2,0.1-0.2l1.2-3.7c0-0.1,0-0.1,0.1-0.1c0,0,0.1-0.1,0.2-0.1H22c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.2,3.7c0,0.1,0.1,0.3,0.1,0.5c0-0.2,0.1-0.3,0.1-0.5l1.1-3.7c0-0.1,0-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1h0.6L24.1,25.8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                Great Deal <span class="_4vKwXK">(3)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DEAL_RATING-GOOD_PRICE" data-cg-ft="checkbox-GOOD_PRICE"
+                                                    value="GOOD_PRICE">
+                                                <p class="_2J3cfC">
+                                                <div class="_2YwLJP">
+                                                    <div class="_3uEYW2 _5174Ak">
+                                                        <svg class="_39Jeuh _2UowKY" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 34 34">
+                                                            <circle fill="#ccc" cx="17" cy="17" r="15"></circle>
+                                                            <path class="_4MkEVP" fill="#fff"
+                                                                d="M25.779,17l-7.97-7.97v4.857H8.221v6.226h9.588V24.97Z">
+                                                            </path>
+                                                            <path class="_3TQrgB" fill="#fff"
+                                                                d="M11.491,24.707a.731.731,0,0,1-.73-.733.723.723,0,0,1,.157-.451L21.934,9.571a.731.731,0,0,1,1.148.906h0L12.065,24.43A.725.725,0,0,1,11.491,24.707Z">
+                                                            </path>
+                                                            <path class="tSs9pu" fill="#fff"
+                                                                d="M12.713,10.43a7.843,7.843,0,0,1,.829-.635,5.98,5.98,0,0,1,.972-.522,6.1,6.1,0,0,1,1.134-.35A6.474,6.474,0,0,1,16.972,8.8a5.488,5.488,0,0,1,1.762.267,3.983,3.983,0,0,1,1.363.761,3.4,3.4,0,0,1,.877,1.2,3.823,3.823,0,0,1,.312,1.568,3.964,3.964,0,0,1-.245,1.462,4.114,4.114,0,0,1-.611,1.074,4.708,4.708,0,0,1-.807.789l-.828.628a6.378,6.378,0,0,0-.672.578,1.139,1.139,0,0,0-.34.639l-.255,1.624h-1.88l-.188-1.812a1.478,1.478,0,0,1,.149-.917,2.815,2.815,0,0,1,.579-.724,7.592,7.592,0,0,1,.806-.634,7.319,7.319,0,0,0,.834-.667,3.487,3.487,0,0,0,.65-.811,2.087,2.087,0,0,0,.261-1.074,1.643,1.643,0,0,0-.15-.717,1.617,1.617,0,0,0-.416-.544,1.853,1.853,0,0,0-.64-.35,2.559,2.559,0,0,0-.806-.122,3.565,3.565,0,0,0-1.072.139,3.867,3.867,0,0,0-.746.311c-.2.115-.376.219-.517.31a.707.707,0,0,1-.378.14.607.607,0,0,1-.578-.334Zm2.1,13.108a1.714,1.714,0,0,1,.127-.656,1.6,1.6,0,0,1,.351-.533,1.7,1.7,0,0,1,1.2-.49,1.636,1.636,0,0,1,.662.134,1.758,1.758,0,0,1,.534.356,1.628,1.628,0,0,1,.361.533,1.657,1.657,0,0,1-.895,2.2,1.708,1.708,0,0,1-.662.128,1.755,1.755,0,0,1-.667-.128,1.582,1.582,0,0,1-.884-.878A1.707,1.707,0,0,1,14.815,23.538Z">
+                                                            </path>
+                                                            <path class="_5VHxKG" fill="#ccc"
+                                                                d="M27.2,10.6l-8.3-8.3c-1.1-1.1-2.8-1.1-3.9,0l-8.3,8.3C6.3,11.1,6,11.8,6,12.6v17.2c0,1.5,1.2,2.7,2.7,2.7h16.5c1.5,0,2.7-1.2,2.7-2.7V12.6C28,11.8,27.7,11.1,27.2,10.6z M15.1,7.5c1.1-1.1,2.8-1.1,3.9,0c1.1,1.1,1.1,2.8,0,3.9c-1.1,1.1-2.8,1.1-3.9,0C14,10.3,14,8.6,15.1,7.5z M12.7,25.8h-0.4c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-3.1-4c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v3.8H8.2v-5.5h0.4c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1l3.1,4c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2v-3.7h0.7V25.8z M17.2,25.8h-3.4v-5.5h3.4v0.7h-2.6v1.7h2.1v0.6h-2.1v1.8h2.6L17.2,25.8z M24.1,25.8h-0.7L22,21.7c0-0.1-0.1-0.2-0.1-0.3c0,0.1-0.1,0.2-0.1,0.3l-1.4,4.1h-0.7L18,20.2h0.7c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.1,3.7c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0-0.2,0.1-0.2l1.2-3.7c0-0.1,0-0.1,0.1-0.1c0,0,0.1-0.1,0.2-0.1H22c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.2,3.7c0,0.1,0.1,0.3,0.1,0.5c0-0.2,0.1-0.3,0.1-0.5l1.1-3.7c0-0.1,0-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1h0.6L24.1,25.8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                Good Deal <span class="_4vKwXK">(13)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DEAL_RATING-FAIR_PRICE" data-cg-ft="checkbox-FAIR_PRICE"
+                                                    value="FAIR_PRICE">
+                                                <p class="_2J3cfC">
+                                                <div class="_2YwLJP">
+                                                    <div class="_3uEYW2 EVaT8S">
+                                                        <svg class="_39Jeuh _2UowKY" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 34 34">
+                                                            <circle fill="#ccc" cx="17" cy="17" r="15"></circle>
+                                                            <path class="_4MkEVP" fill="#fff"
+                                                                d="M25.779,17l-7.97-7.97v4.857H8.221v6.226h9.588V24.97Z">
+                                                            </path>
+                                                            <path class="_3TQrgB" fill="#fff"
+                                                                d="M11.491,24.707a.731.731,0,0,1-.73-.733.723.723,0,0,1,.157-.451L21.934,9.571a.731.731,0,0,1,1.148.906h0L12.065,24.43A.725.725,0,0,1,11.491,24.707Z">
+                                                            </path>
+                                                            <path class="tSs9pu" fill="#fff"
+                                                                d="M12.713,10.43a7.843,7.843,0,0,1,.829-.635,5.98,5.98,0,0,1,.972-.522,6.1,6.1,0,0,1,1.134-.35A6.474,6.474,0,0,1,16.972,8.8a5.488,5.488,0,0,1,1.762.267,3.983,3.983,0,0,1,1.363.761,3.4,3.4,0,0,1,.877,1.2,3.823,3.823,0,0,1,.312,1.568,3.964,3.964,0,0,1-.245,1.462,4.114,4.114,0,0,1-.611,1.074,4.708,4.708,0,0,1-.807.789l-.828.628a6.378,6.378,0,0,0-.672.578,1.139,1.139,0,0,0-.34.639l-.255,1.624h-1.88l-.188-1.812a1.478,1.478,0,0,1,.149-.917,2.815,2.815,0,0,1,.579-.724,7.592,7.592,0,0,1,.806-.634,7.319,7.319,0,0,0,.834-.667,3.487,3.487,0,0,0,.65-.811,2.087,2.087,0,0,0,.261-1.074,1.643,1.643,0,0,0-.15-.717,1.617,1.617,0,0,0-.416-.544,1.853,1.853,0,0,0-.64-.35,2.559,2.559,0,0,0-.806-.122,3.565,3.565,0,0,0-1.072.139,3.867,3.867,0,0,0-.746.311c-.2.115-.376.219-.517.31a.707.707,0,0,1-.378.14.607.607,0,0,1-.578-.334Zm2.1,13.108a1.714,1.714,0,0,1,.127-.656,1.6,1.6,0,0,1,.351-.533,1.7,1.7,0,0,1,1.2-.49,1.636,1.636,0,0,1,.662.134,1.758,1.758,0,0,1,.534.356,1.628,1.628,0,0,1,.361.533,1.657,1.657,0,0,1-.895,2.2,1.708,1.708,0,0,1-.662.128,1.755,1.755,0,0,1-.667-.128,1.582,1.582,0,0,1-.884-.878A1.707,1.707,0,0,1,14.815,23.538Z">
+                                                            </path>
+                                                            <path class="_5VHxKG" fill="#ccc"
+                                                                d="M27.2,10.6l-8.3-8.3c-1.1-1.1-2.8-1.1-3.9,0l-8.3,8.3C6.3,11.1,6,11.8,6,12.6v17.2c0,1.5,1.2,2.7,2.7,2.7h16.5c1.5,0,2.7-1.2,2.7-2.7V12.6C28,11.8,27.7,11.1,27.2,10.6z M15.1,7.5c1.1-1.1,2.8-1.1,3.9,0c1.1,1.1,1.1,2.8,0,3.9c-1.1,1.1-2.8,1.1-3.9,0C14,10.3,14,8.6,15.1,7.5z M12.7,25.8h-0.4c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-3.1-4c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v3.8H8.2v-5.5h0.4c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1l3.1,4c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2v-3.7h0.7V25.8z M17.2,25.8h-3.4v-5.5h3.4v0.7h-2.6v1.7h2.1v0.6h-2.1v1.8h2.6L17.2,25.8z M24.1,25.8h-0.7L22,21.7c0-0.1-0.1-0.2-0.1-0.3c0,0.1-0.1,0.2-0.1,0.3l-1.4,4.1h-0.7L18,20.2h0.7c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.1,3.7c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0-0.2,0.1-0.2l1.2-3.7c0-0.1,0-0.1,0.1-0.1c0,0,0.1-0.1,0.2-0.1H22c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.2,3.7c0,0.1,0.1,0.3,0.1,0.5c0-0.2,0.1-0.3,0.1-0.5l1.1-3.7c0-0.1,0-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1h0.6L24.1,25.8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                Fair Deal <span class="_4vKwXK">(33)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DEAL_RATING-POOR_PRICE" data-cg-ft="checkbox-POOR_PRICE"
+                                                    value="POOR_PRICE">
+                                                <p class="_2J3cfC">
+                                                <div class="_2YwLJP">
+                                                    <div class="_3uEYW2 _5ZQc7H">
+                                                        <svg class="_39Jeuh _2UowKY" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 34 34">
+                                                            <circle fill="#ccc" cx="17" cy="17" r="15"></circle>
+                                                            <path class="_4MkEVP" fill="#fff"
+                                                                d="M25.779,17l-7.97-7.97v4.857H8.221v6.226h9.588V24.97Z">
+                                                            </path>
+                                                            <path class="_3TQrgB" fill="#fff"
+                                                                d="M11.491,24.707a.731.731,0,0,1-.73-.733.723.723,0,0,1,.157-.451L21.934,9.571a.731.731,0,0,1,1.148.906h0L12.065,24.43A.725.725,0,0,1,11.491,24.707Z">
+                                                            </path>
+                                                            <path class="tSs9pu" fill="#fff"
+                                                                d="M12.713,10.43a7.843,7.843,0,0,1,.829-.635,5.98,5.98,0,0,1,.972-.522,6.1,6.1,0,0,1,1.134-.35A6.474,6.474,0,0,1,16.972,8.8a5.488,5.488,0,0,1,1.762.267,3.983,3.983,0,0,1,1.363.761,3.4,3.4,0,0,1,.877,1.2,3.823,3.823,0,0,1,.312,1.568,3.964,3.964,0,0,1-.245,1.462,4.114,4.114,0,0,1-.611,1.074,4.708,4.708,0,0,1-.807.789l-.828.628a6.378,6.378,0,0,0-.672.578,1.139,1.139,0,0,0-.34.639l-.255,1.624h-1.88l-.188-1.812a1.478,1.478,0,0,1,.149-.917,2.815,2.815,0,0,1,.579-.724,7.592,7.592,0,0,1,.806-.634,7.319,7.319,0,0,0,.834-.667,3.487,3.487,0,0,0,.65-.811,2.087,2.087,0,0,0,.261-1.074,1.643,1.643,0,0,0-.15-.717,1.617,1.617,0,0,0-.416-.544,1.853,1.853,0,0,0-.64-.35,2.559,2.559,0,0,0-.806-.122,3.565,3.565,0,0,0-1.072.139,3.867,3.867,0,0,0-.746.311c-.2.115-.376.219-.517.31a.707.707,0,0,1-.378.14.607.607,0,0,1-.578-.334Zm2.1,13.108a1.714,1.714,0,0,1,.127-.656,1.6,1.6,0,0,1,.351-.533,1.7,1.7,0,0,1,1.2-.49,1.636,1.636,0,0,1,.662.134,1.758,1.758,0,0,1,.534.356,1.628,1.628,0,0,1,.361.533,1.657,1.657,0,0,1-.895,2.2,1.708,1.708,0,0,1-.662.128,1.755,1.755,0,0,1-.667-.128,1.582,1.582,0,0,1-.884-.878A1.707,1.707,0,0,1,14.815,23.538Z">
+                                                            </path>
+                                                            <path class="_5VHxKG" fill="#ccc"
+                                                                d="M27.2,10.6l-8.3-8.3c-1.1-1.1-2.8-1.1-3.9,0l-8.3,8.3C6.3,11.1,6,11.8,6,12.6v17.2c0,1.5,1.2,2.7,2.7,2.7h16.5c1.5,0,2.7-1.2,2.7-2.7V12.6C28,11.8,27.7,11.1,27.2,10.6z M15.1,7.5c1.1-1.1,2.8-1.1,3.9,0c1.1,1.1,1.1,2.8,0,3.9c-1.1,1.1-2.8,1.1-3.9,0C14,10.3,14,8.6,15.1,7.5z M12.7,25.8h-0.4c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-3.1-4c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v3.8H8.2v-5.5h0.4c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1l3.1,4c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2v-3.7h0.7V25.8z M17.2,25.8h-3.4v-5.5h3.4v0.7h-2.6v1.7h2.1v0.6h-2.1v1.8h2.6L17.2,25.8z M24.1,25.8h-0.7L22,21.7c0-0.1-0.1-0.2-0.1-0.3c0,0.1-0.1,0.2-0.1,0.3l-1.4,4.1h-0.7L18,20.2h0.7c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.1,3.7c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0-0.2,0.1-0.2l1.2-3.7c0-0.1,0-0.1,0.1-0.1c0,0,0.1-0.1,0.2-0.1H22c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.2,3.7c0,0.1,0.1,0.3,0.1,0.5c0-0.2,0.1-0.3,0.1-0.5l1.1-3.7c0-0.1,0-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1h0.6L24.1,25.8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                High Price <span class="_4vKwXK">(21)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DEAL_RATING-OVERPRICED" data-cg-ft="checkbox-OVERPRICED"
+                                                    value="OVERPRICED">
+                                                <p class="_2J3cfC">
+                                                <div class="_2YwLJP">
+                                                    <div class="_3uEYW2 _2NApg7">
+                                                        <svg class="_39Jeuh _2UowKY" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 34 34">
+                                                            <circle fill="#ccc" cx="17" cy="17" r="15"></circle>
+                                                            <path class="_4MkEVP" fill="#fff"
+                                                                d="M25.779,17l-7.97-7.97v4.857H8.221v6.226h9.588V24.97Z">
+                                                            </path>
+                                                            <path class="_3TQrgB" fill="#fff"
+                                                                d="M11.491,24.707a.731.731,0,0,1-.73-.733.723.723,0,0,1,.157-.451L21.934,9.571a.731.731,0,0,1,1.148.906h0L12.065,24.43A.725.725,0,0,1,11.491,24.707Z">
+                                                            </path>
+                                                            <path class="tSs9pu" fill="#fff"
+                                                                d="M12.713,10.43a7.843,7.843,0,0,1,.829-.635,5.98,5.98,0,0,1,.972-.522,6.1,6.1,0,0,1,1.134-.35A6.474,6.474,0,0,1,16.972,8.8a5.488,5.488,0,0,1,1.762.267,3.983,3.983,0,0,1,1.363.761,3.4,3.4,0,0,1,.877,1.2,3.823,3.823,0,0,1,.312,1.568,3.964,3.964,0,0,1-.245,1.462,4.114,4.114,0,0,1-.611,1.074,4.708,4.708,0,0,1-.807.789l-.828.628a6.378,6.378,0,0,0-.672.578,1.139,1.139,0,0,0-.34.639l-.255,1.624h-1.88l-.188-1.812a1.478,1.478,0,0,1,.149-.917,2.815,2.815,0,0,1,.579-.724,7.592,7.592,0,0,1,.806-.634,7.319,7.319,0,0,0,.834-.667,3.487,3.487,0,0,0,.65-.811,2.087,2.087,0,0,0,.261-1.074,1.643,1.643,0,0,0-.15-.717,1.617,1.617,0,0,0-.416-.544,1.853,1.853,0,0,0-.64-.35,2.559,2.559,0,0,0-.806-.122,3.565,3.565,0,0,0-1.072.139,3.867,3.867,0,0,0-.746.311c-.2.115-.376.219-.517.31a.707.707,0,0,1-.378.14.607.607,0,0,1-.578-.334Zm2.1,13.108a1.714,1.714,0,0,1,.127-.656,1.6,1.6,0,0,1,.351-.533,1.7,1.7,0,0,1,1.2-.49,1.636,1.636,0,0,1,.662.134,1.758,1.758,0,0,1,.534.356,1.628,1.628,0,0,1,.361.533,1.657,1.657,0,0,1-.895,2.2,1.708,1.708,0,0,1-.662.128,1.755,1.755,0,0,1-.667-.128,1.582,1.582,0,0,1-.884-.878A1.707,1.707,0,0,1,14.815,23.538Z">
+                                                            </path>
+                                                            <path class="_5VHxKG" fill="#ccc"
+                                                                d="M27.2,10.6l-8.3-8.3c-1.1-1.1-2.8-1.1-3.9,0l-8.3,8.3C6.3,11.1,6,11.8,6,12.6v17.2c0,1.5,1.2,2.7,2.7,2.7h16.5c1.5,0,2.7-1.2,2.7-2.7V12.6C28,11.8,27.7,11.1,27.2,10.6z M15.1,7.5c1.1-1.1,2.8-1.1,3.9,0c1.1,1.1,1.1,2.8,0,3.9c-1.1,1.1-2.8,1.1-3.9,0C14,10.3,14,8.6,15.1,7.5z M12.7,25.8h-0.4c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-3.1-4c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v3.8H8.2v-5.5h0.4c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1l3.1,4c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2v-3.7h0.7V25.8z M17.2,25.8h-3.4v-5.5h3.4v0.7h-2.6v1.7h2.1v0.6h-2.1v1.8h2.6L17.2,25.8z M24.1,25.8h-0.7L22,21.7c0-0.1-0.1-0.2-0.1-0.3c0,0.1-0.1,0.2-0.1,0.3l-1.4,4.1h-0.7L18,20.2h0.7c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.1,3.7c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0-0.2,0.1-0.2l1.2-3.7c0-0.1,0-0.1,0.1-0.1c0,0,0.1-0.1,0.2-0.1H22c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.2,3.7c0,0.1,0.1,0.3,0.1,0.5c0-0.2,0.1-0.3,0.1-0.5l1.1-3.7c0-0.1,0-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1h0.6L24.1,25.8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                Overpriced <span class="_4vKwXK">(17)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DEAL_RATING-NA" data-cg-ft="checkbox-NA" value="NA">
+                                                <p class="_2J3cfC">
+                                                <div class="_2YwLJP">
+                                                    <div class="_3uEYW2 _67Ep9B">
+                                                        <svg class="_39Jeuh _2UowKY" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 34 34">
+                                                            <circle fill="#ccc" cx="17" cy="17" r="15"></circle>
+                                                            <path class="_4MkEVP" fill="#fff"
+                                                                d="M25.779,17l-7.97-7.97v4.857H8.221v6.226h9.588V24.97Z">
+                                                            </path>
+                                                            <path class="_3TQrgB" fill="#fff"
+                                                                d="M11.491,24.707a.731.731,0,0,1-.73-.733.723.723,0,0,1,.157-.451L21.934,9.571a.731.731,0,0,1,1.148.906h0L12.065,24.43A.725.725,0,0,1,11.491,24.707Z">
+                                                            </path>
+                                                            <path class="tSs9pu" fill="#fff"
+                                                                d="M12.713,10.43a7.843,7.843,0,0,1,.829-.635,5.98,5.98,0,0,1,.972-.522,6.1,6.1,0,0,1,1.134-.35A6.474,6.474,0,0,1,16.972,8.8a5.488,5.488,0,0,1,1.762.267,3.983,3.983,0,0,1,1.363.761,3.4,3.4,0,0,1,.877,1.2,3.823,3.823,0,0,1,.312,1.568,3.964,3.964,0,0,1-.245,1.462,4.114,4.114,0,0,1-.611,1.074,4.708,4.708,0,0,1-.807.789l-.828.628a6.378,6.378,0,0,0-.672.578,1.139,1.139,0,0,0-.34.639l-.255,1.624h-1.88l-.188-1.812a1.478,1.478,0,0,1,.149-.917,2.815,2.815,0,0,1,.579-.724,7.592,7.592,0,0,1,.806-.634,7.319,7.319,0,0,0,.834-.667,3.487,3.487,0,0,0,.65-.811,2.087,2.087,0,0,0,.261-1.074,1.643,1.643,0,0,0-.15-.717,1.617,1.617,0,0,0-.416-.544,1.853,1.853,0,0,0-.64-.35,2.559,2.559,0,0,0-.806-.122,3.565,3.565,0,0,0-1.072.139,3.867,3.867,0,0,0-.746.311c-.2.115-.376.219-.517.31a.707.707,0,0,1-.378.14.607.607,0,0,1-.578-.334Zm2.1,13.108a1.714,1.714,0,0,1,.127-.656,1.6,1.6,0,0,1,.351-.533,1.7,1.7,0,0,1,1.2-.49,1.636,1.636,0,0,1,.662.134,1.758,1.758,0,0,1,.534.356,1.628,1.628,0,0,1,.361.533,1.657,1.657,0,0,1-.895,2.2,1.708,1.708,0,0,1-.662.128,1.755,1.755,0,0,1-.667-.128,1.582,1.582,0,0,1-.884-.878A1.707,1.707,0,0,1,14.815,23.538Z">
+                                                            </path>
+                                                            <path class="_5VHxKG" fill="#ccc"
+                                                                d="M27.2,10.6l-8.3-8.3c-1.1-1.1-2.8-1.1-3.9,0l-8.3,8.3C6.3,11.1,6,11.8,6,12.6v17.2c0,1.5,1.2,2.7,2.7,2.7h16.5c1.5,0,2.7-1.2,2.7-2.7V12.6C28,11.8,27.7,11.1,27.2,10.6z M15.1,7.5c1.1-1.1,2.8-1.1,3.9,0c1.1,1.1,1.1,2.8,0,3.9c-1.1,1.1-2.8,1.1-3.9,0C14,10.3,14,8.6,15.1,7.5z M12.7,25.8h-0.4c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-3.1-4c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v3.8H8.2v-5.5h0.4c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1l3.1,4c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2v-3.7h0.7V25.8z M17.2,25.8h-3.4v-5.5h3.4v0.7h-2.6v1.7h2.1v0.6h-2.1v1.8h2.6L17.2,25.8z M24.1,25.8h-0.7L22,21.7c0-0.1-0.1-0.2-0.1-0.3c0,0.1-0.1,0.2-0.1,0.3l-1.4,4.1h-0.7L18,20.2h0.7c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.1,3.7c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0-0.2,0.1-0.2l1.2-3.7c0-0.1,0-0.1,0.1-0.1c0,0,0.1-0.1,0.2-0.1H22c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.2,3.7c0,0.1,0.1,0.3,0.1,0.5c0-0.2,0.1-0.3,0.1-0.5l1.1-3.7c0-0.1,0-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1h0.6L24.1,25.8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                No Price Analysis <span class="_4vKwXK">(3)</span></p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="DEAL_RATING-OUTLIER" data-cg-ft="checkbox-OUTLIER"
+                                                    value="OUTLIER">
+                                                <p class="_2J3cfC">
+                                                <div class="_2YwLJP">
+                                                    <div class="_3uEYW2 _5mdskw">
+                                                        <svg class="_39Jeuh _2UowKY" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 34 34">
+                                                            <circle fill="#ccc" cx="17" cy="17" r="15"></circle>
+                                                            <path class="_4MkEVP" fill="#fff"
+                                                                d="M25.779,17l-7.97-7.97v4.857H8.221v6.226h9.588V24.97Z">
+                                                            </path>
+                                                            <path class="_3TQrgB" fill="#fff"
+                                                                d="M11.491,24.707a.731.731,0,0,1-.73-.733.723.723,0,0,1,.157-.451L21.934,9.571a.731.731,0,0,1,1.148.906h0L12.065,24.43A.725.725,0,0,1,11.491,24.707Z">
+                                                            </path>
+                                                            <path class="tSs9pu" fill="#fff"
+                                                                d="M12.713,10.43a7.843,7.843,0,0,1,.829-.635,5.98,5.98,0,0,1,.972-.522,6.1,6.1,0,0,1,1.134-.35A6.474,6.474,0,0,1,16.972,8.8a5.488,5.488,0,0,1,1.762.267,3.983,3.983,0,0,1,1.363.761,3.4,3.4,0,0,1,.877,1.2,3.823,3.823,0,0,1,.312,1.568,3.964,3.964,0,0,1-.245,1.462,4.114,4.114,0,0,1-.611,1.074,4.708,4.708,0,0,1-.807.789l-.828.628a6.378,6.378,0,0,0-.672.578,1.139,1.139,0,0,0-.34.639l-.255,1.624h-1.88l-.188-1.812a1.478,1.478,0,0,1,.149-.917,2.815,2.815,0,0,1,.579-.724,7.592,7.592,0,0,1,.806-.634,7.319,7.319,0,0,0,.834-.667,3.487,3.487,0,0,0,.65-.811,2.087,2.087,0,0,0,.261-1.074,1.643,1.643,0,0,0-.15-.717,1.617,1.617,0,0,0-.416-.544,1.853,1.853,0,0,0-.64-.35,2.559,2.559,0,0,0-.806-.122,3.565,3.565,0,0,0-1.072.139,3.867,3.867,0,0,0-.746.311c-.2.115-.376.219-.517.31a.707.707,0,0,1-.378.14.607.607,0,0,1-.578-.334Zm2.1,13.108a1.714,1.714,0,0,1,.127-.656,1.6,1.6,0,0,1,.351-.533,1.7,1.7,0,0,1,1.2-.49,1.636,1.636,0,0,1,.662.134,1.758,1.758,0,0,1,.534.356,1.628,1.628,0,0,1,.361.533,1.657,1.657,0,0,1-.895,2.2,1.708,1.708,0,0,1-.662.128,1.755,1.755,0,0,1-.667-.128,1.582,1.582,0,0,1-.884-.878A1.707,1.707,0,0,1,14.815,23.538Z">
+                                                            </path>
+                                                            <path class="_5VHxKG" fill="#ccc"
+                                                                d="M27.2,10.6l-8.3-8.3c-1.1-1.1-2.8-1.1-3.9,0l-8.3,8.3C6.3,11.1,6,11.8,6,12.6v17.2c0,1.5,1.2,2.7,2.7,2.7h16.5c1.5,0,2.7-1.2,2.7-2.7V12.6C28,11.8,27.7,11.1,27.2,10.6z M15.1,7.5c1.1-1.1,2.8-1.1,3.9,0c1.1,1.1,1.1,2.8,0,3.9c-1.1,1.1-2.8,1.1-3.9,0C14,10.3,14,8.6,15.1,7.5z M12.7,25.8h-0.4c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-3.1-4c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2v3.8H8.2v-5.5h0.4c0.1,0,0.1,0,0.2,0c0,0,0.1,0.1,0.1,0.1l3.1,4c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2v-3.7h0.7V25.8z M17.2,25.8h-3.4v-5.5h3.4v0.7h-2.6v1.7h2.1v0.6h-2.1v1.8h2.6L17.2,25.8z M24.1,25.8h-0.7L22,21.7c0-0.1-0.1-0.2-0.1-0.3c0,0.1-0.1,0.2-0.1,0.3l-1.4,4.1h-0.7L18,20.2h0.7c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.1,3.7c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3c0-0.1,0-0.2,0.1-0.3c0-0.1,0-0.2,0.1-0.2l1.2-3.7c0-0.1,0-0.1,0.1-0.1c0,0,0.1-0.1,0.2-0.1H22c0.1,0,0.1,0,0.2,0.1c0,0,0.1,0.1,0.1,0.1l1.2,3.7c0,0.1,0.1,0.3,0.1,0.5c0-0.2,0.1-0.3,0.1-0.5l1.1-3.7c0-0.1,0-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1h0.6L24.1,25.8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                Uncertain <span class="_4vKwXK">(2)</span></p>
+                                            </label></li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-vehicle_condition">
+                                    <legend class="_5m33yq"><span>New / Used / CPO</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_CONDITION-CPO" data-cg-ft="checkbox-CPO" value="CPO">
+                                                <p class="_2J3cfC">Certified Pre-Owned<span class="_4vKwXK">(32)</span>
+                                                </p>
+                                            </label></li>
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="VEHICLE_CONDITION-USED" data-cg-ft="checkbox-USED" value="USED">
+                                                <p class="_2J3cfC">Used<span class="_4vKwXK">(92)</span></p>
+                                            </label></li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-is_single_owner">
+                                    <legend class="_5m33yq"><span>Vehicle History</span>
+                                        <button class="_34eWiv _4sCgq3 _5pm78H hvw5U6" type="submit"
+                                            aria-labelledby="filter-disclaimer-collapse-btn-is_single_owner">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="info-circle"
+                                                class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
+                                            <div hidden="" id="filter-disclaimer-collapse-btn-is_single_owner"
+                                                class="_26jUmd">View more
+                                            </div>
+                                        </button>
+                                    </legend>
+                                    <div aria-hidden="true" class="_5giXsd" style="min-height: 0px; display: none;">
+                                        <div class="_2LMv9T">
+                                            <div class="_3jW2QL">
+                                                <div class="HB59W6">
+                                                    <div>Vehicle history data provided by Experian AutoCheck. This data,
+                                                        and
+                                                        any reliance on it, is subject to the <a
+                                                            href="https://www.autocheck.com/vehiclehistory/termsAndConditions"
+                                                            target="_blank" rel="noopener noreferrer">AutoCheck Terms
+                                                            and Conditions</a> and the <a href="/Cars/TermsOfUse.html"
+                                                            rel="nofollow" target="_blank">CarGurus
+                                                            Terms of Use</a>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="IS_SINGLE_OWNER" data-cg-ft="checkbox-IS_SINGLE_OWNER" value="">
+                                                <p class="_2J3cfC">Single Owner<span class="_4vKwXK">(56)</span></p>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <fieldset
+                                                data-cg-ft="filters-panel-filter-is-single-owner-hide-vehicles-with">
+                                                <legend class="_9Mt8kX">Hide vehicles with:</legend>
+                                                <ul>
+                                                    <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                                tabindex="0" id="HAS_ACCIDENTS"
+                                                                data-cg-ft="checkbox-HAS_ACCIDENTS" value="">
+                                                            <p class="_2J3cfC">Accidents Reported<span
+                                                                    class="_4vKwXK">(14)</span></p>
+                                                        </label></li>
+                                                    <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                                tabindex="0" id="IS_FLEET"
+                                                                data-cg-ft="checkbox-IS_FLEET" value="">
+                                                            <p class="_2J3cfC">Fleet (e.g. rental or corporate)<span
+                                                                    class="_4vKwXK">(2)</span></p>
+                                                        </label></li>
+                                                </ul>
+                                            </fieldset>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-ncap_overall_safety_rating">
+                                    <legend class="_5m33yq"><span>NHTSA Overall Safety Rating</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li class="_4rfAz3" data-cg-ft="radio-NCAP_OVERALL_SAFETY_RATING-5"><input
+                                                type="radio" name="5" class="_59BKuC" tabindex="0"
+                                                id="NCAP_OVERALL_SAFETY_RATING-5"><label
+                                                for="NCAP_OVERALL_SAFETY_RATING-5">
+                                                <div class="_583KVb">
+                                                    <div class="_3sopyT">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="DBay8A">5 Stars</span>
+                                                    </div>
+                                                </div>
+                                                <span class="_4rKnjB">(74)</span>
+                                            </label></li>
+                                        <li class="_4rfAz3" data-cg-ft="radio-NCAP_OVERALL_SAFETY_RATING-4"><input
+                                                type="radio" name="4" class="_59BKuC" tabindex="0"
+                                                id="NCAP_OVERALL_SAFETY_RATING-4"><label
+                                                for="NCAP_OVERALL_SAFETY_RATING-4">
+                                                <div class="_583KVb">
+                                                    <div class="_3sopyT">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="DBay8A">4+ Stars</span>
+                                                    </div>
+                                                </div>
+                                                <span class="_4rKnjB">(81)</span>
+                                            </label></li>
+                                        <li class="_4rfAz3" data-cg-ft="radio-NCAP_OVERALL_SAFETY_RATING-Not Rated">
+                                            <input type="radio" name="Not Rated" class="_59BKuC" tabindex="0"
+                                                id="NCAP_OVERALL_SAFETY_RATING-Not Rated"><label
+                                                for="NCAP_OVERALL_SAFETY_RATING-Not Rated">
+                                                <div class="_583KVb">Not Rated</div>
+                                                <span class="_4rKnjB">(11)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-seller_hierarchy_type">
+                                    <legend class="_5m33yq"><span>Seller Type</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                                    id="SELLER_HIERARCHY_TYPE-DEALER"
+                                                    data-cg-ft="checkbox-SELLER_HIERARCHY_TYPE" value="DEALER">
+                                                <p class="_2J3cfC">Dealer<span class="_4vKwXK">(92)</span></p>
+                                            </label></li>
+                                        <li class="qZvkvr"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="FRANCHISE_DEALER"
+                                                    data-cg-ft="checkbox-FRANCHISE_DEALER" value="FRANCHISE_DEALER">
+                                                <p class="_2J3cfC">Authorized Dealer<span class="_4vKwXK">(35)</span>
+                                                </p>
+                                            </label></li>
+                                        <li class="qZvkvr"><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="PAYING_DEALER" data-cg-ft="checkbox-PAYING_DEALER"
+                                                    value="PAYING_DEALER">
+                                                <p class="_2J3cfC">CarGurus Partners<span class="_4vKwXK">(92)</span>
+                                                </p>
+                                            </label></li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-has_photos">
+                                    <legend class="_5m33yq"><span>Photos</span></legend>
+                                    <label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                            id="HAS_PHOTOS" data-cg-ft="checkbox-HAS_PHOTOS" value="">
+                                        <p class="_2J3cfC">Hide vehicles without photos<span class="_5DuqYT">(3)</span>
+                                        </p>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-fuel_consumption">
+                                    <legend class="_5m33yq"><span>Gas Mileage</span></legend>
+                                    <div class="wXkvin">
+                                        <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">17 MPG - 24 MPG
+                                        </div>
+                                        <div class="_4VRgPK">
+                                            <div class="_3vmcUg"></div>
+                                            <div class="_3pdaxM"></div>
+                                            <button role="slider" aria-valuemin="17" aria-valuemax="24" aria-label="17"
+                                                aria-valuenow="17" class="UzYZdP" data-cg-ft="range-slider-handle-$$-0"
+                                                style="left: 0%;"></button>
+                                            <button role="slider" aria-valuemin="17" aria-valuemax="24" aria-label="24"
+                                                aria-valuenow="24" class="UzYZdP" data-cg-ft="range-slider-handle-$$-1"
+                                                style="left: 100%;"></button>
+                                            <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-has_recent_price_drops">
+                                    <legend class="_5m33yq"><span>Price Drops</span></legend>
+                                    <label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                            id="HAS_RECENT_PRICE_DROPS" data-cg-ft="checkbox-HAS_RECENT_PRICE_DROPS"
+                                            value="">
+                                        <p class="_2J3cfC">Only show recent price drops<span class="_5DuqYT">(13)</span>
+                                        </p>
+                                    </label>
+                                </fieldset>
+                                <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-average_dealer_ratings">
+                                    <legend class="_5m33yq"><span>Average Dealer Rating</span></legend>
+                                    <ul class="_3dCQ2x">
+                                        <li class="_4rfAz3" data-cg-ft="radio-AVERAGE_DEALER_RATINGS-FIVE_STAR"><input
+                                                type="radio" name="FIVE_STAR" class="_59BKuC" tabindex="0"
+                                                id="AVERAGE_DEALER_RATINGS-FIVE_STAR"><label
+                                                for="AVERAGE_DEALER_RATINGS-FIVE_STAR">
+                                                <div class="_583KVb">
+                                                    <div class="_3sopyT">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="DBay8A">5 Stars</span>
+                                                    </div>
+                                                </div>
+                                                <span class="_4rKnjB">(1)</span>
+                                            </label></li>
+                                        <li class="_4rfAz3"
+                                            data-cg-ft="radio-AVERAGE_DEALER_RATINGS-FOUR_STAR_AND_MORE">
+                                            <input type="radio" name="FOUR_STAR_AND_MORE" class="_59BKuC" tabindex="0"
+                                                id="AVERAGE_DEALER_RATINGS-FOUR_STAR_AND_MORE"><label
+                                                for="AVERAGE_DEALER_RATINGS-FOUR_STAR_AND_MORE">
+                                                <div class="_583KVb">
+                                                    <div class="_3sopyT">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="DBay8A">4+ Stars</span>
+                                                    </div>
+                                                </div>
+                                                <span class="_4rKnjB">(45)</span>
+                                            </label>
+                                        </li>
+                                        <li class="_4rfAz3"
+                                            data-cg-ft="radio-AVERAGE_DEALER_RATINGS-THREE_STAR_AND_MORE">
+                                            <input type="radio" name="THREE_STAR_AND_MORE" class="_59BKuC" tabindex="0"
+                                                id="AVERAGE_DEALER_RATINGS-THREE_STAR_AND_MORE"><label
+                                                for="AVERAGE_DEALER_RATINGS-THREE_STAR_AND_MORE">
+                                                <div class="_583KVb">
+                                                    <div class="_3sopyT">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="DBay8A">3+ Stars</span>
+                                                    </div>
+                                                </div>
+                                                <span class="_4rKnjB">(92)</span>
+                                            </label>
+                                        </li>
+                                        <li class="_4rfAz3" data-cg-ft="radio-AVERAGE_DEALER_RATINGS-TWO_STAR_AND_MORE">
+                                            <input type="radio" name="TWO_STAR_AND_MORE" class="_59BKuC" tabindex="0"
+                                                id="AVERAGE_DEALER_RATINGS-TWO_STAR_AND_MORE"><label
+                                                for="AVERAGE_DEALER_RATINGS-TWO_STAR_AND_MORE">
+                                                <div class="_583KVb">
+                                                    <div class="_3sopyT">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="DBay8A">2+ Stars</span>
+                                                    </div>
+                                                </div>
+                                                <span class="_4rKnjB">(92)</span>
+                                            </label>
+                                        </li>
+                                        <li class="_4rfAz3" data-cg-ft="radio-AVERAGE_DEALER_RATINGS-ONE_STAR_AND_MORE">
+                                            <input type="radio" name="ONE_STAR_AND_MORE" class="_59BKuC" tabindex="0"
+                                                id="AVERAGE_DEALER_RATINGS-ONE_STAR_AND_MORE"><label
+                                                for="AVERAGE_DEALER_RATINGS-ONE_STAR_AND_MORE">
+                                                <div class="_583KVb">
+                                                    <div class="_3sopyT">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="_4z5HgY" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"
+                                                            width="14" height="14" class="_2waTFh">
+                                                            <path class="RZugQc" fill="#c2ccd4"
+                                                                d="M6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7l3.3,1.7 c0.6,0.3,1.3-0.2,1.2-0.8l-0.6-3.7l2.7-2.6c0.5-0.5,0.2-1.3-0.4-1.4L9.7,3.8L8,0.5C7.7-0.1,6.9-0.1,6.6,0.5L6.6,0.5z">
+                                                            </path>
+                                                            <path class="_5bxaLR" fill="#ffb100"
+                                                                d="M7.3,0.1C7,0.1,6.7,0.2,6.6,0.5L5,3.8L1.3,4.4C0.6,4.5,0.4,5.3,0.8,5.7l2.7,2.6L2.9,12 c-0.1,0.7,0.6,1.2,1.2,0.8l3.3-1.7V0.1z">
+                                                            </path>
+                                                        </svg>
+                                                        <span class="DBay8A">1+ Stars</span>
+                                                    </div>
+                                                </div>
+                                                <span class="_4rKnjB">(92)</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class=" px-0 mt-5">
         <footer class="bg-white text-center text-black">
@@ -225,6 +2368,9 @@
 
                         </div>
                     </div>
+                    <div class="listingSearchWrap">
+                        <button class='btn mobile_Show btn-primary form-control' id='btnOpenSearch'>Search</button>
+                    </div>
                 </section>
             </div>
 
@@ -237,6 +2383,34 @@
 
 
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#btnOpenSearch').click(function (e) {
+                if ($(this).text() == "Search") {
+                    $('.leftPanelWrapper').show();
+                    $(this).text("Hide Search");
+                } else {
+                    $('.leftPanelWrapper').hide();
+                    $(this).text("Search");
+                }
+            })
+            // if (window.innerWidth <= 768) {
+            //     $('.leftPanelWrapper').hide();
+            // }
+            // $(window).resize(function () {
+            //     if (window.innerWidth <= 768) {
+            //         $('.leftPanelWrapper').hide();
+            //     }
+            // })
+
+        })
+    </script>
     <script src="./assets/js/nav.js"></script>
 </body>
+
 </html>

@@ -7687,7 +7687,7 @@ textarea.form-control-lg {
 }
 
 .border-1 {
-  border-width: 1px !important;
+  border-width: 1px solid !important;
 }
 
 .border-2 {
