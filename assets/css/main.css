@@ -45,7 +45,12 @@ body {
 .clr-primary {
     color: var(--primary);
 }
-
+.clr-low{
+    color: red;
+}
+.clr-high{
+    color: #ff8400;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -694,9 +699,13 @@ nav.topNav .buttons .topNavBtn.bdr {
     box-shadow: 0px 4px 1rem rgb(0 0 0 / 13%) !important;
     transition: all 0.5s;
 }
-
+.btn{
+    transition: all 0.3s;
+}
 .btn:hover {
     background-color: var(--primary-light);
+    /* opacity: 0.5; */
+    transition: all 0.3s;
 }
 
 .box-shadow-0 {
@@ -949,7 +958,8 @@ margin: 0 auto;
 .research-tab {
     backdrop-filter: blur(12px);
 }
-.estimate-payment{
+
+.estimate-payment {
     border: 1px solid var(--primary);
 }
 
@@ -965,25 +975,153 @@ margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
-.estimate-payment-price{
+
+.estimate-payment-price {
     font-family: lato;
     color: var(--primary);
     font-size: 3rem;
     font-weight: bolder;
 }
-.estimate-payment-price span{
+
+.estimate-payment-price span {
     font-family: lato;
     color: var(--dark);
     font-size: 1rem;
     font-weight: normal;
 }
+
+.finance-tab-btn {
+    border: 1px solid var(--light) !important;
+    color: #464b4fce;
+
+}
+
+.modal-css {
+    max-width: 60%;
+}
+
+.modal-detail span a {
+    color: blue;
+}
+
+.modal-detail {
+    height: 9em;
+    overflow: auto;
+    text-align: justify;
+    font-size: small;
+    color: var(--dark);
+}
+
+.modal-detail::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.modal-detail::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+.modal-detail::-webkit-scrollbar-thumb {
+    background: var(--dark);
+    border-radius: 10px;
+}
+.modal-detail-overview span a {
+    color: blue;
+}
+
+.modal-detail-overview {
+    height: 9em;
+    overflow: auto;
+    text-align: justify;
+    font-size: small;
+    color: var(--dark);
+    background-color: white;
+    padding: 10px;
+}
+.stock-car-img{
+    aspect-ratio: 1.8;
+    object-fit: fill;
+}
+
+.modal-detail-overview::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.modal-detail-overview::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+.modal-detail-overview::-webkit-scrollbar-thumb {
+    background: var(--dark);
+    border-radius: 10px;
+}
+.applicant input{
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--dark);
+}
+.applicant select{
+    border: 1px solid var(--dark) !important;
+    border-radius: 0;
+}
+.request-info-modal{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.request-info-modal>div p input{
+    width: 150px;
+    padding: 4px 5px;
+    margin-bottom: 10px;
+}
+.dealers-price p{
+    margin-bottom: 5px;
+}
+.negotiation{
+    border-left: 1px solid var(--dark);
+    padding-left: 10px;
+}
+.negotiation p smaller{
+    text-transform: uppercase;
+}
+.negotiation p{
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+.negotiation p span{
+    font-size: 1.5rem !important;
+    margin-right: 0.1875rem;
+    display: inline-block;
+    vertical-align: sub;
+    line-height: 10px;
+}
+.Contactless li{
+    list-style: none;
+}
+.circle-svg{
+    border-radius: 100%;
+    background-color: var(--primary);
+}
+.circle-svg svg{
+    padding: 10px;
+}
+._4z5HgY{
+    /* fill: yellow; */
+}
 @media (min-width: 767px) {
     .fianceinadiv {
         border-right: 1px solid rgba(0, 0, 0, 0.218);
     }
+
 }
+
 @media (max-width: 768px) {
-   
+    .modal-css {
+        max-width: 100%;
+    }
+
     .homepage.redesign .hero section.searchWrap {
         top: 50% !important;
         transform: translateY(-66%) !important;
@@ -1020,10 +1158,11 @@ margin: 0 auto;
 }
 
 @media only screen and (max-width: 767px) {
-    .fianceinadiv{
+    .fianceinadiv {
         border-bottom: 1px solid rgba(0, 0, 0, 0.218);
         padding-bottom: 15px;
     }
+
     .homepage.redesign .searchWrap .used-search label {
         display: inline-block !important;
     }
@@ -1053,5 +1192,19 @@ margin: 0 auto;
 
     .cpo-new-car-price {
         background: #f4f5f5;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-fianceinadiv {
+        border-right: 1px solid rgba(0, 0, 0, 0.218);
+        /* padding-right: 15px; */
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-fianceinadiv {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.218);
+
     }
 }
