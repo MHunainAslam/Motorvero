@@ -1110,6 +1110,83 @@ margin: 0 auto;
 ._4z5HgY{
     /* fill: yellow; */
 }
+._42zXRc {
+    background: #c2ccd4;
+    display: flex;
+    flex-grow: 1;
+    height: 1.25rem;
+    margin: 0 0.125rem 0 0.625rem;
+}
+.hVKvZS{
+    color: var(--dark   );
+}
+._4w1r1J ol li:before {
+    background-color: var(--primary);
+    border-radius: 50%;
+    color: var(--white);
+    content: counter(steps);
+    display: inline-grid;
+    height: 1.5em;
+    line-height: 1.5;
+    margin: 0 0.5rem 0.75rem 0;
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+    width: 1.5em;
+}
+._4w1r1J ol li {
+    counter-increment: steps;
+    list-style: none;
+}
+.chat-btn{
+    background: var(--primary);
+    color: white;
+    width: 100px;
+    justify-content: space-between;
+    display: flex;
+    padding: 5px;
+}
+/* rating start*/
+
+.rate {
+    /* float: left; */
+    height: 46px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  .rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+  }
+  .rate:not(:checked) > label {
+    /* float:right; */
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+  }
+  .rate:not(:checked) > label:before {
+    content: '★ ';
+  }
+  .rate > input:checked ~ label {
+    color: #ffc700;
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+  }
+/* rating end */
 @media (min-width: 767px) {
     .fianceinadiv {
         border-right: 1px solid rgba(0, 0, 0, 0.218);
@@ -1199,6 +1276,11 @@ margin: 0 auto;
     .modal-fianceinadiv {
         border-right: 1px solid rgba(0, 0, 0, 0.218);
         /* padding-right: 15px; */
+    }
+    .tab-dropdown {
+        border: none;
+        border-bottom: 1px solid #7070707a;
+        border-radius: 0px;
     }
 }
 

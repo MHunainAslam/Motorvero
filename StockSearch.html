@@ -2650,6 +2650,19 @@
             // })
 
         })
+        async function successwal() {
+            let s = await swal("Request Sent", "Request Sent Successfully.", "success");
+            if(s){
+                $('[data-bs-dismiss="modal"]').trigger('click');
+            }
+            //    swal.fire({
+            //         position: 'top-end',
+            //         icon: 'success',
+            //         title: 'Your work has been saved',
+            //         showConfirmButton: false,
+            //         timer: 1500
+            //     })
+        }
         async function avvv() {
             let s = await swal("Request Sent", "Request Sent Soccessfully.", "success");
             if(s){
@@ -2663,6 +2676,8 @@
             //         timer: 1500
             //     })
         }
+        
+
 
     </script>
     <script src="./assets/js/nav.js"></script>
