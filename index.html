@@ -12,7 +12,14 @@
     <script src="./assets/js/bootstrap.js"></script>
     <!-- <link rel="stylesheet" href="./assets/css/main.css"> -->
     <title>Document</title>
-
+<style>
+    .slick-prev{
+        display: none !important;
+    }
+    .slick-next{
+        display: none !important;
+    }
+</style>
 </head>
 
 
@@ -131,23 +138,26 @@
                         </h1>
                         <ul class="nav nav-tabs mt-2 border-0 " id="myTab" role="tablist">
 
-                            <li class="nav-item col px-1 mt-1" role="presentation">
-                                <a class="nav-link active btn tab-btn text-white" id="profile-tab" data-bs-toggle="tab"
+                            <li class="nav-item col px-1 mt-1 position-relative" role="presentation">
+                                <a class="h-100 d-flex align-items-center justify-content-center  tab-btn nav-link active btn tab-btn text-white" id="profile-tab" data-bs-toggle="tab"
                                     href="#buy" role="tab" aria-controls="buy" aria-selected="true">Buy Used</a>
                             </li>
-                            <li class="nav-item col px-1 mt-1" role="presentation">
-                                <a class="nav-link btn tab-btn text-white" id="buy_new-tab" data-bs-toggle="tab"
+                            <li class="nav-item col px-1 mt-1 position-relative" role="presentation">
+                                <a class="h-100 d-flex align-items-center justify-content-center  tab-btn nav-link btn tab-btn text-white" id="buy_new-tab" data-bs-toggle="tab"
                                     href="#buy_new" role="tab" aria-controls="buy_new" aria-selected="false"
                                     tabindex="-1">Buy New</a>
                             </li>
-                            <li class="nav-item col px-1 mt-1" role="presentation">
-                                <a class="nav-link btn tab-btn text-white px-0" id="certified-tab" data-bs-toggle="tab"
+                            <li class="nav-item col px-1 mt-1 position-relative" role="presentation">
+                                <a class="d-md-block d-none nav-link btn tab-btn text-white px-0 tab-btn" id="certified-tab" data-bs-toggle="tab"
                                     href="#certified" role="tab" aria-controls="certified" aria-selected="false"
                                     tabindex="-1">Certified
                                     Pre-Owned</a>
+                                <a class="h-100 d-flex align-items-center d-md-none justify-content-center  tab-btn nav-link btn tab-btn text-white px-0" id="certified-tab" data-bs-toggle="tab"
+                                    href="#certified" role="tab" aria-controls="certified" aria-selected="false"
+                                    tabindex="-1">CPO</a>
                             </li>
-                            <li class="nav-item col px-1 mt-1" role="presentation">
-                                <a class="nav-link btn tab-btn text-white" id="financing-tab" data-bs-toggle="tab"
+                            <li class="nav-item col px-1 mt-1 position-relative" role="presentation">
+                                <a class="h-100 d-flex align-items-center justify-content-center  tab-btn nav-link btn tab-btn text-white" id="financing-tab" data-bs-toggle="tab"
                                     href="#financing" role="tab" aria-controls="financing" aria-selected="false"
                                     tabindex="-1">Financing</a>
                             </li>
@@ -762,7 +772,7 @@
                             <div class="tab-pane  fade" id="buy_new" role="tabpanel" aria-labelledby="buy_new-tab">
                                 <ul class="nav nav-tabs" id="myTabNested" role="tablist">
                                     <li class="nav-item position-relative" role="presentationnested">
-                                        <a class="nav-link active text clr-dark" id="model1-tab" data-bs-toggle="tab"
+                                        <a class="nav-link active " id="model1-tab" data-bs-toggle="tab"
                                             href="#model1" role="tab" aria-controls="model1" aria-selected="true">By
                                             Make/Model</a>
                                     </li>
@@ -773,7 +783,7 @@
                                             Style</a>
                                     </li>
                                     <li class="nav-item position-relative" role="presentationnested">
-                                        <a class="nav-link  clr-dark " id="byprice1-tab" data-bs-toggle="tab"
+                                        <a class="nav-link   " id="byprice1-tab" data-bs-toggle="tab"
                                             href="#byprice1" role="tab" aria-controls="byprice1" aria-selected="false"
                                             tabindex="-1">By Price</a>
                                     </li>
@@ -2407,12 +2417,12 @@
         </div>
     </section>
     <section class="mt-5">
-        <div class="container">
+        <div class="container position-relative">
             <h2 class="heading text-center">What Our <span>Users Are Saying
                 </span></h2>
             <hr class="mx-auto ecu">
 
-            <div class="fadeslider">
+            <div class="fadeslider" id="fadeslider">
                 <div>
                     <div class="row p-3 ">
                         <div class="col-lg-7 ">
@@ -2540,9 +2550,9 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-control-group-2 my-lg-5 ">
+            <div class="carousel-control-group-2 my-lg-5 second-slider-btn">
 
-                <a id="">
+                <a id="comment_home_prev">
                     <svg class="icon-carousel-control" xmlns="http://www.w3.org/2000/svg" width="36.439"
                         height="34.769">
                         <rect x=".455" y=".455" width="35.529" height="33.859" rx=".147" ry=".147" fill="transparent"
@@ -3520,7 +3530,7 @@
             responsive: [
 
                 {
-                    breakpoint: 1500,
+                    breakpoint: 9500,
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
@@ -3559,12 +3569,12 @@
                 fade: true,
                 // cssEase: 'linear'
             });
-            comment_home_prev.addEventListener('click', () => {
-                document.querySelector('.fade.slick-prev').click();
-            })
-            comment_home_next.addEventListener('click', () => {
-                document.querySelector('.fade.slick-next ').click();
-            })
+        })
+        comment_home_prev.addEventListener('click', () => {
+            document.getElementById('fadeslider').querySelector('.slick-prev').click();
+        })
+        comment_home_next.addEventListener('click', () => {
+            document.getElementById('fadeslider').querySelector('.slick-next ').click();
         })
 
 

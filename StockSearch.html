@@ -454,7 +454,7 @@
         outline: none
     }
 
-    .searchPanel {
+    .leftPanelWrapper>div {
         background-color: #f5f6f6;
         border: 1px solid #cccccc;
         padding: 0.5rem;
@@ -508,7 +508,7 @@
 
     .tabList .tab.selected {
         background-color: #4a93d2;
-        color: #ffffff;
+        color: #ffffff !important;
     }
 
     .tabList.main .tab {
@@ -577,6 +577,38 @@
         margin: 0 0 1rem;
         width: 100%;
     }
+
+    .form-range::-webkit-slider-thumb:active {
+        background-color: white;
+    }
+
+    .form-range::-webkit-slider-thumb {
+        background-color: white;
+    }
+
+    .form-range::-webkit-slider-runnable-track {
+        background-color: #5093ce;
+    }
+
+    /* .form-rang::-webkit-slider-thumb {
+        background: gray !important;
+    }
+
+    .form-rang::-moz-range-thumb {
+        background: rgb(81, 40, 40) !important;
+    }
+
+    .form-rang::-ms-thumb {
+        background: yellow !important;
+    } */
+
+    /* .form-range::-webkit-slider-runnable-track {
+        background-color: #006598 !important;
+    } */
+
+    /* .stock-search-tab .selected{
+        background-color: #000;
+    } */
 
     /*# sourceURL=/_/gsi/_/ss/k=gsi.gsi.tCB0CF0PYPo.L.W.O/am=chE/d=1/rs=AF0KOtVnwrR3G0SH_dAafZ_I2U2nbna7aw/m=gis_client_button_style */
 </style>
@@ -700,23 +732,26 @@
         <div class="container-fluid px-1">
             <div class="col-12">
                 <div class="row">
-                    <div class="col-lg-3 col-md-4 col-12">
+                    <div class="col-lg-4 col-md-5 col-12">
                         <div class="leftPanelWrapper">
                             <div class="listingSearchWrap-leftPanel searchPanel">
-                                <ul class="tabList main" role="tablist">
-                                    <li class="tab selected" role="tab" id="react-tabs-0" aria-selected="true"
-                                        aria-disabled="false" aria-controls="react-tabs-1" tabindex="0">Search Used
+                                <ul class="tabList main p-0 rounded-5" role="tablist">
+                                    <li class="tab selected stock-search-tab rounded-5 m-1" role="tab" id="react-tabs-0"
+                                        aria-selected="true" aria-disabled="false" aria-controls="react-tabs-1"
+                                        tabindex="0">Search Used
                                     </li>
-                                    <li class="tab" role="tab" id="react-tabs-2" aria-selected="false"
-                                        aria-disabled="false" aria-controls="react-tabs-3">Search New
+                                    <li class="tab stock-search-tab rounded-5 m-1" role="tab" id="react-tabs-2"
+                                        aria-selected="false" aria-disabled="false" aria-controls="react-tabs-3">Search
+                                        New
                                     </li>
+
                                 </ul>
                                 <div class="react-tabs__tab-panel react-tabs__tab-panel--selected" role="tabpanel"
                                     id="react-tabs-1" aria-labelledby="react-tabs-0">
                                     <div class="searchForms">
                                         <div class="tabGroup" data-tabs="true">
-                                            <ul class="tabList" role="tablist">
-                                                <li class="tab selected" role="tab" id="react-tabs-4"
+                                            <ul class="tabList p-0 rounded-5" role="tablist">
+                                                <li class="tab selected rounded-5" role="tab" id="react-tabs-4"
                                                     aria-selected="true" aria-disabled="false"
                                                     aria-controls="react-tabs-5" tabindex="0">By Car
                                                 </li>
@@ -726,22 +761,137 @@
                                                 <form>
                                                     <div class="carPicker">
                                                         <select name="selectedMakeId" id="maker"
-                                                            aria-label="Select Make">
-                                                            <?php
-                                                        $sql = "SELECT * FROM makers ORDER BY id DESC";
-                                                        $result = mysqli_query($con, $sql);
-                                                        if ($result) {
-                                                            while ($row = mysqli_fetch_assoc($result)) { ?>
-                                                            <option value="<?php echo $row['id'] ?>">
-                                                                <?php echo $row['Maker'] ?>
-                                                            </option>
-                                                            <?php }
-                                                        }
-                                                        ?>
+                                                            aria-label="Select Make" class="form-control rounded-4">
+                                                            <option value="134">VPG</option>
+                                                            <option value="133">Polestar</option>
+                                                            <option value="132">Edsel</option>
+                                                            <option value="131">SRT</option>
+                                                            <option value="130">BRICKLIN</option>
+                                                            <option value="129">austin-healey</option>
+                                                            <option value="128">autobianchi</option>
+                                                            <option value="127">Buick</option>
+                                                            <option value="126">Chrysler</option>
+                                                            <option value="125">KARMA</option>
+                                                            <option value="124">Lada</option>
+                                                            <option value="123">Lancia</option>
+                                                            <option value="122">MINI</option>
+                                                            <option value="121">Hummer</option>
+                                                            <option value="120">Ford</option>
+                                                            <option value="119">Freightliner</option>
+                                                            <option value="118">Franklin</option>
+                                                            <option value="117">Intermeccanica</option>
+                                                            <option value="116">International Harvester</option>
+                                                            <option value="115">Jensen</option>
+                                                            <option value="114">Daihatsu</option>
+                                                            <option value="113">Duesenberg</option>
+                                                            <option value="112">Morris</option>
+                                                            <option value="111">Maybach</option>
+                                                            <option value="110">MG</option>
+                                                            <option value="109">Moskvitch </option>
+                                                            <option value="108">Muntz</option>
+                                                            <option value="107">Pagani </option>
+                                                            <option value="106">BMW</option>
+                                                            <option value="105">Pininfarina</option>
+                                                            <option value="104">Peugeot</option>
+                                                            <option value="103">Kaiser</option>
+                                                            <option value="102">Lada</option>
+                                                            <option value="101">MG</option>
+                                                            <option value="100">De Tomaso</option>
+                                                            <option value="99">DeLorean</option>
+                                                            <option value="98">Oldsmobile</option>
+                                                            <option value="97">Opel</option>
+                                                            <option value="96">Nash</option>
+                                                            <option value="95">Graham</option>
+                                                            <option value="94">Hillman</option>
+                                                            <option value="93">DeSoto</option>
+                                                            <option value="92">Eagle</option>
+                                                            <option value="91">Opel</option>
+                                                            <option value="90">Plymouth</option>
+                                                            <option value="89">Iso</option>
+                                                            <option value="88">Geo</option>
+                                                            <option value="87">DODGE</option>
+                                                            <option value="86">daewoo</option>
+                                                            <option value="85">studebaker</option>
+                                                            <option value="84">Triumph </option>
+                                                            <option value="83">Packard</option>
+                                                            <option value="82">sunbeam</option>
+                                                            <option value="81">packard</option>
+                                                            <option value="80">Rambler</option>
+                                                            <option value="79">Renault</option>
+                                                            <option value="78">Reliant</option>
+                                                            <option value="77">Riley</option>
+                                                            <option value="76">Shelby</option>
+                                                            <option value="75">Shelby</option>
+                                                            <option value="74">Shelby</option>
+                                                            <option value="73">TVR</option>
+                                                            <option value="72">Suzuki</option>
+                                                            <option value="71">Willys</option>
+                                                            <option value="70">Acura</option>
+                                                            <option value="69">Alfa Romeo</option>
+                                                            <option value="68">HONDA</option>
+                                                            <option value="67">acura</option>
+                                                            <option value="66">Smart</option>
+                                                            <option value="65">GMC</option>
+                                                            <option value="64">Maserati</option>
+                                                            <option value="62">genesis</option>
+                                                            <option value="61">AMC</option>
+                                                            <option value="60">Citreon</option>
+                                                            <option value="59">Landrover</option>
+                                                            <option value="58">Mitsubishi</option>
+                                                            <option value="57">lincoln</option>
+                                                            <option value="56">AMC</option>
+                                                            <option value="55">Subaru </option>
+                                                            <option value="54">Isuzu</option>
+                                                            <option value="53">FIAT</option>
+                                                            <option value="52">Chevrolet</option>
+                                                            <option value="51">lotus</option>
+                                                            <option value="50">Mazda</option>
+                                                            <option value="49">McLaren</option>
+                                                            <option value="48">Lamborghini</option>
+                                                            <option value="47">amc</option>
+                                                            <option value="46">Ferrari</option>
+                                                            <option value="45">Pontiac</option>
+                                                            <option value="44">Cadillac</option>
+                                                            <option value="43">Nissan</option>
+                                                            <option value="42">Mercedes Benz</option>
+                                                            <option value="41">Jaguar</option>
+                                                            <option value="40">Bentley</option>
+                                                            <option value="39">amc</option>
+                                                            <option value="38">RAM</option>
+                                                            <option value="37">Jaguar</option>
+                                                            <option value="36">INFINITI</option>
+                                                            <option value="34">Volkswagen</option>
+                                                            <option value="33">Saturn</option>
+                                                            <option value="32">Rover</option>
+                                                            <option value="31">Volvo</option>
+                                                            <option value="30">SCION</option>
+                                                            <option value="29">Mercury</option>
+                                                            <option value="28">Saab</option>
+                                                            <option value="27">Rolls Royce</option>
+                                                            <option value="26">Wagoneer</option>
+                                                            <option value="25">kia</option>
+                                                            <option value="23">Lexus</option>
+                                                            <option value="20">Jaguar</option>
+                                                            <option value="17">Aston Martin</option>
+                                                            <option value="16">Ariel</option>
+                                                            <option value="15">AM General</option>
+                                                            <option value="14">allard</option>
+                                                            <option value="12">Buick</option>
+                                                            <option value="11">Honda</option>
+                                                            <option value="10">Hyundai</option>
+                                                            <option value="9">Porsche</option>
+                                                            <option value="8">BMW</option>
+                                                            <option value="7">Tesla </option>
+                                                            <option value="6">Toyota</option>
+                                                            <option value="5">Audi</option>
+                                                            <option value="2">Alfa Romeo</option>
+                                                            <option value="1">Acura</option>
                                                         </select>
                                                     </div>
-                                                    <div class="yearSelectors">
-                                                        <select id="Year" name="selectedStartYear">
+                                                    <div class="d-flex my-2">
+
+                                                        <select id="Year" name="selectedStartYear"
+                                                            class="form-control w-50 rounded-4">
                                                             <option>All Years</option>
                                                             <option>2021</option>
                                                             <option>2020</option>
@@ -765,8 +915,12 @@
                                                             <option>1985</option>
                                                             <option>1981</option>
                                                         </select>
-                                                        <span>to</span>
-                                                        <select name="selectedEndYear" aria-label="Select To Year">
+
+
+                                                        <span class="px-1 my-auto">to</span>
+
+                                                        <select name="selectedEndYear" aria-label="Select To Year"
+                                                            class="w-50 form-control rounded-4">
                                                             <option>Similar</option>
                                                             <option>2021</option>
                                                             <option>2020</option>
@@ -791,71 +945,71 @@
                                                             <option>1981</option>
                                                         </select>
                                                     </div>
-                                                    <div class="row inlineLabel">
-                                                        <label for="zip">ZIP</label>
-                                                        <span><input name="zip" id="zip" type="tel" size="7"
-                                                                maxlength="7" class="fullWidth" value=""></span>
-                                                    </div>
-                                                    <div class="row inlineLabel">
-                                                        <label for="distance">Radius</label>
-                                                        <select name="distance" id="distance" class="fullWidth">
-                                                            <option value="10">10 mi</option>
-                                                            <option value="25">25 mi</option>
-                                                            <option value="50">50 mi</option>
-                                                            <option value="75">75 mi</option>
-                                                            <option value="100">100 mi</option>
-                                                            <option value="150">150 mi</option>
-                                                            <option value="200">200 mi</option>
-                                                            <option value="500">500 mi</option>
-                                                            <option value="50000" selected="selected">Nationwide
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                    <button class="btn btn-primary py-2 rounded-pill"
-                                                        type="submit">Search</button>
                                                 </form>
                                             </div>
+                                            <div class="my-1 inlineLabel">
+                                                <label for="zip">ZIP</label>
+                                                <span><input name="zip" id="zip" type="tel" size="7" maxlength="7"
+                                                        class="fullWidth form-control" value=""></span>
+                                            </div>
+                                            <div class="inlineLabel my-1">
+                                                <label for="distance">Radius</label>
+                                                <select name="distance" id="distance" class="fullWidth form-control">
+                                                    <option value="10">10 mi</option>
+                                                    <option value="25">25 mi</option>
+                                                    <option value="50">50 mi</option>
+                                                    <option value="75">75 mi</option>
+                                                    <option value="100">100 mi</option>
+                                                    <option value="150">150 mi</option>
+                                                    <option value="200">200 mi</option>
+                                                    <option value="500">500 mi</option>
+                                                    <option value="50000" selected="selected">Nationwide
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <button class="text-white btn back-primary py-2 my-1 rounded-pill w-100"
+                                                type="submit">Search</button>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="_3K15rt" data-cg-ft="filters-panel-desktop">
-                                <div class="a5oHrY">
+                                <div class="d-flex justify-content-between">
                                     <h3>Filter Results</h3>
-                                    <p>92 listings</p>
+                                    <p class="my-auto">92 listings</p>
                                 </div>
                                 <div>
-                                    <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-price">
+                                    <fieldset class="mt-4" data-cg-ft="filters-panel-filter-price">
                                         <legend class="_5m33yq"><span>Price</span></legend>
                                         <div>
                                             <div class="wXkvin">
-                                                <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">$4,000 -
+                                                <div class="px-3 clr-dark" data-cg-ft="range-slider-label-mobile">$4,000
+                                                    -
                                                     $60,000
                                                 </div>
-                                                <div class="_4VRgPK">
+                                                <div class="d-flex position-relative">
                                                     <div class="_3vmcUg"></div>
+                                                    <!-- <label for="customRange3" class="form-label">Example range</label> -->
+                                                    <input type="range" class="form-range custom-range-left" min="4000"
+                                                        max="5000" id="stockpriceleft" value="4000">
+                                                    <input type="range" class="form-range custom-range-right" min="5001"
+                                                        max="6000" id="stockpriceright" value="60000">
                                                     <div class="_3pdaxM"></div>
-                                                    <button role="slider" aria-valuemin="4000" aria-valuemax="60000"
-                                                        aria-label="4000" aria-valuenow="4000" class="UzYZdP"
-                                                        data-cg-ft="range-slider-handle-$$-0"
-                                                        style="left: 0%;"></button>
-                                                    <button role="slider" aria-valuemin="4000" aria-valuemax="60000"
-                                                        aria-label="60000" aria-valuenow="60000" class="UzYZdP"
-                                                        data-cg-ft="range-slider-handle-$$-1"
-                                                        style="left: 100%;"></button>
-                                                    <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
+
                                                 </div>
                                             </div>
-                                            <label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
-                                                    id="rangeFilter" data-cg-ft="checkbox-rangeFilter" value=""
-                                                    checked="">
-                                                <p class="_2J3cfC">Include Listings Without Available Pricing</p>
+                                            <label class="d-flex my-3"><input type="checkbox" class="RUxFSo"
+                                                    tabindex="0" id="rangeFilter" data-cg-ft="checkbox-rangeFilter"
+                                                    value="" checked="">
+                                                <p class="my-auto ps-1 small">Include Listings Without Available Pricing
+                                                </p>
                                             </label>
                                         </div>
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-contactless_options">
                                         <legend class="_5m33yq"><span>Contactless Services</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li class="_4YS7ud"><label class="_4MtdAD"><input type="checkbox"
                                                         class="RUxFSo" tabindex="0"
                                                         id="CONTACTLESS_OPTIONS-REMOTE_PURCHASES"
@@ -864,21 +1018,17 @@
                                                             class="_4vKwXK">(67)</span>
                                                     </p>
                                                 </label>
-                                                <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
-                                                    aria-labelledby="REMOTE_PURCHASES" tabindex="0"
-                                                    aria-expanded="false" aria-controls="hidden-7k0k4l"
-                                                    aria-haspopup="dialog">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                                        data-icon="info-circle"
-                                                        class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
-                                                        role="img" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512">
-                                                        <path fill="currentColor"
-                                                            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
-                                                        </path>
-                                                    </svg>
-                                                    <div hidden="" id="REMOTE_PURCHASES" class="_26jUmd">View more</div>
-                                                </button>
+
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle" width="15px" height="15px"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
+                                                <div hidden="" id="REMOTE_PURCHASES" class="_26jUmd">View more</div>
+
                                                 <div role="dialog" id="hidden-7k0k4l" class="hidden _3sja5r" hidden=""
                                                     tabindex="-1" aria-modal="false" data-dialog="true"
                                                     aria-label="Pay or finance this car completely remotely—either by phone or email. Paperwork will be delivered to you."
@@ -907,21 +1057,14 @@
                                                             class="_4vKwXK">(65)</span>
                                                     </p>
                                                 </label>
-                                                <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
-                                                    aria-labelledby="AT_HOME_DROP_OFF" tabindex="0"
-                                                    aria-expanded="false" aria-controls="hidden-t2dm3m"
-                                                    aria-haspopup="dialog">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                                        data-icon="info-circle"
-                                                        class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
-                                                        role="img" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512">
-                                                        <path fill="currentColor"
-                                                            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
-                                                        </path>
-                                                    </svg>
-                                                    <div hidden="" id="AT_HOME_DROP_OFF" class="_26jUmd">View more</div>
-                                                </button>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle" width="15px" height="15px"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
                                                 <div role="dialog" id="hidden-t2dm3m" class="hidden _3sja5r" hidden=""
                                                     tabindex="-1" aria-modal="false" data-dialog="true"
                                                     aria-label="Ready to buy? This dealer will drop your new car off at your home, free of charge within 25 miles of the dealership."
@@ -951,22 +1094,14 @@
                                                             class="_4vKwXK">(59)</span>
                                                     </p>
                                                 </label>
-                                                <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
-                                                    aria-labelledby="AT_HOME_TEST_DRIVE" tabindex="0"
-                                                    aria-expanded="false" aria-controls="hidden-pqmjcd"
-                                                    aria-haspopup="dialog">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                                        data-icon="info-circle"
-                                                        class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
-                                                        role="img" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512">
-                                                        <path fill="currentColor"
-                                                            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
-                                                        </path>
-                                                    </svg>
-                                                    <div hidden="" id="AT_HOME_TEST_DRIVE" class="_26jUmd">View more
-                                                    </div>
-                                                </button>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle" width="15px" height="15px"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
                                                 <div role="dialog" id="hidden-pqmjcd" class="hidden _3sja5r" hidden=""
                                                     tabindex="-1" aria-modal="false" data-dialog="true"
                                                     aria-label="Try a no-commitment, free test drive at home. Car will be dropped off (within 25 miles of the dealership) so you can safely test drive on your own."
@@ -997,22 +1132,14 @@
                                                     <p class="_2J3cfC">Private dealer appointments<span
                                                             class="_4vKwXK">(66)</span></p>
                                                 </label>
-                                                <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
-                                                    aria-labelledby="SHOWROOM_APPOINTMENTS" tabindex="0"
-                                                    aria-expanded="false" aria-controls="hidden-iq1mao"
-                                                    aria-haspopup="dialog">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                                        data-icon="info-circle"
-                                                        class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
-                                                        role="img" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512">
-                                                        <path fill="currentColor"
-                                                            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
-                                                        </path>
-                                                    </svg>
-                                                    <div hidden="" id="SHOWROOM_APPOINTMENTS" class="_26jUmd">View more
-                                                    </div>
-                                                </button>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle" width="15px" height="15px"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
                                                 <div role="dialog" id="hidden-iq1mao" class="hidden _3sja5r" hidden=""
                                                     tabindex="-1" aria-modal="false" data-dialog="true"
                                                     aria-label="Practice social distancing and get a specific time to visit this dealer to enjoy a solo test drive."
@@ -1041,22 +1168,14 @@
                                                             class="_4vKwXK">(65)</span>
                                                     </p>
                                                 </label>
-                                                <button class="_34eWiv _55AVqM _5pm78H hvw5U6" type="button"
-                                                    aria-labelledby="REMOTE_APPOINTMENTS" tabindex="0"
-                                                    aria-expanded="false" aria-controls="hidden-fadl8h"
-                                                    aria-haspopup="dialog">
-                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                                        data-icon="info-circle"
-                                                        class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
-                                                        role="img" xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 512 512">
-                                                        <path fill="currentColor"
-                                                            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
-                                                        </path>
-                                                    </svg>
-                                                    <div hidden="" id="REMOTE_APPOINTMENTS" class="_26jUmd">View more
-                                                    </div>
-                                                </button>
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                    data-icon="info-circle" width="15px" height="15px"
+                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor"
+                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                    </path>
+                                                </svg>
                                                 <div role="dialog" id="hidden-fadl8h" class="hidden _3sja5r" hidden=""
                                                     tabindex="-1" aria-modal="false" data-dialog="true"
                                                     aria-label="Schedule a virtual meeting with this dealer and get a video tour of this car."
@@ -1081,7 +1200,7 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-finance_partners">
                                         <legend class="_5m33yq"><span>Financing</span></legend>
-                                        <ul class="_3dCQ2x" role="group">
+                                        <ul class="filter-result" role="group">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="HAS_FINANCING"
                                                         data-cg-ft="checkbox-HAS_FINANCING" value="">
@@ -1114,45 +1233,37 @@
                                             </li>
                                         </ul>
                                         <div class="N39hwG">
-                                            <div class="_2ygENa">
-                                                <button class="_52ReBB UKJzUV _2yeM1A"
+                                            <div class="text-center">
+                                                <a class="clr-primary fs-6 lh-1 my-3"
                                                     data-cg-ft="financing-link-launcher-SRP_FILTER_LAUNCHER"
                                                     role="button" type="button">Learn more about online financing
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-mileage">
                                         <legend class="_5m33yq"><span>Mileage</span></legend>
-                                        <div class="wXkvin">
+                                        <div class="ps-3">
                                             <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">Any</div>
                                             <div class="_4VRgPK">
                                                 <div class="_3vmcUg"></div>
                                                 <div class="_3pdaxM"></div>
-                                                <button role="slider" aria-valuemin="0" aria-valuemax="179000"
-                                                    aria-label="179000" aria-valuenow="179000" class="UzYZdP"
-                                                    data-cg-ft="range-slider-handle-$$-0" style="left: 100%;"></button>
+                                                <input type="range" class="form-range custom-range" value="100" name=""
+                                                    id="mileage">
                                                 <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
                                             </div>
                                         </div>
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-shop_by_type">
                                         <legend class="_5m33yq"><span>Choose how to shop</span>
-                                            <button class="_34eWiv _4sCgq3 _5pm78H hvw5U6" type="submit"
-                                                aria-labelledby="filter-disclaimer-collapse-btn-shop_by_type">
-                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                                    data-icon="info-circle"
-                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
-                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                    <path fill="currentColor"
-                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
-                                                    </path>
-                                                </svg>
-                                                <div hidden="" id="filter-disclaimer-collapse-btn-shop_by_type"
-                                                    class="_26jUmd">
-                                                    View more
-                                                </div>
-                                            </button>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="info-circle" width="15px" height="15px"
+                                                class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
                                         </legend>
                                         <div aria-hidden="true" class="_5giXsd" style="min-height: 0px; display: none;">
                                             <div class="_2LMv9T">
@@ -1178,37 +1289,41 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul class="_3dCQ2x">
-                                            <div class="sbsGfm"><label class="_4MtdAD"><input type="checkbox"
-                                                        class="RUxFSo" tabindex="0" id="MIX" data-cg-ft="checkbox-MIX"
-                                                        value="" checked="">
-                                                    <p class="_2J3cfC"><span class="_3TkZNa">See a mix:</span><span
-                                                            class="_42L88F">show all local cars &amp; some delivery
+                                        <ul class="filter-result">
+                                            <li>
+                                                <label class="_2J3cfC" for="seeamix"> <input type="checkbox"
+                                                        id="seeamix">
+                                                    <p class="fw-bold">See a
+                                                        mix:<span class="_42L88F fw-normal">show all local cars &amp;
+                                                            some
+                                                            delivery
                                                             &amp;
                                                             store transfer results</span>
                                                     </p>
-                                                </label></div>
-                                            <fieldset>
-                                                <legend class="_4eTETB">Customize results</legend>
-                                                <div><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
-                                                            tabindex="0" id="NEAR_BY" data-cg-ft="checkbox-NEAR_BY"
-                                                            value="">
-                                                        <p class="_2J3cfC">Nearby listings<span
-                                                                class="_4vKwXK">(2)</span>
-                                                        </p>
-                                                    </label><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
-                                                            tabindex="0" id="HOME_DELIVERY"
-                                                            data-cg-ft="checkbox-HOME_DELIVERY" value="">
-                                                        <p class="_2J3cfC">Home delivery<span
-                                                                class="_4vKwXK">(91)</span>
-                                                        </p>
-                                                    </label></div>
-                                            </fieldset>
+                                                </label>
+                                            </li>
+
+
+                                            <p class="_4eTETB clr-dark  fw-bold">Customize results</p>
+                                            <li> <label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                        tabindex="0" id="NEAR_BY" data-cg-ft="checkbox-NEAR_BY"
+                                                        value="">
+                                                    <p class="_2J3cfC">Nearby listings<span class="_4vKwXK">(2)</span>
+                                                    </p>
+                                                </label>
+                                            </li>
+                                            <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
+                                                        tabindex="0" id="HOME_DELIVERY"
+                                                        data-cg-ft="checkbox-HOME_DELIVERY" value="">
+                                                    <p class="_2J3cfC">Home delivery<span class="_4vKwXK">(91)</span>
+                                                    </p>
+                                                </label>
+                                            </li>
                                         </ul>
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-trim_name">
                                         <legend class="_5m33yq"><span>Trim</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="TRIM_NAME-AWD" data-cg-ft="checkbox-AWD"
                                                         value="AWD">
@@ -1287,26 +1402,26 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-days_on_market">
                                         <legend class="_5m33yq"><span>Days on Market</span></legend>
-                                        <div class="wXkvin">
+                                        <div class="ps-3">
                                             <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">0 days - 200
                                                 days
-                                            </div>
-                                            <div class="_4VRgPK">
-                                                <div class="_3vmcUg"></div>
-                                                <div class="_3pdaxM"></div>
-                                                <button role="slider" aria-valuemin="0" aria-valuemax="200"
-                                                    aria-label="0" aria-valuenow="0" class="UzYZdP"
-                                                    data-cg-ft="range-slider-handle-$$-0" style="left: 0%;"></button>
-                                                <button role="slider" aria-valuemin="0" aria-valuemax="200"
-                                                    aria-label="200" aria-valuenow="200" class="UzYZdP"
-                                                    data-cg-ft="range-slider-handle-$$-1" style="left: 100%;"></button>
-                                                <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
+
+                                                <div class="d-flex position-relative">
+                                                    <div class="_3vmcUg"></div>
+                                                    <!-- <label for="customRange3" class="form-label">Example range</label> -->
+                                                    <input type="range" class="form-range custom-range-left" min="0"
+                                                        max="100" id="daysonmarketleft" value="0">
+                                                    <input type="range" class="form-range custom-range-right" min="101"
+                                                        max="200" id="daysonmarketright" value="200">
+                                                    <div class="_3pdaxM"></div>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </fieldset>
-                                    <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-drivetrain">
+                                    <fieldset class="mt-5" data-cg-ft="filters-panel-filter-drivetrain">
                                         <legend class="_5m33yq"><span>Drivetrain</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DRIVETRAIN-ALL_WHEEL_DRIVE"
                                                         data-cg-ft="checkbox-ALL_WHEEL_DRIVE" value="ALL_WHEEL_DRIVE">
@@ -1325,68 +1440,82 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-color">
                                         <legend class="_5m33yq"><span>Color</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="COLOR-BLACK" data-cg-ft="checkbox-BLACK"
                                                         value="BLACK">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_3ZsiJM"><span class="EWdfup BNasx5"></span><span
                                                             class="_2P52Mt">Black</span></div>
-                                                    <span class="_4vKwXK">(24)</span></p>
+                                                    <span class="_4vKwXK">(24)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="COLOR-BLUE" data-cg-ft="checkbox-BLUE"
                                                         value="BLUE">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_3ZsiJM"><span class="EWdfup RdKcF6"></span><span
                                                             class="_2P52Mt">Blue</span></div>
-                                                    <span class="_4vKwXK">(3)</span></p>
+                                                    <span class="_4vKwXK">(3)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="COLOR-GRAY" data-cg-ft="checkbox-GRAY"
                                                         value="GRAY">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_3ZsiJM"><span class="EWdfup _2wmsu7"></span><span
                                                             class="_2P52Mt">Gray</span></div>
-                                                    <span class="_4vKwXK">(18)</span></p>
+                                                    <span class="_4vKwXK">(18)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="COLOR-RED" data-cg-ft="checkbox-RED"
                                                         value="RED">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_3ZsiJM"><span class="EWdfup _3VL3i3"></span><span
                                                             class="_2P52Mt">Red</span></div>
-                                                    <span class="_4vKwXK">(2)</span></p>
+                                                    <span class="_4vKwXK">(2)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="COLOR-SILVER" data-cg-ft="checkbox-SILVER"
                                                         value="SILVER">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_3ZsiJM"><span class="EWdfup _4NchCV"></span><span
                                                             class="_2P52Mt">Silver</span></div>
-                                                    <span class="_4vKwXK">(9)</span></p>
+                                                    <span class="_4vKwXK">(9)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="COLOR-WHITE" data-cg-ft="checkbox-WHITE"
                                                         value="WHITE">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_3ZsiJM"><span class="EWdfup _3Vvhnr"></span><span
                                                             class="_2P52Mt">White</span></div>
-                                                    <span class="_4vKwXK">(22)</span></p>
+                                                    <span class="_4vKwXK">(22)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="COLOR-UNKNOWN" data-cg-ft="checkbox-UNKNOWN"
                                                         value="UNKNOWN">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_3ZsiJM"><span class="EWdfup _3Zr7XV"></span><span
                                                             class="_2P52Mt">Unknown</span></div>
-                                                    <span class="_4vKwXK">(14)</span></p>
+                                                    <span class="_4vKwXK">(14)</span>
+                                                    <p></p>
                                                 </label></li>
                                         </ul>
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-interior_color">
                                         <legend class="_5m33yq"><span>Interior Color</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="INTERIOR_COLOR-BLACK"
                                                         data-cg-ft="checkbox-BLACK" value="BLACK">
@@ -1416,7 +1545,7 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-vehicle_option">
                                         <legend class="_5m33yq"><span>Features</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="VEHICLE_OPTION-132" data-cg-ft="checkbox-132"
                                                         value="132">
@@ -1610,11 +1739,12 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-deal_rating">
                                         <legend class="_5m33yq"><span>Deal Ratings</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DEAL_RATING-GREAT_PRICE"
                                                         data-cg-ft="checkbox-GREAT_PRICE" value="GREAT_PRICE">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_2YwLJP">
                                                         <div class="_3uEYW2 _2QYuhA">
                                                             <svg class="_39Jeuh _2UowKY"
@@ -1635,12 +1765,14 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    Great Deal <span class="_4vKwXK">(3)</span></p>
+                                                    Great Deal <span class="_4vKwXK">(3)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DEAL_RATING-GOOD_PRICE"
                                                         data-cg-ft="checkbox-GOOD_PRICE" value="GOOD_PRICE">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_2YwLJP">
                                                         <div class="_3uEYW2 _5174Ak">
                                                             <svg class="_39Jeuh _2UowKY"
@@ -1661,12 +1793,14 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    Good Deal <span class="_4vKwXK">(13)</span></p>
+                                                    Good Deal <span class="_4vKwXK">(13)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DEAL_RATING-FAIR_PRICE"
                                                         data-cg-ft="checkbox-FAIR_PRICE" value="FAIR_PRICE">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_2YwLJP">
                                                         <div class="_3uEYW2 EVaT8S">
                                                             <svg class="_39Jeuh _2UowKY"
@@ -1687,12 +1821,14 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    Fair Deal <span class="_4vKwXK">(33)</span></p>
+                                                    Fair Deal <span class="_4vKwXK">(33)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DEAL_RATING-POOR_PRICE"
                                                         data-cg-ft="checkbox-POOR_PRICE" value="POOR_PRICE">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_2YwLJP">
                                                         <div class="_3uEYW2 _5ZQc7H">
                                                             <svg class="_39Jeuh _2UowKY"
@@ -1713,12 +1849,14 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    High Price <span class="_4vKwXK">(21)</span></p>
+                                                    High Price <span class="_4vKwXK">(21)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DEAL_RATING-OVERPRICED"
                                                         data-cg-ft="checkbox-OVERPRICED" value="OVERPRICED">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_2YwLJP">
                                                         <div class="_3uEYW2 _2NApg7">
                                                             <svg class="_39Jeuh _2UowKY"
@@ -1739,12 +1877,14 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    Overpriced <span class="_4vKwXK">(17)</span></p>
+                                                    Overpriced <span class="_4vKwXK">(17)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DEAL_RATING-NA" data-cg-ft="checkbox-NA"
                                                         value="NA">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_2YwLJP">
                                                         <div class="_3uEYW2 _67Ep9B">
                                                             <svg class="_39Jeuh _2UowKY"
@@ -1765,12 +1905,14 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    No Price Analysis <span class="_4vKwXK">(3)</span></p>
+                                                    No Price Analysis <span class="_4vKwXK">(3)</span>
+                                                    <p></p>
                                                 </label></li>
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="DEAL_RATING-OUTLIER"
                                                         data-cg-ft="checkbox-OUTLIER" value="OUTLIER">
                                                     <p class="_2J3cfC">
+                                                    </p>
                                                     <div class="_2YwLJP">
                                                         <div class="_3uEYW2 _5mdskw">
                                                             <svg class="_39Jeuh _2UowKY"
@@ -1791,13 +1933,14 @@
                                                             </svg>
                                                         </div>
                                                     </div>
-                                                    Uncertain <span class="_4vKwXK">(2)</span></p>
+                                                    Uncertain <span class="_4vKwXK">(2)</span>
+                                                    <p></p>
                                                 </label></li>
                                         </ul>
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-vehicle_condition">
                                         <legend class="_5m33yq"><span>New / Used / CPO</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="VEHICLE_CONDITION-CPO"
                                                         data-cg-ft="checkbox-CPO" value="CPO">
@@ -1814,20 +1957,14 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-is_single_owner">
                                         <legend class="_5m33yq"><span>Vehicle History</span>
-                                            <button class="_34eWiv _4sCgq3 _5pm78H hvw5U6" type="submit"
-                                                aria-labelledby="filter-disclaimer-collapse-btn-is_single_owner">
-                                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                                    data-icon="info-circle"
-                                                    class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x "
-                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                    <path fill="currentColor"
-                                                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
-                                                    </path>
-                                                </svg>
-                                                <div hidden="" id="filter-disclaimer-collapse-btn-is_single_owner"
-                                                    class="_26jUmd">View more
-                                                </div>
-                                            </button>
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="info-circle" width="15px" height="15px"
+                                                class="svg-inline--fa fa-info-circle fa-w-16 fa-fw fa-1x " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z">
+                                                </path>
+                                            </svg>
                                         </legend>
                                         <div aria-hidden="true" class="_5giXsd" style="min-height: 0px; display: none;">
                                             <div class="_2LMv9T">
@@ -1849,7 +1986,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="IS_SINGLE_OWNER"
                                                         data-cg-ft="checkbox-IS_SINGLE_OWNER" value="">
@@ -1881,7 +2018,7 @@
                                     <fieldset class="_5pN1ma"
                                         data-cg-ft="filters-panel-filter-ncap_overall_safety_rating">
                                         <legend class="_5m33yq"><span>NHTSA Overall Safety Rating</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result-rating">
                                             <li class="_4rfAz3" data-cg-ft="radio-NCAP_OVERALL_SAFETY_RATING-5"><input
                                                     type="radio" name="5" class="_59BKuC" tabindex="0"
                                                     id="NCAP_OVERALL_SAFETY_RATING-5"><label
@@ -2006,7 +2143,7 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-seller_hierarchy_type">
                                         <legend class="_5m33yq"><span>Seller Type</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result">
                                             <li><label class="_4MtdAD"><input type="checkbox" class="RUxFSo"
                                                         tabindex="0" id="SELLER_HIERARCHY_TYPE-DEALER"
                                                         data-cg-ft="checkbox-SELLER_HIERARCHY_TYPE" value="DEALER">
@@ -2030,44 +2167,41 @@
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-has_photos">
                                         <legend class="_5m33yq"><span>Photos</span></legend>
-                                        <label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                        <label class="d-flex"><input type="checkbox" class="" tabindex="0"
                                                 id="HAS_PHOTOS" data-cg-ft="checkbox-HAS_PHOTOS" value="">
-                                            <p class="_2J3cfC">Hide vehicles without photos<span
+                                            <p class="ps-3 mb-0">Hide vehicles without photos<span
                                                     class="_5DuqYT">(3)</span>
                                             </p>
                                         </label>
                                     </fieldset>
                                     <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-fuel_consumption">
                                         <legend class="_5m33yq"><span>Gas Mileage</span></legend>
-                                        <div class="wXkvin">
-                                            <div class="_4jC7Yw" data-cg-ft="range-slider-label-mobile">17 MPG - 24 MPG
+                                            <div class="ps-3 _4jC7Yw" data-cg-ft="range-slider-label-mobile">17 MPG - 24 MPG
+                                                <div class="d-flex position-relative">
+                                                    <div class="_3vmcUg"></div>
+                                                    <!-- <label for="customRange3" class="form-label">Example range</label> -->
+                                                    <input type="range" class="form-range custom-range-left" min="0"
+                                                        max="100" id="daysonmarketleft" value="0">
+                                                    <input type="range" class="form-range custom-range-right" min="101"
+                                                        max="200" id="daysonmarketright" value="200">
+                                                    <div class="_3pdaxM"></div>
+
+                                                </div>
                                             </div>
-                                            <div class="_4VRgPK">
-                                                <div class="_3vmcUg"></div>
-                                                <div class="_3pdaxM"></div>
-                                                <button role="slider" aria-valuemin="17" aria-valuemax="24"
-                                                    aria-label="17" aria-valuenow="17" class="UzYZdP"
-                                                    data-cg-ft="range-slider-handle-$$-0" style="left: 0%;"></button>
-                                                <button role="slider" aria-valuemin="17" aria-valuemax="24"
-                                                    aria-label="24" aria-valuenow="24" class="UzYZdP"
-                                                    data-cg-ft="range-slider-handle-$$-1" style="left: 100%;"></button>
-                                                <div class="_4sw7vZ" style="left: 0%; width: 100%;"></div>
-                                            </div>
-                                        </div>
                                     </fieldset>
-                                    <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-has_recent_price_drops">
+                                    <fieldset class="_5pN1ma mt-5" data-cg-ft="filters-panel-filter-has_recent_price_drops">
                                         <legend class="_5m33yq"><span>Price Drops</span></legend>
-                                        <label class="_4MtdAD"><input type="checkbox" class="RUxFSo" tabindex="0"
+                                        <label class="d-flex"><input type="checkbox" class="RUxFSo" tabindex="0"
                                                 id="HAS_RECENT_PRICE_DROPS" data-cg-ft="checkbox-HAS_RECENT_PRICE_DROPS"
                                                 value="">
-                                            <p class="_2J3cfC">Only show recent price drops<span
+                                            <p class="ps-3 mb-0">Only show recent price drops<span
                                                     class="_5DuqYT">(13)</span>
                                             </p>
                                         </label>
                                     </fieldset>
-                                    <fieldset class="_5pN1ma" data-cg-ft="filters-panel-filter-average_dealer_ratings">
+                                    <fieldset class="mt-4" data-cg-ft="filters-panel-filter-average_dealer_ratings">
                                         <legend class="_5m33yq"><span>Average Dealer Rating</span></legend>
-                                        <ul class="_3dCQ2x">
+                                        <ul class="filter-result-rating">
                                             <li class="_4rfAz3" data-cg-ft="radio-AVERAGE_DEALER_RATINGS-FIVE_STAR">
                                                 <input type="radio" name="FIVE_STAR" class="_59BKuC" tabindex="0"
                                                     id="AVERAGE_DEALER_RATINGS-FIVE_STAR"><label
@@ -2363,7 +2497,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-9 col-md-8">
+                    <div class="col-lg-8 col-md-7">
                         <div class="row">
 
                             <div class="col-lg-4 col-md-6  py-1 px-2">
@@ -2466,8 +2600,16 @@
                                             <input type="number" class="" placeholder="123456789" name="" id=""><br>
                                             Thanks You!
                                         </p>
-                                        <button class="border-0 btn btn-success w-100 rounded-3" type="button" onclick="avvv()">Send</button>
-                                        <p class="small mt-4">By submitting my contact information on CarGurus, I agree to receive communications from CarGurus, from the vehicle’s seller, and from the seller’s agent(s). If I include my phone number, I agree to receive calls and text messages (including via automation). I can opt out at any time. I also agree to the Terms of Use and Privacy Policy, which explain how my data is used to better understand my vehicle shopping interests. This consent is not a condition of any purchase. Standard message and data rates may apply.</p>
+                                        <button class="border-0 btn btn-success w-100 rounded-3" type="button"
+                                            onclick="avvv()">Send</button>
+                                        <p class="small mt-4">By submitting my contact information on CarGurus, I agree
+                                            to receive communications from CarGurus, from the vehicle’s seller, and from
+                                            the seller’s agent(s). If I include my phone number, I agree to receive
+                                            calls and text messages (including via automation). I can opt out at any
+                                            time. I also agree to the Terms of Use and Privacy Policy, which explain how
+                                            my data is used to better understand my vehicle shopping interests. This
+                                            consent is not a condition of any purchase. Standard message and data rates
+                                            may apply.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2652,7 +2794,7 @@
         })
         async function successwal() {
             let s = await swal("Request Sent", "Request Sent Successfully.", "success");
-            if(s){
+            if (s) {
                 $('[data-bs-dismiss="modal"]').trigger('click');
             }
             //    swal.fire({
@@ -2665,7 +2807,7 @@
         }
         async function avvv() {
             let s = await swal("Request Sent", "Request Sent Soccessfully.", "success");
-            if(s){
+            if (s) {
                 $('[data-bs-dismiss="modal"]').trigger('click');
             }
             //    swal.fire({
@@ -2676,7 +2818,24 @@
             //         timer: 1500
             //     })
         }
-        
+        function makeActive() {
+            var element = document.getElementsByClassName("react-tabs-0");
+            element.classList.add("selected");
+            //    element.innerHTML="This is Active";
+        }
+        // makeActive()
+        Array.from({ length: 10 }, (_, index) => {
+
+            console.log(index);
+
+        });
+        Array.from(document.querySelectorAll(".stock-search-tab")).forEach(function (element) {
+            element.onclick = function () {
+                Array.from(document.querySelectorAll(".stock-search-tab")).forEach((plant) => plant.classList.remove('selected'));
+                this.classList.toggle('selected');
+            };
+        });
+
 
 
     </script>

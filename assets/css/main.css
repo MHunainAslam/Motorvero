@@ -45,12 +45,15 @@ body {
 .clr-primary {
     color: var(--primary);
 }
-.clr-low{
+
+.clr-low {
     color: red;
 }
-.clr-high{
+
+.clr-high {
     color: #ff8400;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -208,6 +211,14 @@ nav.main {
 
     .nav-links li a {
         padding: 8px 0px !important;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .second-slider-btn {
+        position: absolute !important;
+        right: 0px !important;
+        bottom: 50px !important;
     }
 }
 
@@ -699,9 +710,11 @@ nav.topNav .buttons .topNavBtn.bdr {
     box-shadow: 0px 4px 1rem rgb(0 0 0 / 13%) !important;
     transition: all 0.5s;
 }
-.btn{
+
+.btn {
     transition: all 0.3s;
 }
+
 .btn:hover {
     background-color: var(--primary-light);
     /* opacity: 0.5; */
@@ -831,6 +844,17 @@ nav.topNav .buttons .topNavBtn.bdr {
     border-color: var(--bs-nav-tabs-link-active-border-color);
 }
 
+.tab-btn.active::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -5px;
+    right: 44%;
+}
+
 /* .tabintotab ul.nav-tabs .nav-link.active::after {
 content: "";
 position: absolute;
@@ -845,27 +869,30 @@ margin: 0 auto;
 } */
 
 .tabintotab>div .nav-tabs .nav-link.active {
-    text-decoration: underline;
-    background-color: transparent !important;
-    color: black;
+    /* text-decoration: underline; */
+    background-color: var(--primary-light) !important;
+    color: white;
     border: none;
 }
 
-.tabintotab>div .nav-tabs .nav-link:hover,
-.tabintotab>div .nav-tabs .nav-link:focus {
+/* .tabintotab>div .nav-tabs .nav-link,
+.tabintotab>div .nav-tabs .nav-link {
     isolation: isolate;
-    /* border-color: var(--bs-nav-tabs-link-hover-border-color); */
-    background-color: transparent !important;
-    color: black;
+    border-color: var(--bs-nav-tabs-link-hover-border-color);
+    background-color: var(--primary-light) !important;
+    color: white;
     text-decoration: underline;
     border: 2px;
     margin: 0px !important;
-}
+
+} */
 
 .tabintotab>div .nav-tabs .nav-link {
-    margin: 0px !important;
+    margin: 3px !important;
     border: none !important;
-    color: #707070;
+    background-color: var(--primary-light) !important;
+    color: white;
+    border-radius: 5px;
 }
 
 
@@ -1026,6 +1053,7 @@ margin: 0 auto;
     background: var(--dark);
     border-radius: 10px;
 }
+
 .modal-detail-overview span a {
     color: blue;
 }
@@ -1039,7 +1067,8 @@ margin: 0 auto;
     background-color: white;
     padding: 10px;
 }
-.stock-car-img{
+
+.stock-car-img {
     aspect-ratio: 1.8;
     object-fit: fill;
 }
@@ -1058,58 +1087,72 @@ margin: 0 auto;
     background: var(--dark);
     border-radius: 10px;
 }
-.applicant input{
+
+.applicant input {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid var(--dark);
 }
-.applicant select{
+
+.applicant select {
     border: 1px solid var(--dark) !important;
     border-radius: 0;
 }
-.request-info-modal{
+
+.request-info-modal {
     border: 1px solid black;
     border-radius: 15px;
 }
-.request-info-modal>div p input{
+
+.request-info-modal>div p input {
     width: 150px;
     padding: 4px 5px;
     margin-bottom: 10px;
 }
-.dealers-price p{
+
+.dealers-price p {
     margin-bottom: 5px;
 }
-.negotiation{
+
+.negotiation {
     border-left: 1px solid var(--dark);
     padding-left: 10px;
 }
-.negotiation p smaller{
+
+.negotiation p smaller {
     text-transform: uppercase;
 }
-.negotiation p{
+
+.negotiation p {
     font-weight: bolder;
     margin-bottom: 0px;
 }
-.negotiation p span{
+
+.negotiation p span {
     font-size: 1.5rem !important;
     margin-right: 0.1875rem;
     display: inline-block;
     vertical-align: sub;
     line-height: 10px;
 }
-.Contactless li{
+
+.Contactless li {
     list-style: none;
 }
-.circle-svg{
+
+.circle-svg {
     border-radius: 100%;
     background-color: var(--primary);
 }
-.circle-svg svg{
+
+.circle-svg svg {
     padding: 10px;
 }
-._4z5HgY{
+
+._4z5HgY {
     /* fill: yellow; */
 }
+
 ._42zXRc {
     background: #c2ccd4;
     display: flex;
@@ -1117,9 +1160,11 @@ margin: 0 auto;
     height: 1.25rem;
     margin: 0 0.125rem 0 0.625rem;
 }
-.hVKvZS{
-    color: var(--dark   );
+
+.hVKvZS {
+    color: var(--dark);
 }
+
 ._4w1r1J ol li:before {
     background-color: var(--primary);
     border-radius: 50%;
@@ -1134,11 +1179,13 @@ margin: 0 auto;
     place-items: center;
     width: 1.5em;
 }
+
 ._4w1r1J ol li {
     counter-increment: steps;
     list-style: none;
 }
-.chat-btn{
+
+.chat-btn {
     background: var(--primary);
     color: white;
     width: 100px;
@@ -1146,6 +1193,7 @@ margin: 0 auto;
     display: flex;
     padding: 5px;
 }
+
 /* rating start*/
 
 .rate {
@@ -1155,38 +1203,131 @@ margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-  }
-  .rate:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
-  }
-  .rate:not(:checked) > label {
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
     /* float:right; */
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
-  }
-  .rate:not(:checked) > label:before {
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
     content: '★ ';
-  }
-  .rate > input:checked ~ label {
+}
+
+.rate>input:checked~label {
     color: #ffc700;
-  }
-  .rate:not(:checked) > label:hover,
-  .rate:not(:checked) > label:hover ~ label {
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
     color: #deb217;
-  }
-  .rate > input:checked + label:hover,
-  .rate > input:checked + label:hover ~ label,
-  .rate > input:checked ~ label:hover,
-  .rate > input:checked ~ label:hover ~ label,
-  .rate > label:hover ~ input:checked ~ label {
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
     color: #c59b08;
-  }
+}
+
+.filter-result-rating {
+    background: white;
+    border: 1px solid var(--dark);
+    max-height: 15rem;
+    overflow: auto;
+    padding: 10px;
+}
+
+.filter-result-rating li {
+    display: flex;
+    margin-top: 10px;
+}
+
+.filter-result-rating li label {
+    display: flex;
+    padding-left: 10px;
+}
+
+.filter-result {
+    background: white;
+    border: 1px solid var(--dark);
+    max-height: 15rem;
+    overflow: auto;
+    padding: 10px;
+}
+
+.filter-result li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-result li label {
+    display: flex;
+}
+
+.filter-result li svg {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.filter-result li label p {
+    padding-left: 10px;
+    margin-bottom: 0px;
+    line-height: 1rem;
+}
+
+.custom-range-left {
+    position: absolute;
+    left: 2px;
+    width: 50%;
+}
+
+.custom-range-right {
+    right: 2px;
+    position: absolute;
+    width: 50%;
+}
+
+.progress {
+    background: yellow;
+    border: solid 2px #82CFD0;
+    border-radius: 8px;
+    height: 7px;
+    width: 400px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.progress::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #434343;
+}
+
 /* rating end */
+.second-slider-btn {
+    position: absolute;
+    right: 33%;
+    bottom: -50px;
+}
+
 @media (min-width: 767px) {
     .fianceinadiv {
         border-right: 1px solid rgba(0, 0, 0, 0.218);
@@ -1277,12 +1418,15 @@ margin: 0 auto;
         border-right: 1px solid rgba(0, 0, 0, 0.218);
         /* padding-right: 15px; */
     }
+
     .tab-dropdown {
         border: none;
         border-bottom: 1px solid #7070707a;
         border-radius: 0px;
     }
 }
+
+
 
 @media (max-width: 576px) {
     .modal-fianceinadiv {
